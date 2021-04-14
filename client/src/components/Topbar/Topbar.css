@@ -1,0 +1,31 @@
+.navbar {
+    font-family: Courier, monospace;
+    background-color: #d5b590 !important;
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-family: 'Abril Fatface';
+    color: #1b4738 !important;
+    font-size: 32px !important;
+}
+
+.top-bar ul li {
+    background-color: white;
+    color: black;
+    list-style-type: none;
+  }
+
+ #nav-menu {
+     display: flex;
+ }
+
+ .nav-item {
+    list-style-type: none;
+ }
+
+ .nav-link {
+     color:  #1b4738 !important;
+     font-family: 'Raleway', Courier, monospace;
+     font-weight: 100;
+ }

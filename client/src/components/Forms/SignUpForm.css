@@ -1,0 +1,66 @@
+.imgDiv {
+    background-image: url("../../img/dark-green-texture.jpg");
+    width: auto;
+    height: 100vh;
+}
+
+.container {
+    float: left;
+    width: 200px;
+    position: absolute;
+}
+
+.signup {
+    font-family: Courier, monospace;
+    color: #d5b590;
+    border: 1px  #d5b590 solid;
+    border-radius: 2%;
+    padding: 25px;
+}
+
+h2 {
+    font-family: 'Abril Fatface';
+    color: #d5b590 !important;
+    font-size: 32px !important;
+    padding: 25px;
+}
+
+.SignUpImage {
+    border-radius: 50% !important;
+    border: 10px double #d5b590 ;
+}
+
+.imageContainer {
+    float: right;
+}
+
+input {
+    background-color: lightgray !important;
+}
+
+button {
+    background-color: #d5b590!important;
+    color: black;
+    font-family: 'Raleway', Courier, monospace;
+}
+
+.memberslinkDiv {
+    float: right;
+}
+
+.imageDiv{
+    padding: 100px;
+    justify-content: center;
+}
+
+.membersBtn {
+    padding-left: 25px;
+}
+
+a {
+    color: black;
+}
+
+.date {
+    margin-left: 20px;
+}

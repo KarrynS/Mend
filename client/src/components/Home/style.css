@@ -1,0 +1,80 @@
+
+
+.navbar {
+    font-family: Courier, monospace;
+    background-color: #d5b590 !important;
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-family: 'Abril Fatface';
+    color: #1b4738 !important;
+    font-size: 32px !important;
+}
+
+ul li {
+    background-color: white;
+    color: black;
+    list-style-type: none;
+  }
+
+ #nav-menu {
+     display: flex;
+ }
+
+ .nav-item {
+    list-style-type: none;
+ }
+
+ .nav-link {
+     color:  #1b4738 !important;
+     font-family: 'Raleway', Courier, monospace;
+     font-weight: 100;
+ }
+
+ .imgDiv {
+    background-image: url("../../img/dark-green-texture.jpg");
+    width: auto;
+    height: 100vh;
+}
+
+ .symptom {
+        font-family: Courier, monospace;
+        border: 1px  #d5b590 solid;
+        background-color: #d5b590;
+        border-radius: 2%;
+        padding: 25px;
+ }
+
+
+.btn {
+background-color: #1b4738 !important;
+color:  #d5b590 !important;
+}
+
+.row {
+margin-top: 20px;
+}
+
+.card-title {
+color: #1b4738 !important;
+padding: 0px;
+
+}
+
+.card-deck {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container {
+    position: relative !important;
+}
+
+.card {
+    background-color: #d5b590 !important;
+}
+
+.fas {
+    justify-content: center;
+}
