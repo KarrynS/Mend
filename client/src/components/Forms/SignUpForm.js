@@ -22,6 +22,7 @@ function SignUpForm() {
         API.saveUser(userData)
         .then(res =>  {
             console.log("userData on signup", userData);
+            
             window.location.href = "/dashboard";
         })
         .catch(err => console.log(err));

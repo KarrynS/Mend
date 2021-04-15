@@ -1,9 +1,9 @@
 // Requiring our models and passport as we've configured it
 //var db = require("../models/Profile");
-var passport = require("../config/passport");
-const Profile = require("../models/profile");
-const Symptom = require("../models/symptom");
-const isAuthenticated = require("../config/middleware/isAuthenticated");
+var passport = require("../../config/passport");
+const Profile = require("../../models/profile");
+const Symptom = require("../../models/symptom");
+const isAuthenticated = require("../../config/middleware/isAuthenticated");
 
 
 module.exports = function(app) {

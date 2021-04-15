@@ -4,6 +4,7 @@ var session = require("express-session");
 const mongoose = require("mongoose");
 const passport = require("./config/passport");
 const path = require("path");
+const routes = require("./routes");
 
 //setting up port
 const PORT = process.env.PORT || 8080;
@@ -34,7 +35,8 @@ mongoose.connect(
 );
 
 // Routes
-require("./routes/api-routes")(app);
+app.use(routes);
+//require("./routes/api-routes")(app);
 app.get("*", (req,res) => {
   res.sendFile(path.join(__dirname, "/client/build/index.html"))
 })

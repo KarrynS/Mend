@@ -48,7 +48,7 @@ profileSchema.pre("Save", async function (next) {
 })
 
 ///Trying to change dob entry to an age value   ******need to check age calc is saving to schema
-profileSchema.methods.setAge = function () {
+profileSchema.pre("Save", function () {
     const from = dob.split("/");
     const birthdateTimeStamp = new Date(from[2], from[1] - 1, from[0]);
     const cur = new Date();
@@ -57,7 +57,7 @@ profileSchema.methods.setAge = function () {
     this.age = currentAge;
 
     return this.age;
-}
+})
 
 
 const Profile = mongoose.model("profile", profileSchema);
