@@ -1,9 +1,9 @@
 // Requiring our models and passport as we've configured it
-var db = require("../models/Profile");
-var passport = require("../../config/passport");
-const Profile = require("../../models/profile");
-const Symptom = require("../../models/symptom");
-const isAuthenticated = require("../../config/middleware/isAuthenticated");
+//var db = require("../models/Profile");
+var passport = require("../config/passport");
+const Profile = require("../models/profile");
+const Symptom = require("../models/symptom");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 
 module.exports = function(app) {
@@ -11,22 +11,25 @@ module.exports = function(app) {
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
-    res.json(req.user);
+    res.json({
+      email: req.user.email,
+      id: req.user.id
+    });
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
     app.post("/api/signup", (req, res) => {
-        db.Profile.create({
+        Profile.create({
           name: req.body.name,
           email: req.body.email,
           password: req.body.password,
           dob: req.body.dob
         })
-            .then(dbUser => {
-                res.json(dbUser);
-            })
+            // .then(dbUser => {
+            //     res.json(dbUser);
+            // })
             .then(() => {
               res.redirect(301, "/dashboard");
             })
@@ -46,7 +49,7 @@ module.exports = function(app) {
   //symptoms, diagnosis, treatment plan 
   
 //Route for creating a new symptom
-  app.post("/home", isAuthenticated, (req, res) => {
+  app.post("/dashboard", isAuthenticated, (req, res) => {
     Symptom.create({
         eye: req.body.eye,
         soreEye: req.body.soreEye,

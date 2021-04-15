@@ -9,7 +9,7 @@ function Navbar() {
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">Mend</a>
                     <div className="collapse navbar-collapse mr-auto" id="navbarNavAltMarkup">
-                    <ul class="medium-horizontal align-right text-black" id="nav-menu">
+                    <ul className="medium-horizontal align-right text-black" id="nav-menu">
                             <li className="nav-item">
                                 <Link to="/dashboard" className={window.location.pathname === "/" || window.location.pathname === "/members"
                                     ? "nav-link active"

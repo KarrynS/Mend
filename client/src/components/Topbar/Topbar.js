@@ -7,14 +7,14 @@ function Topbar() {
         <>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
-                <div class="top-bar">
-                    <div class="top-bar-left">
+                <div className="top-bar">
+                    <div className="top-bar-left">
                     <a className="navbar-brand" href="/">Mend</a>
                 </div>
                 </div>
                 
-                <div class="top-bar-right">
-                    <ul class="medium-horizontal align-right text-black" id="nav-menu">
+                <div className="top-bar-right">
+                    <ul className="medium-horizontal align-right text-black" id="nav-menu">
                     <li className ="nav-item">
                         <Link to="/login" className={window.location.pathname === "/login" 
                                     ? "nav-link active" 
