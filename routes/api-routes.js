@@ -1,9 +1,8 @@
 // Requiring our models and passport as we've configured it
-var db = require("../models/Profile");
-var passport = require("../../config/passport");
-const Profile = require("../../models/profile");
-const Symptom = require("../../models/symptom");
-const isAuthenticated = require("../../config/middleware/isAuthenticated");
+var passport = require("../config/passport");
+const Profile = require("../models/profile");
+const Symptom = require("../models/symptom");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 
 module.exports = function(app) {
@@ -18,20 +17,15 @@ module.exports = function(app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
     app.post("/api/signup", (req, res) => {
-        db.Profile.create({
-          name: req.body.name,
-          email: req.body.email,
-          password: req.body.password,
-          dob: req.body.dob
-        })
+        Profile.create(req.body)
             .then(dbUser => {
                 res.json(dbUser);
             })
-            .then(() => {
-              res.redirect(301, "/dashboard");
-            })
+            // .then(() => {
+            //   res.redirect(301, "/dashboard");
+            // })
             .catch(err => {
-                res.status(401).json(err);
+                res.status(422).json(err);
             });
     });
 
