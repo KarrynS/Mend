@@ -36,7 +36,7 @@ mongoose.connect(
 
 // Routes
 //app.use(routes);
-require("./routes/api-routes")(app);
+require("./controllers/api-routes")(app);
 app.get("*", (req,res) => {
   res.sendFile(path.join(__dirname, "/client/build/index.html"))
 })
