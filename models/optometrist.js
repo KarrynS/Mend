@@ -16,6 +16,6 @@ const optometristSchema = new Schema({
     }
 });
 
-const Optometrist = mongoose.model("optometrist", optometristSchema);
+const Optometrist = mongoose.model("Optometrist", optometristSchema);
 
 module.exports = Optometrist;

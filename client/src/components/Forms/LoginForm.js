@@ -22,8 +22,8 @@ function LoginForm() {
     //upon loging, use API to autheticate user
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        if (formObject.email && formObject.password) {
-            API.loginUser({
+        if (formObject.email && formObject.password && formObject) {
+            API.login({
                 email: formObject.email,
                 password: formObject.password
             })

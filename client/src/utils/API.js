@@ -1,18 +1,27 @@
 import axios from "axios";
+import passport from "passport";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    createUser: function(userData) {
-        return axios.post("/api/profile/signup", userData)
+    create: function(userData) {
+        return axios.post("/api/user/signup", userData)
     },
-    loginUser: query => {
-        return axios.post("api/login", 
-            {
-                email: query.email, 
-                password:query.password
-            })
+    login: ()=> {
+        return axios.post('/login',
+        passport.authenticate('local'),
+        function(req, res) {
+          res.send(req.user);
+        }
+      );
     },
-    newSymptom: function(userData) {
-        return axios.post("api/symptoms", userData)
+    symptom: function(userData) {
+        return axios.post("api/user/symptom", userData)
+
+    },
+    logout: () => {
+        return axios.get('/logout', function(req, res){
+            req.logout();
+            res.send(null)
+          });
     }
 }

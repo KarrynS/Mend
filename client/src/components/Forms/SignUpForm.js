@@ -26,14 +26,16 @@ function SignUpForm() {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         if (formObject.email && formObject.password && formObject.name && formObject.birthday) {
-            API.createUser({
+            API.create({
                 name: formObject.name,
+                username: formObject.name,
                 email: formObject.email,
                 password: formObject.password,
                 birthday: formObject.birthday
             })
             .then(() => setformObject({
                 name: "",
+                username: "",
                 email: "",
                 password: "",
                 birthday: ""
@@ -72,7 +74,7 @@ function SignUpForm() {
                         <h2>Sign Up Form</h2>
                         <form className="signup" onSubmit={handleFormSubmit}>
                             <div className="form-group name">
-                                <label for="exampleInputEmail1">Name</label>
+                                <label htmlFor="exampleInputEmail1">Name</label>
                                 <input 
                                     onChange={handleInputChange} 
                                     name="name"
@@ -81,8 +83,18 @@ function SignUpForm() {
                                     id="name-input" 
                                     placeholder="Name" />
                             </div>
+                            <div className="form-group username">
+                                <label htmlFor="exampleInputEmail1">Usermame</label>
+                                <input 
+                                    onChange={handleInputChange} 
+                                    name="username"
+                                    type="text" 
+                                    className="form-control" 
+                                    id="name-input" 
+                                    placeholder="Username" />
+                            </div>
                             <div className="form-group email">
-                                <label for="exampleInputEmail1">Email</label>
+                                <label htmlFor="exampleInputEmail1">Email</label>
                                 <input 
                                     onChange={handleInputChange}
                                     name="email" 
@@ -92,7 +104,7 @@ function SignUpForm() {
                                     placeholder="user@mail.com.au"/>
                             </div>
                             <div className="form-group password">
-                                <label for="exampleInputPassword1">Password</label>
+                                <label htmlFor="exampleInputPassword1">Password</label>
                                 <input 
                                     onChange={handleInputChange}
                                     name="password" 
@@ -102,7 +114,7 @@ function SignUpForm() {
                                     placeholder="Password (must be longer than 6 characters)"/>
                             </div>
                             <div>
-                                <label for="birthday">Birthday: </label>
+                                <label htmlFor="birthday">Birthday: </label>
                                 <input 
                                     onChange={handleInputChange} 
                                     type="text" 

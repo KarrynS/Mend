@@ -3,11 +3,15 @@ const bcrypt = require("bcrypt");
 
 const Schema = mongoose.Schema;
 
-const profileSchema = new Schema({
+const userSchema = new Schema({
     name: {
         type: String,
         trim: true, 
         required: "Enter a name to create your profile"
+    },
+    username: {
+        type: String,
+        index:true
     },
     email: {
         type: String,
@@ -38,17 +42,38 @@ const profileSchema = new Schema({
     ]
 });
 
-//Hashing password with bycrpt   *******need to double check this is working properly*****
-profileSchema.pre("Save", async function (next) {
-    const user = this;
-    if (user.isModified("password")) {
-        user.password = await bcrypt.hash(user.password, 8);
-    }
-    next ();
-})
+const User = mongoose.model("User", userSchema);
+
+module.exports = User;
+
+module.exports.createUser = function(newUser, callback){
+    bcrypt.genSalt(10, function(err, salt) {
+      bcrypt.hash(newUser.password, salt, function(err, hash) {
+        newUser.password = hash;
+        newUser.save(callback);
+      });
+    });
+  }
+
+module.exports.getUserByUsername = function(username, callback){
+var query = {username: username};
+User.findOne(query, callback);
+}
+
+module.exports.getUserById = function(id, callback){
+User.findById(id, callback);
+}
+
+module.exports.comparePassword = function(candidatePassword, hash, callback){
+bcrypt.compare(candidatePassword, hash, function(err, isMatch) {
+    if(err) throw err;
+    callback(null, isMatch);
+});
+}
+
 
 ///Trying to change dob entry to an age value   ******need to check age calc is saving to schema
-profileSchema.pre("Save", function () {
+userSchema.pre("Save", function () {
     const from = birthday.split("/");
     const birthdateTimeStamp = new Date(from[2], from[1] - 1, from[0]);
     const cur = new Date();
@@ -60,9 +85,6 @@ profileSchema.pre("Save", function () {
 })
 
 
-const Profile = mongoose.model("profile", profileSchema);
-
-module.exports = Profile;
 
 
 

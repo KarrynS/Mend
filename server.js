@@ -1,11 +1,12 @@
 //Requiring necessary npm packages
 const express = require("express");
-var session = require("express-session");
+const session = require("express-session");
 const mongoose = require("mongoose");
 const passport = require("./config/passport");
 const path = require("path");
 const routes = require("./routes");
-
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 
 //setting up port
 const PORT = process.env.PORT || 8080;
@@ -18,6 +19,11 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+// BodyParser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
@@ -34,6 +40,7 @@ mongoose.connect(
         useFindAndModify: false
       }
 );
+const db = mongoose.connection;
 
 // Routes
 app.use(routes);
@@ -42,12 +49,8 @@ app.get("*", (req,res) => {
   res.sendFile(path.join(__dirname, "/client/build/index.html"))
 })
 
+
 app.listen(PORT, () => {
   console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
 });
 
-
-
-//Questions to ask
-//do we need to sync mongoose db model var db = require("./models");  
-            //&& db.sequelize.sync().then(function() {

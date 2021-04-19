@@ -1,9 +1,9 @@
 const db = require("../models");
 
-//Defining methods for profileController
+//Defining methods for optometrist Controller
 module.exports = {
     create: function(req,res) {
-        db.Profile.create(req.body)
+        db.Optometrist.create(req.body)
         .then(dbUser => {
             res.json(dbUser);
         })
@@ -15,4 +15,3 @@ module.exports = {
         });
     }
 }
-

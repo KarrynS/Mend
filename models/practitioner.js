@@ -23,7 +23,7 @@ const practitionerSchema = new Schema({
 
 })
 
-const Practitioner = mongoose.model("practitioner", practitionerSchema);
+const Practitioner = mongoose.model("Practitioner", practitionerSchema);
 
 module.exports = Practitioner;
 

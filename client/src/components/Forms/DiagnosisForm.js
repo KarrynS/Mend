@@ -1,7 +1,7 @@
 import React from "react";
 import "./Diagnosis.css";
 
-const DiagnosisForm = () => {
+function DiagnosisForm() {
     return (
         <>
          <form class="form-inline">

@@ -1,5 +1,5 @@
 module.exports = {
-    Profile: require("./profile"),
+    User: require("./user"),
     Symptom: require("./symptom"),
     Optometrist: require("./optometrist")
   };

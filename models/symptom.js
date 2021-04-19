@@ -8,47 +8,47 @@ const symptomSchema = new Schema({
         required: "Please select a valid option"
     },
     soreEye: {
-        type: Boolean,
+        type: String,
         default: false
     },
     redEye: {
-        type: Boolean,
+        type: String,
         default: false
     },
     dryEye: {
-        type: Boolean,
+        type: String,
         default: false
     },
     itchyEye: {
-        type: Boolean,
+        type: String,
         default: false
     },
     blurryVision: {
-        type: Boolean,
+        type: String,
         default: false
     },
     lossofVision: {
-        type: Boolean,
+        type: String,
         default: false
     },
     doubleVision: {
-        type: Boolean,
+        type: String,
         default: false
     },
     headaches: {
-        type: Boolean,
+        type: String,
         default: false
     },
     floaters: {
-        type: Boolean,
+        type: String,
         default: false
     },
     flashes: {
-        type: Boolean,
+        type: String,
         default: false
     },
     pain: {
-        type: Number,
+        type: String,
         default: false
     },
     date: {
@@ -57,6 +57,6 @@ const symptomSchema = new Schema({
       },
 })
 
-const Symptom = mongoose.model("symptom", symptomSchema);
+const Symptom = mongoose.model("Symptom", symptomSchema);
 
 module.exports = Symptom;

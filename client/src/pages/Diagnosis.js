@@ -2,7 +2,7 @@ import React from "react"
 import DiagnosisForm from "../components/Forms/DiagnosisForm";
 import Navbar from "../components/Navbar/Navbar";
 
-const Diagnosis = () => {
+function Diagnosis() {
     return (
         <div>
             <Navbar />
