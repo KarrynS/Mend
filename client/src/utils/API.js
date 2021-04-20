@@ -13,7 +13,7 @@ export default {
     },
 
     newSymptom: function(userData) {
-        return axios.post("api/user/symptom", userData)
+        return axios.post("api/symptom/", userData)
 
     },
     logout: () => {
@@ -21,5 +21,10 @@ export default {
     },
     populate: function(symptomData) {
       return axios.get("/populated", symptomData)
+    },
+    loadSavedSymptoms: () => {
+      
+      return axios.get('api/symptom')
     }
+    
 }
