@@ -6,7 +6,7 @@ const symptomRoutes = require("./symptom");
 router.use("/user", userRoutes);
 
 // User routes
-//router.use("/user", symptomRoutes);
+router.use("/symptom", symptomRoutes);
 
 
 module.exports = router;

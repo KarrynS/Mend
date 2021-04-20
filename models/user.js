@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
+const passport = require("passport");
 
 const Schema = mongoose.Schema;
 
@@ -70,6 +71,8 @@ bcrypt.compare(candidatePassword, hash, function(err, isMatch) {
     callback(null, isMatch);
 });
 }
+
+
 
 
 ///Trying to change dob entry to an age value   ******need to check age calc is saving to schema

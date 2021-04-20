@@ -2,11 +2,10 @@
 const express = require("express");
 const session = require("express-session");
 const mongoose = require("mongoose");
-const passport = require("./config/passport");
+const passport = require("passport");
 const path = require("path");
 const routes = require("./routes");
-var bodyParser = require('body-parser');
-var cookieParser = require('cookie-parser');
+
 
 //setting up port
 const PORT = process.env.PORT || 8080;
@@ -19,11 +18,6 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-
-// BodyParser Middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
 
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
@@ -40,7 +34,6 @@ mongoose.connect(
         useFindAndModify: false
       }
 );
-const db = mongoose.connection;
 
 // Routes
 app.use(routes);

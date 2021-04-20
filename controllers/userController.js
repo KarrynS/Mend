@@ -7,14 +7,14 @@ module.exports = {
         var password2 = req.body.password2;
       
         if (password == password2){
-          var newUser = new User({
+          var newUser = new db.User({
             name: req.body.name,
             email: req.body.email,
             username: req.body.username,
             password: req.body.password
           });
       
-          User.createUser(newUser, function(err, user){
+          db.User.createUser(newUser, function(err, user){
             if(err) throw err;
             res.send(user).end()
           });
@@ -40,6 +40,9 @@ module.exports = {
         .catch(err => {
           res.json(err);
         });
+    },
+    login: function(req,res) {
+      res.send(req.user);
     }
 }
 

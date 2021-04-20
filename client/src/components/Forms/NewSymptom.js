@@ -48,7 +48,7 @@ function NewSymptom() {
             soreEye: "",
             redEye: "",
             dryEye: "",
-            itchEye: "",
+            itchyEye: "",
             blurryVision: "",
             lossofVision: "",
             doubleVision: "",
