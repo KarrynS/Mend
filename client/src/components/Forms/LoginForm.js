@@ -6,7 +6,7 @@ import API from "../../utils/API";
 function LoginForm() {
        //establishing form values
        const [formObject, setformObject] = useState({
-        email: "",
+        username: "",
         password: ""
     })
 
@@ -22,13 +22,13 @@ function LoginForm() {
     //upon loging, use API to autheticate user
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        if (formObject.email && formObject.password && formObject) {
+        if (formObject.username && formObject.password && formObject) {
             API.login({
-                email: formObject.email,
+                username: formObject.username,
                 password: formObject.password
             })
             .then(() => setformObject({
-                email: "",
+                username: "",
                 password: ""
             }))
             .then(() => {
@@ -48,14 +48,14 @@ function LoginForm() {
                             <h2>Login Form</h2>
                             <form className="login" onSubmit={handleFormSubmit}>
                                 <div className="form-group">
-                                    <label htmlFor="exampleInputEmail1">Email address</label>
+                                    <label htmlFor="exampleInputEmail1">Username</label>
                                     <input 
                                         onChange={handleInputChange}
-                                        type="email" 
-                                        name="email" 
+                                        type="text" 
+                                        name="username" 
                                         className="form-control" 
-                                        id="email-input" 
-                                        placeholder="Email"/>
+                                        id="username-input" 
+                                        placeholder="Username"/>
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="exampleInputPassword1">Password</label>

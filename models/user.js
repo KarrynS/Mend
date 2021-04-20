@@ -12,12 +12,14 @@ const userSchema = new Schema({
     },
     username: {
         type: String,
-        index:true
+        index:true,
+        required: "Please enter a user name"
     },
     email: {
         type: String,
         unique: true,
-        match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+        match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
+        required: "Please enter an email address"
       },
     password: {
         type: String,

@@ -1,6 +1,6 @@
 const db = require("../models");
 
-//Defining methods for profileController
+//Defining methods for userController
 module.exports = {
     create: function(req,res) {
         var password = req.body.password;
@@ -11,9 +11,11 @@ module.exports = {
             name: req.body.name,
             email: req.body.email,
             username: req.body.username,
-            password: req.body.password
-          });
-      
+            password: req.body.password,
+            birthday: req.body.birthday
+          }
+          );
+          console.log("dbUser/userController", newUser)
           db.User.createUser(newUser, function(err, user){
             if(err) throw err;
             res.send(user).end()
