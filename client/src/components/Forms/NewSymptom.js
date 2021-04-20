@@ -1,21 +1,21 @@
-import React, {useState} from "react";
+import React, {useState, useEffect } from "react";
 import "./NewSymptom.css";
 import API from "../../utils/API";
 
 function NewSymptom() {
     const [formObject, setFormObject] = useState({
         eye: "", 
-        soreEye: "",
-        redEye: "",
-        dryEye: "",
-        itchEye: "",
-        blurryVision: "",
-        lossofVision: "",
-        doubleVision: "",
-        headaches: "",
-        floaters: "",
-        flashes: "",
-        pain: ""
+        soreEye: false,
+        redEye: false,
+        dryEye: false,
+        itchyEye: false,
+        blurryVision: false,
+        lossofVision: false,
+        doubleVision: false,
+        headaches: false,
+        floaters: false,
+        flashes: false,
+        pain: false
     })
 
     function handleInputChange(event) {
@@ -28,6 +28,8 @@ function NewSymptom() {
     
     const handleFormSubmit = (e) => {
         e.preventDefault();
+
+        console.log("formObject = ", formObject)
 
         API.newSymptom({
             eye: formObject.eye,
@@ -65,6 +67,18 @@ function NewSymptom() {
         console.log("New symptoms", formObject)
     }
 
+    //loading saved symptoms API call
+    useEffect(() => {
+        loadSavedSymptoms();
+        },[])
+
+    const loadSavedSymptoms = () => {
+        API.loadSavedSymptoms()
+        .then(res => {
+            
+            console.log("response =", res);
+        })
+    }
 
     return (
         <>
