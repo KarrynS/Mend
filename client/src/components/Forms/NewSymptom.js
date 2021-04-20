@@ -18,25 +18,20 @@ function NewSymptom() {
         pain: ""
     })
 
-    // function handleInputChange(event) {
-    //     const { name, value } = event.target;
-    //     setFormObject({
-    //         ...formObject, 
-    //         [name]: value
-    //     })
-    // }
-    
-
-    const handleFormSubmit = (e) => {
-        const { name, value } = e.target;
+    function handleInputChange(event) {
+        const { name, value } = event.target;
         setFormObject({
             ...formObject, 
             [name]: value
         })
+    }
+    
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
 
-        console.log("New symptoms", formObject)
+        
 
-        API.Symptom({
+        API.newSymptom({
             eye: formObject.eye,
             soreEye: formObject.soreEye,
             redEye: formObject.redEye,
@@ -69,6 +64,7 @@ function NewSymptom() {
             window.location.href = "/symptoms";
         })
         .catch(err => console.log(err));
+        console.log("New symptoms", formObject)
     }
 
 
@@ -84,7 +80,7 @@ function NewSymptom() {
                         <div className="row">
                         <div className="col col-lg-4">
                             <div className="form-check">
-                                <input  name="eye" className="form-check-input" type="checkbox" value="Right" id="flexCheckDefault"/>
+                                <input  onChange={handleInputChange} name="eye" className="form-check-input" type="checkbox" value="Right" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                   Right Eye
                                 </label>
@@ -92,7 +88,7 @@ function NewSymptom() {
                         </div>
                         <div className="col col-lg-4">
                             <div className="form-check">
-                            <input  name="eye" className="form-check-input" type="checkbox" value="Left" id="flexCheckDefault"/>
+                            <input  name="eye" onChange={handleInputChange} className="form-check-input" type="checkbox" value="Left" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                   Left Eye
                                 </label>
@@ -100,7 +96,7 @@ function NewSymptom() {
                         </div>
                         <div className="col col-lg-4">
                             <div className="form-check">
-                                <input  name="eye"className="form-check-input" type="checkbox" value="Both" id="flexCheckDefault"/>
+                                <input  name="eye" onChange={handleInputChange} className="form-check-input" type="checkbox" value="Both" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                   Both Eyes
                                 </label>
@@ -108,7 +104,7 @@ function NewSymptom() {
                         </div>
                         <div className="col col-md-6">
                             <div className="form-check">
-                            <input  name="soreEye" className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                            <input  name="soreEye" onChange={handleInputChange} className="form-check-input" type="checkbox" value="true" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                   Sore Eyes
                                 </label>
@@ -116,7 +112,7 @@ function NewSymptom() {
                         </div>
                         <div className="col col-md-6">
                             <div className="form-check">
-                                <input  name="redEye" className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                                <input  name="redEye" onChange={handleInputChange} className="form-check-input" type="checkbox" value="true" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                  Red Eyes
                                 </label>
@@ -124,7 +120,7 @@ function NewSymptom() {
                         </div>
                         <div className="col col-md-6">
                             <div className="form-check">
-                                <input  name="dryEye" className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                                <input  name="dryEye" onChange={handleInputChange} className="form-check-input" type="checkbox" value="true" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                   Dry Eyes
                                 </label>
@@ -132,7 +128,7 @@ function NewSymptom() {
                         </div>
                         <div className="col col-md-6">
                             <div className="form-check">
-                                <input  name="itchyEye" className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                                <input  name="itchyEye" onChange={handleInputChange} className="form-check-input" type="checkbox" value="true" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                  Itchy Eyes
                                 </label>
@@ -140,7 +136,7 @@ function NewSymptom() {
                         </div>
                         <div className="col col-md-6">
                             <div className="form-check">
-                                <input  name="blurryVision" className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                                <input  name="blurryVision" onChange={handleInputChange} className="form-check-input" type="checkbox" value="true" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                   Blurry Vision
                                 </label>
@@ -148,7 +144,7 @@ function NewSymptom() {
                         </div>
                         <div className="col col-md-6">
                             <div className="form-check">
-                                <input  name="doubleVision" className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                                <input  name="doubleVision" onChange={handleInputChange} className="form-check-input" type="checkbox" value="true" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                  Double Vision
                                 </label>
@@ -156,7 +152,7 @@ function NewSymptom() {
                         </div>
                         <div className="col col-md-6">
                             <div className="form-check">
-                                <input  name="headaches" className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                                <input  name="headaches" onChange={handleInputChange} className="form-check-input" type="checkbox" value="true" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                   Headaches
                                 </label>
@@ -164,7 +160,7 @@ function NewSymptom() {
                         </div>
                         <div className="col col-md-6">
                             <div className="form-check">
-                                <input  name="floaters" className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                                <input  name="floaters" onChange={handleInputChange} className="form-check-input" type="checkbox" value="true" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                  Floaters
                                 </label>
@@ -172,7 +168,7 @@ function NewSymptom() {
                         </div>
                         <div className="col col-md-6">
                             <div className="form-check">
-                                <input  name="flashes" className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                                <input  name="flashes" onChange={handleInputChange} className="form-check-input" type="checkbox" value="true" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                 Flashes of light
                                 </label>
@@ -183,7 +179,7 @@ function NewSymptom() {
                                 <div className="col">
                                     <label htmlFor="customRange2" className="form-label">Pain Level : select nearest pain level</label>
                                     <div className="d-flex justify-content-center my-4">
-                                    <select className="form-select"  name="pain"  multiple aria-label="multiple select example">
+                                    <select className="form-select"  onChange={handleInputChange} name="pain"  multiple aria-label="multiple select example">
                                         <option value="No pain">No pain</option>
                                         <option value="Mild pain">Mild pain</option>
                                         <option value="Moderate pain">Moderate pain</option>
