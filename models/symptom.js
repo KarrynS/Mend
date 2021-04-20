@@ -8,11 +8,11 @@ const symptomSchema = new Schema({
         required: "Please select a valid option"
     },
     soreEye: {
-        type: String,
+        type: Boolean,
         default: false
     },
     redEye: {
-        type: String,
+        type: Boolean,
         default: false
     },
     dryEye: {
