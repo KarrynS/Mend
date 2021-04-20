@@ -16,35 +16,35 @@ const symptomSchema = new Schema({
         default: false
     },
     dryEye: {
-        type: String,
+        type: Boolean,
         default: false
     },
     itchyEye: {
-        type: String,
+        type: Boolean,
         default: false
     },
     blurryVision: {
-        type: String,
+        type: Boolean,
         default: false
     },
     lossofVision: {
-        type: String,
+        type: Boolean,
         default: false
     },
     doubleVision: {
-        type: String,
+        type: Boolean,
         default: false
     },
     headaches: {
-        type: String,
+        type: Boolean,
         default: false
     },
     floaters: {
-        type: String,
+        type: Boolean,
         default: false
     },
     flashes: {
-        type: String,
+        type: Boolean,
         default: false
     },
     pain: {

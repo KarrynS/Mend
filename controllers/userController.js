@@ -30,7 +30,16 @@ module.exports = {
         .catch(err => {
             res.status(422).json(err);
         });
+    },
+    populate: function(req, res) {
+        db.User.find({})
+        .populate("symptoms")
+        .then(dbUser => {
+          res.json(dbUser);
+        })
+        .catch(err => {
+          res.json(err);
+        });
     }
-
 }
 

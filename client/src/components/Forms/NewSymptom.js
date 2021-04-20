@@ -29,14 +29,12 @@ function NewSymptom() {
     const handleFormSubmit = (e) => {
         e.preventDefault();
 
-        
-
         API.newSymptom({
             eye: formObject.eye,
             soreEye: formObject.soreEye,
             redEye: formObject.redEye,
             dryEye: formObject.dryEye,
-            itchEye: formObject.itchyEye,
+            itchyEye: formObject.itchyEye,
             blurryVision: formObject.blurryVision,
             lossofVision: formObject.lossofVision,
             doubleVision: formObject.doubleVision,

@@ -14,7 +14,7 @@ export default {
         }
       );
     },
-    symptom: function(userData) {
+    newSymptom: function(userData) {
         return axios.post("api/user/symptom", userData)
 
     },
@@ -23,5 +23,8 @@ export default {
             req.logout();
             res.send(null)
           });
+    },
+    populate: function(symptomData) {
+      return axios.get("/populated", symptomData)
     }
 }

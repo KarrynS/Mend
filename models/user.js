@@ -37,7 +37,7 @@ const userSchema = new Schema({
     symptoms: [
         {
             type: Schema.Types.ObjectId,
-            ref: "symptom"
+            ref: "Symptom"
         }
     ]
 });
