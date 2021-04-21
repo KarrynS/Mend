@@ -33,9 +33,12 @@ function OptomLoginForm() {
             }))
             .then(() => {
                 console.log("loginData", formObject);
-                window.location.href = "/dashboard";
+                window.location.href = "/optometrist";
             })
-            .catch(err => console.log(err));
+            .catch((err) => {
+                console.log("Authorisation Error: ", err)
+                alert("Invalid login details")
+            });
         }
     }
 
