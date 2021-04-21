@@ -23,7 +23,6 @@ export default {
       return axios.get("/populated", symptomData)
     },
     loadSavedSymptoms: () => {
-      
       return axios.get('api/symptom')
     }
     

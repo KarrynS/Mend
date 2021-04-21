@@ -1,8 +1,11 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./NewSymptom.css";
 import API from "../../utils/API";
+import SavedSymptoms from "../Symptoms/index";
 
 function NewSymptom() {
+
+    //handling form input and form submit
     const [formObject, setFormObject] = useState({
         eye: "", 
         soreEye: false,
@@ -15,7 +18,7 @@ function NewSymptom() {
         headaches: false,
         floaters: false,
         flashes: false,
-        pain: false
+        pain: ""
     })
 
     function handleInputChange(event) {
@@ -68,17 +71,46 @@ function NewSymptom() {
     }
 
     //loading saved symptoms API call
+    const [symptoms, setSymptoms] = useState([]);
+
     useEffect(() => {
         loadSavedSymptoms();
         },[])
 
     const loadSavedSymptoms = () => {
         API.loadSavedSymptoms()
-        .then(res => {
-            
-            console.log("response =", res);
-        })
+            .then(res => {
+            setSymptoms(res.data)
+            console.log("response =", res.data);
+            })
+        .catch(err => console.log(err));
     }
+
+    const symptomsArray = () => {
+            const symptomsIssueCard = symptoms.map(symptom => {
+                console.log("symptomsIssueCard", symptom);
+                console.log("keys", Object.keys((symptom)));
+                const keys = Object.keys((symptom))
+
+        //         trueSymptoms = keys.filter((key) => {
+        //             return symptom[key] === true;
+               })
+            
+        //     const symptomCard = symptom;
+        //     for (const [key, value] of Object.entries(symptomCard)){
+        //         console.log(`${key}: ${value}`);
+        //         const symptomKey = `${key}`;
+        //         const symptomValue = `${value}`
+        //         console.log("symptomKey symptomValue", symptomKey, symptomValue)
+
+
+        //     }
+
+
+        // })
+        
+    }
+    symptomsArray();
 
     return (
         <>
@@ -90,6 +122,7 @@ function NewSymptom() {
                         <br/>
                         <p>Check all symptoms that apply</p>
                         <div className="row">
+                            <div className="row">
                         <div className="col col-lg-4">
                             <div className="form-check">
                                 <input  onChange={handleInputChange} name="eye" className="form-check-input" type="checkbox" value="Right" id="flexCheckDefault"/>
@@ -113,6 +146,8 @@ function NewSymptom() {
                                   Both Eyes
                                 </label>
                             </div>            
+                        </div>
+                        <hr/>
                         </div>
                         <div className="col col-md-6">
                             <div className="form-check">
@@ -209,6 +244,14 @@ function NewSymptom() {
                     </div>
                 </div>
             </div>
+
+            {symptoms.map(symptom => {
+                return (
+                    <SavedSymptoms 
+                    symptom={symptom}
+                    />
+                )
+            })}
         </>
     )
 }
