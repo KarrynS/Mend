@@ -23,7 +23,7 @@ function Topbar() {
                                 >Members</Link>
                     </li>
                     <li className ="nav-item">
-                        <Link to="/practitioner" className={window.location.pathname === "/practitioner" 
+                        <Link to="/optomlogin" className={window.location.pathname === "/optomlogin" 
                                     ? "nav-link active" 
                                     : "nav-link"
                                     }

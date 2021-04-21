@@ -11,10 +11,8 @@ export default {
     currentUser: () => {
       return axios.get('/api/user/current')
     },
-
     newSymptom: function(userData) {
         return axios.post("api/symptom/", userData)
-
     },
     logout: () => {
         return axios.get('/api/user/logout')
@@ -24,6 +22,12 @@ export default {
     },
     loadSavedSymptoms: () => {
       return axios.get('api/symptom')
-    }
+    },
+    optomLogin: (userData)=> {
+      return axios.post('/api/optom/login', userData)
+    },
+    optomSignUp: function(userData) {
+      return axios.post("/api/optom/signup", userData)
+    },
     
 }

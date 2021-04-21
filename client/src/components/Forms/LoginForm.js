@@ -45,7 +45,7 @@ function LoginForm() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-md-offset-3">
-                            <h2>Login Form</h2>
+                            <h2>Member Login Form</h2>
                             <form className="login" onSubmit={handleFormSubmit}>
                                 <div className="form-group">
                                     <label htmlFor="exampleInputEmail1">Username</label>

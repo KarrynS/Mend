@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const userController = require("../../controllers/userController");
+const optometristController = require("../../controllers/optometristController");
 const passport = require("passport");
 const { Optometrist } = require("../../models");
 
@@ -36,8 +36,8 @@ Optometrist.getUserById(id, function(err, user) {
 });
 
 router.route("/signup")
-    .post(userController.create)
-    .get(userController.find);    
+    .post(optometristController.create)
+    .get(optometristController.find);  
 
 router.post('/login',
     passport.authenticate('local'),
@@ -56,3 +56,5 @@ router.get('/current', function(req, res){
     req.logout();
     res.send(null)
   });
+
+module.exports = router;

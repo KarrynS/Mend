@@ -15,7 +15,7 @@ module.exports = {
             birthday: req.body.birthday
           }
           );
-          console.log("dbUser/optometristController", newUser)
+          console.log("dbOptometrist/optometristController", newUser)
           db.Optometrist.createUser(newUser, function(err, user){
             if(err) throw err;
             res.send(user).end()
@@ -24,4 +24,13 @@ module.exports = {
           res.status(500).send("{errors: \"Passwords don't match\"}").end()
         }
     },
+    find: function(req,res) {
+      db.Optometrist.find(req.body)
+      .then(dbUser => {
+          res.json(dbUser);
+      })
+      .catch(err => {
+          res.status(422).json(err);
+      });
+  },
 }

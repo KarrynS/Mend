@@ -1,0 +1,53 @@
+.imgDiv {
+    background-image: url("../../img/dark-green-texture.jpg");
+    width: auto;
+    height: 100vh;
+}
+
+.imageDiv{
+    padding: 100px;
+    justify-content: center;
+}
+
+.LogInImage {
+    border-radius: 50% !important;
+    border: 10px double #d5b590 ;
+}
+
+.login {
+    font-family: Courier, monospace;
+    color: #d5b590;
+    border: 1px  #d5b590 solid;
+    border-radius: 2%;
+    padding: 25px;
+}
+
+h2 {
+    font-family: 'Abril Fatface';
+    color: #d5b590 !important;
+    font-size: 32px !important;
+    padding: 25px;
+}
+
+h3 {
+    font-family: 'Abril Fatface';
+    color: #d5b590 !important;
+    font-size: 28px;
+    padding: 25px;
+}
+
+a {
+    color:#d5b590 ! important;
+    font-family: Courier, monospace;
+    font-size: 20px;
+}
+
+input {
+    background-color: lightgray !important;
+}
+
+button {
+    background-color: #d5b590!important;
+    color: black;
+    font-family: 'Raleway', Courier, monospace;
+}
