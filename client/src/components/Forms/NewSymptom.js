@@ -86,31 +86,25 @@ function NewSymptom() {
         .catch(err => console.log(err));
     }
 
-    const symptomsArray = () => {
-            const symptomsIssueCard = symptoms.map(symptom => {
-                console.log("symptomsIssueCard", symptom);
-                console.log("keys", Object.keys(symptom));
-                const keys = Object.keys((symptom))
+    // const symptomsArray = () => {
+    //         const symptomsIssueCard = symptoms.map(symptom => {
+    //             console.log("symptomsIssueCard", symptom);
+    //             console.log("keys", Object.keys(symptom));
+    //             const keys = Object.keys((symptom))
 
-        //         trueSymptoms = keys.filter((key) => {
-        //             return symptom[key] === true;
-               })
-            
-        //     const symptomCard = symptom;
-        //     for (const [key, value] of Object.entries(symptomCard)){
-        //         console.log(`${key}: ${value}`);
-        //         const symptomKey = `${key}`;
-        //         const symptomValue = `${value}`
-        //         console.log("symptomKey symptomValue", symptomKey, symptomValue)
-
-
-        //     }
-
-
-        // })
-        
-    }
-    symptomsArray();
+    //     //         trueSymptoms = keys.filter((key) => {
+    //     //             return symptom[key] === true;
+    //            })
+    //     //     const symptomCard = symptom;
+    //     //     for (const [key, value] of Object.entries(symptomCard)){
+    //     //         console.log(`${key}: ${value}`);
+    //     //         const symptomKey = `${key}`;
+    //     //         const symptomValue = `${value}`
+    //     //         console.log("symptomKey symptomValue", symptomKey, symptomValue)
+    //     //     }
+    //     // })
+    // }
+    // symptomsArray();
 
     return (
         <>

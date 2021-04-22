@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e3bffb25.chunk.css",
+    "main.js": "/static/js/main.c25ae111.chunk.js",
+    "main.js.map": "/static/js/main.c25ae111.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.992eac29.js",
+    "runtime-main.js.map": "/static/js/runtime-main.992eac29.js.map",
+    "static/css/2.02adba32.chunk.css": "/static/css/2.02adba32.chunk.css",
+    "static/js/2.256b631d.chunk.js": "/static/js/2.256b631d.chunk.js",
+    "static/js/2.256b631d.chunk.js.map": "/static/js/2.256b631d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.7ea8f6946bae633069bae514fba01b6a.js": "/precache-manifest.7ea8f6946bae633069bae514fba01b6a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.02adba32.chunk.css.map": "/static/css/2.02adba32.chunk.css.map",
+    "static/css/main.e3bffb25.chunk.css.map": "/static/css/main.e3bffb25.chunk.css.map",
+    "static/js/2.256b631d.chunk.js.LICENSE.txt": "/static/js/2.256b631d.chunk.js.LICENSE.txt",
+    "static/media/OptometristLogin.css": "/static/media/dark-green-texture.e90a0d8a.jpg",
+    "static/media/glassesonbook.jpg": "/static/media/glassesonbook.9169418f.jpg",
+    "static/media/leaf.jpg": "/static/media/leaf.eb27cd08.jpg",
+    "static/media/optomlogin.jpg": "/static/media/optomlogin.e9a47341.jpg",
+    "static/media/optomsignup.jpg": "/static/media/optomsignup.c64835c7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.992eac29.js",
+    "static/css/2.02adba32.chunk.css",
+    "static/js/2.256b631d.chunk.js",
+    "static/css/main.e3bffb25.chunk.css",
+    "static/js/main.c25ae111.chunk.js"
+  ]
+}

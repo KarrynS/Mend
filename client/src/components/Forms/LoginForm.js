@@ -27,11 +27,11 @@ function LoginForm() {
                 username: formObject.username,
                 password: formObject.password
             })
-            .then(() => setformObject({
-                username: "",
-                password: ""
-            }))
-            .then(() => {
+            .then((res) => {
+                setformObject({
+                    username: "",
+                    password: ""
+                })
                 console.log("loginData", formObject);
                 window.location.href = "/dashboard";
             })
