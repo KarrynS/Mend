@@ -25,20 +25,21 @@ module.exports = {
         }
     },
     find: function(req,res) {
-      db.Optometrist.find(req.body)
-      .then(dbUser => {
-          res.json(dbUser);
-      })
-      .catch(err => {
-          res.status(422).json(err);
-      });
+      db.Optometrist
+        .find(req.body)
+        .then(dbUser => {res.json(dbUser);})
+        .catch(err => {res.status(422).json(err);});
     },
-    loadPatient: function(req,res) {
-      db.Optometrist.find({ _id: req.user._id})
-      .then(user =>  {
-          console.log("patient added to Optom =", user)
-          res.status(200).json(user);
+    searchPatient: function(req,res) {
+      console.log("req query", req.query);
+      db.User
+      .findOne({
+        name: req.query.name, 
+        birthday: req.query.birthday,
+        email: req.query.email
       })
-  }
+      .then(user =>  {console.log("Optom patient search  =", user)
+          res.status(200).json(user);})
+      }
     
 }

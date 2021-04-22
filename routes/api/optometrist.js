@@ -39,7 +39,7 @@ Optometrist.getUserById(id, function(err, user) {
 // router.route("/")
 //   .post(optomteristController.find);
 router.route("/patient")
-  .get(optometristController.loadPatient);
+  .get(optometristController.searchPatient);
 
 
 //Authentication routes

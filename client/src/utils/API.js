@@ -38,7 +38,8 @@ export default {
       return axios.get('/api/optom/logout')
     },
     findPatient: (userData) => {
-      return axios.get('api/optom/patient')
+      const queryParams = `?name=${userData.name}&email=${userData.email}&birthday=${userData.birthday}`;
+      return axios.get(`api/optom/patient${queryParams}`, userData)
     }
     
 }
