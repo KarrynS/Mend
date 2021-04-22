@@ -89,7 +89,7 @@ function NewSymptom() {
     const symptomsArray = () => {
             const symptomsIssueCard = symptoms.map(symptom => {
                 console.log("symptomsIssueCard", symptom);
-                console.log("keys", Object.keys((symptom)));
+                console.log("keys", Object.keys(symptom));
                 const keys = Object.keys((symptom))
 
         //         trueSymptoms = keys.filter((key) => {

@@ -5,8 +5,9 @@ const { Optometrist } = require("../../models");
 
 
 var LocalStrategy = require('passport-local').Strategy;
-passport.use(new LocalStrategy(
+passport.use("user-optom", new LocalStrategy(
   function(username, password, done) {
+    console.log("optom passport", username, password)
     Optometrist.getUserByUsername(username, function(err, user){
       if(err) throw err;
       if(!user){
@@ -48,7 +49,7 @@ router.route("/signup")
 
 // Endpoint to login
 router.post('/login',
-  passport.authenticate('local'),
+  passport.authenticate('user-optom'),
   function(req, res) {
     res.send(req.user);
   }

@@ -4,8 +4,9 @@ const passport = require("passport");
 const { User } = require("../../models");
 
 var LocalStrategy = require('passport-local').Strategy;
-passport.use(new LocalStrategy(
+passport.use("user", new LocalStrategy(
   function(username, password, done) {
+    console.log("passport", username, password)
     User.getUserByUsername(username, function(err, user){
       if(err) throw err;
       if(!user){
@@ -40,8 +41,9 @@ router.route("/signup")
 
 // Endpoint to login
 router.post('/login',
-  passport.authenticate('local'),
+  passport.authenticate('user'),
   function(req, res) {
+    console.log("login error: ", req)
     res.send(req.user);
   }
 );
