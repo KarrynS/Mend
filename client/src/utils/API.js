@@ -36,6 +36,9 @@ export default {
     },
     optomLogout: () => {
       return axios.get('/api/optom/logout')
-  },
+    },
+    findPatient: (userData) => {
+      return axios.get('api/optom/patient')
+    }
     
 }

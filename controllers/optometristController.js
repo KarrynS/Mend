@@ -32,5 +32,13 @@ module.exports = {
       .catch(err => {
           res.status(422).json(err);
       });
-  },
+    },
+    loadPatient: function(req,res) {
+      db.Optometrist.find({ _id: req.user._id})
+      .then(user =>  {
+          console.log("patient added to Optom =", user)
+          res.status(200).json(user);
+      })
+  }
+    
 }

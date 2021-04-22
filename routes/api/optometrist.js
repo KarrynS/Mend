@@ -35,26 +35,35 @@ Optometrist.getUserById(id, function(err, user) {
 });
 });
 
+// router.route("/")
+//   .post(optomteristController.find);
+router.route("/patient")
+  .get(optometristController.loadPatient);
+
+
+//Authentication routes
 router.route("/signup")
     .post(optometristController.create)
     .get(optometristController.find);  
 
+// Endpoint to login
 router.post('/login',
-    passport.authenticate('local'),
-    function(req, res) {
-      res.send(req.user);
-    }
-  );
-// Endpoint to get current user
-router.get('/current', function(req, res){
+  passport.authenticate('local'),
+  function(req, res) {
     res.send(req.user);
-  })
-  
-  
-  // Endpoint to logout
-  router.get('/logout', function(req, res){
-    req.logout();
-    res.send(null)
-  });
+  }
+);
+
+// Endpoint to get current user
+router.get('/user', function(req, res){
+  res.send(req.user);
+})
+
+
+// Endpoint to logout
+router.get('/logout', function(req, res){
+  req.logout();
+  res.send(null)
+});
 
 module.exports = router;

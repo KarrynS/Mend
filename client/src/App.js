@@ -17,13 +17,13 @@ function App() {
       <Router>
         <Switch>
           <Route exact path = {["/", "/signup"]} component={SignUp} />
-          <Route exact path = "/login" component={Login} />
-          <Route exact path = "/optomlogin" component={OptomLogin} />
-          <Route exact path = "/optomsignup" component={OptomSignUp} />
-          <Route exact path = "/optometrist" component={Optometrist} />
-          <Route exact path = "/dashboard" component={Dashboard} />
-          <Route exact path = "/symptoms" component={Symptoms} />
-          <Route exact path = "/diagnosis" component={Diagnosis} />
+          <Route path = "/login" component={Login} />
+          <Route path = "/optomlogin" component={OptomLogin} />
+          <Route path = "/optomsignup" component={OptomSignUp} />
+          <Route path = "/optometrist" component={Optometrist} />
+          <Route path = "/dashboard" component={Dashboard} />
+          <Route path = "/symptoms" component={Symptoms} />
+          <Route path = "/diagnosis" component={Diagnosis} />
           {/* <Route exact path = "/treatment" component={Treatment} /> */}
         </Switch> 
       </Router>

@@ -37,22 +37,25 @@ router.route("/signup")
     .post(userController.create)
     .get(userController.find);    
 
+
+// Endpoint to login
 router.post('/login',
-    passport.authenticate('local'),
-    function(req, res) {
-      res.send(req.user);
-    }
-  );
-// Endpoint to get current user
-router.get('/current', function(req, res){
+  passport.authenticate('local'),
+  function(req, res) {
     res.send(req.user);
-  })
-  
-  
-  // Endpoint to logout
-  router.get('/logout', function(req, res){
-    req.logout();
-    res.send(null)
-  });
+  }
+);
+
+// Endpoint to get current user
+router.get('/user', function(req, res){
+  res.send(req.user);
+})
+
+
+// Endpoint to logout
+router.get('/logout', function(req, res){
+  req.logout();
+  res.send(null)
+});
 
 module.exports = router;
