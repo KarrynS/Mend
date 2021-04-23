@@ -6,7 +6,7 @@ module.exports = {
         console.log("body = ", req.body)
         db.Symptom.create(req.body)
         .then(dbSymptom => {
-            console.log(req.user)
+            console.log("req.user", req.user)
             db.User.findOneAndUpdate({
                 _id: req.user._id
             }, {$push: {symptoms: dbSymptom._id}})
