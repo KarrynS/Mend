@@ -40,6 +40,13 @@ module.exports = {
       })
       .then(user =>  {console.log("Optom patient search  =", user)
           res.status(200).json(user);})
-      }
+    },
+    load: function(req,res) {
+      db.User.findOne({_id: req.user.symptoms})
+      .then(symptoms => {
+        console.log("Patient symptoms /OPtom", symptoms)
+        res.status(200).json(symptoms);
+      })
+    }
     
 }

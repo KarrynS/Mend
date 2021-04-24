@@ -241,9 +241,11 @@ function NewSymptom() {
 
             {symptoms.map(symptom => {
                 return (
-                    <SavedSymptoms 
-                    symptom={symptom}
+                    <div className="symptomDiv">
+                         <SavedSymptoms 
+                            symptom={symptom}
                     />
+                    </div>
                 )
             })}
         </>

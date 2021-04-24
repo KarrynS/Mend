@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import API from '../../utils/API';
+import PatientSymptoms from '../Patients';
 import "./PatientSearch.css"
 
 
@@ -10,6 +11,8 @@ const PatientSearch = () => {
         email: "",
         birthday: ""
     });
+    const [patient, setPatient] = useState()
+    // const [getSymptoms, setGetSymptoms] = useState();
 
     function handleInputChange(event) {
         const { name, value } = event.target;
@@ -18,7 +21,6 @@ const PatientSearch = () => {
             [name]: value
         })
         console.log("patient search:", patientSearch)
-
     }
 
     const handleFormSubmit = (e) => {
@@ -29,18 +31,46 @@ const PatientSearch = () => {
             email: patientSearch.email,
             birthday: patientSearch.birthday
         })
-        .then(() => setPatientSearch({
-            name: "", 
-            email: "",
-            birthday: ""
-        }))
+        .then((res) => { 
+            console.log("Patient response", res)
+            setPatient(res.data)
+            // document.querySelector(".patientSymptoms")
+            // .appendChild(renderPatient());
+            setPatientSearch({
+                name: "", 
+                email: "",
+                birthday: ""
+            })
+        })
         .then(() => {
             console.log("patient search:", patientSearch)
+           
         })
         .catch(err => console.log(err));
     }
 
-    
+    // useEffect(() => {
+    //     alert("State updated")
+    // }, [patient])
+
+    // const renderPatient = () => {
+    //     return (
+            
+    //     )
+    // }
+
+    // useEffect(() => {
+    //     getPatientSymptoms();
+    // }, [getSymptoms])
+
+    // const getPatientSymptoms = () => {
+    //     API.loadPatient()
+    //     .then(res => {
+    //         setGetSymptoms(res.data)
+    //         console.log("searchPatient", res.data);
+    //     })
+    //     .catch(err => console.log(err));
+    // }
 
 
     return (
@@ -63,6 +93,13 @@ const PatientSearch = () => {
                 <button type="submit" className="btn btn-default searchBtn">Search</button>
                 </form>
             </div>   
+
+            <div className="patientSymptoms">
+                    {patient ?  <PatientSymptoms patient={patient}/> : null}
+                </div>
+                    
+          
+   
         </>
     )
 }
