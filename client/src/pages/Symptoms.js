@@ -5,6 +5,8 @@ import SavedSymptoms from "../components/Symptoms/index"
 
 
 function Symptoms() {
+
+
     return(
         <>
             <Navbar />

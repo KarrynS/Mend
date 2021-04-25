@@ -1,6 +1,7 @@
 import "./style.css";
 import React from 'react';
 import Moment from  'react-moment';
+import API from "../../utils/API";
 
 const SavedSymptoms = (props) => {
     console.log("SavedSymptom props", props);
@@ -63,6 +64,12 @@ const SavedSymptoms = (props) => {
        }
     }
 
+    function removeSymptom(id) {
+        console.log("delete id", props.symptom._id)
+        API.deleteSymptom(id)
+        .then(res => getTrueSymptoms())
+        .catch( err => console.log(err));
+    }
     return (
         <>
           
@@ -77,7 +84,7 @@ const SavedSymptoms = (props) => {
                             {/* List Symptoms here */}
                             {getTrueSymptoms()}
                         </ul>
-                        <button type="submit" className="deletebtn"><i className="fa fa-close"></i></button>                        </div>
+                        <button onClick={() => removeSymptom(props.symptom._id)} className="deletebtn"><i className="fa fa-close"></i></button>                        </div>
                         
                     </div>
             

@@ -5,4 +5,8 @@ router.route("/")
     .post(symptomController.create)
     .get(symptomController.load);
 
+
+router.route("/:id")
+    .delete(symptomController.remove);
+
 module.exports = router;
