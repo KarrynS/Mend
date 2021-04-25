@@ -1,8 +1,7 @@
-import "./style.css";
-import React from 'react'
+import React from 'react' 
 
-const SavedSymptoms = (props) => {
-    console.log("SavedSymtpom props", props);
+const ShowSymptoms = (props) => {
+    console.log("props on ShowSymptoms", props)
 
     const symptomType = {
         eye: "Affected eye",
@@ -13,26 +12,25 @@ const SavedSymptoms = (props) => {
         blurryVision: "Blurry vision",
         lossofVision: "Loss of vision", 
         doubleVision: "Double vision",
-        headaches: "headaches", 
-        floaters: "floaters", 
-        flashes: "flashes of light",
+        headaches: "Headaches", 
+        floaters: "Floaters", 
+        flashes: "Flashes of light",
         pain: "pain"
     }
 
     const getTrueSymptoms = () => {
-        const keys = Object.keys(props.symptom || {});
-        const trueSymptoms = keys.filter((key) => {
-            return props.symptom[key] === true
-        });
-
-        return trueSymptoms.map((symptom) => {
-            return (
-                <li>{symptomType[symptom]}</li>
-            )
-           
-        });
+            const keys = Object.keys(props.symptom || {});
+            console.log("props.symptoms in getTrueSymptoms", Object.keys(props.symptom))
+            const trueSymptoms = keys.filter((key) => {
+                return props.symptom[key] === true
+            });
+            return trueSymptoms.map((symptom) => {
+                return (
+                    <li>{symptomType[symptom]}</li>
+                )
+               
+            });
     }
-
     return (
         <>
             <div className="symptomContainer">
@@ -40,10 +38,7 @@ const SavedSymptoms = (props) => {
                     <div className=" cardDiv col-4">
                         <p> Symptoms: </p>
                         <ul>
-                            {/* {affectedEye()} */}
                             {getTrueSymptoms()}
-                            {/* list symptoms here */}
-                          
                         </ul>
                     </div>
                 </div>
@@ -52,4 +47,4 @@ const SavedSymptoms = (props) => {
     )
 }
 
-export default SavedSymptoms;
+export default ShowSymptoms

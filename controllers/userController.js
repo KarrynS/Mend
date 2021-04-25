@@ -33,16 +33,16 @@ module.exports = {
             res.status(422).json(err);
         });
     },
-    populate: function(req, res) {
-        db.User.find({})
-        .populate("symptoms")
-        .then(dbUser => {
-          res.json(dbUser);
-        })
-        .catch(err => {
-          res.json(err);
-        });
-    },
+    // populate: function(req, res) {
+    //     db.User.find({})
+    //     .populate("symptoms")
+    //     .then(dbUser => {
+    //       res.json(dbUser);
+    //     })
+    //     .catch(err => {
+    //       res.json(err);
+    //     });
+    // },
     login: function(req,res) {
       res.send(req.user);
     }

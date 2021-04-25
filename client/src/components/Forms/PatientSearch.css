@@ -1,5 +1,5 @@
 .searchDiv {
-    width: 40%;
+    width: 90%;
     justify-content: left;
     text-align: left;
 
@@ -11,7 +11,7 @@
     border: solid;
     font-family: Courier, monospace;
     border: 1px  #d5b590 solid;
-    border-radius: 2%;
+    border-radius: 5px;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 25px;
@@ -22,12 +22,13 @@
     text-align: left;
 }
 
-.form-floatin {
-  background-color: white !important;
-}
 
 .searchTitle {
     color: #1b4738 !important;
     padding-left: 0px;
 }
 
+.label {
+    justify-content: center !important;
+
+}

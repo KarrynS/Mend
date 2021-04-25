@@ -1,5 +1,6 @@
 import "./style.css";
-import React, {useState, useEffect} from 'react'
+import React from 'react'
+import ShowSymptoms from "./ShowSymptoms";
 
 const PatientSymptoms = ({patient}) => {
     // const { name, birthday } = props.patient
@@ -10,13 +11,24 @@ const PatientSymptoms = ({patient}) => {
     
     // },[patient] ) 
 
-
     console.log("patient props", patient)
-    // console.log("Props.name", props.name)
-    // console.log("Props.symptoms", props.symptoms)
+    console.log("patientSymptoms props.symptoms", patient.symptoms)
+    
     return (
         <>
-         <h5>Patients Name goes here : {patient.name}</h5>   
+            <h3>Patient: {patient.name}</h3>
+            <div className="symptomDiv col-4">
+                <h5> Symptoms recorded :</h5>
+                <ul>
+                    {patient.symptoms.map(symptom => {
+                        return (
+                            <ShowSymptoms symptom={symptom}/>
+                         )
+                    })}
+    
+                </ul>
+            </div>
+            
          {/* <p> Birthday {props.patient.birthday}</p>
          <p> Email {props.patient.email}</p> */}
         </>

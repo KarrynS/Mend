@@ -38,6 +38,7 @@ module.exports = {
         birthday: req.query.birthday,
         email: req.query.email
       })
+      .populate("symptoms")
       .then(user =>  {console.log("Optom patient search  =", user)
           res.status(200).json(user);})
     },
