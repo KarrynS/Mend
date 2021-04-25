@@ -3,8 +3,36 @@
     font-family: Courier, monospace;
     margin-left: 20px;
     border-radius: 5px;
+    padding: 10px 16px;
+    margin: 20px;
+    width: 50%;
+}
+
+.symptomDiv:hover{
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 }
 
 .h5 {
     color: #1b4738
 }
+
+/* Style buttons */
+.deletebtn {
+    /* background-color:#1b4738 !important; Blue background */
+    /* border: 1px #1b4738 solid; Remove borders */
+    color: #1b4738 !important; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    width: 10%;
+    height: 2%;
+  }
+  
+  /* Darker background on mouse-over */
+  .deletebtn:hover {
+    background-color: RoyalBlue;
+  }
+
+  ul li{
+      background-color: #d5b590 !important;
+  }

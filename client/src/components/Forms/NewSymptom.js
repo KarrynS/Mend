@@ -3,6 +3,7 @@ import "./NewSymptom.css";
 import API from "../../utils/API";
 import SavedSymptoms from "../Symptoms/index";
 
+
 function NewSymptom() {
 
     //handling form input and form submit
@@ -86,30 +87,11 @@ function NewSymptom() {
         .catch(err => console.log(err));
     }
 
-    // const symptomsArray = () => {
-    //         const symptomsIssueCard = symptoms.map(symptom => {
-    //             console.log("symptomsIssueCard", symptom);
-    //             console.log("keys", Object.keys(symptom));
-    //             const keys = Object.keys((symptom))
-
-    //     //         trueSymptoms = keys.filter((key) => {
-    //     //             return symptom[key] === true;
-    //            })
-    //     //     const symptomCard = symptom;
-    //     //     for (const [key, value] of Object.entries(symptomCard)){
-    //     //         console.log(`${key}: ${value}`);
-    //     //         const symptomKey = `${key}`;
-    //     //         const symptomValue = `${value}`
-    //     //         console.log("symptomKey symptomValue", symptomKey, symptomValue)
-    //     //     }
-    //     // })
-    // }
-    // symptomsArray();
-
+    
     return (
         <>
-            <div className="container">
-                 <div className="row">
+            <div className="formDiv">
+                 <div className="row justify-content-around">
                     <div className="col-md-6 col-md-6">
                         <form className="symptom" onSubmit={handleFormSubmit}>
                         <h2 className="cardTitle">Got an eye issue?</h2>
@@ -236,18 +218,21 @@ function NewSymptom() {
                         <button  type="submit" className="btn btn-default symptomBtn">Add symptoms</button>
                         </form>
                     </div>
-                </div>
-            </div>
-
-            {symptoms.map(symptom => {
+                 
+                {symptoms.map(symptom => {
                 return (
-                    <div className="symptomDiv">
+                    <div className="symptomDiv col-md-6">
                          <SavedSymptoms 
                             symptom={symptom}
-                    />
+                            symptoms={symptoms}
+                    />  
                     </div>
                 )
             })}
+                </div>
+            </div>
+
+           
         </>
     )
 }
