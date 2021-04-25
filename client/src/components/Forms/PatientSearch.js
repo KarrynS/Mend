@@ -12,7 +12,6 @@ const PatientSearch = () => {
         birthday: ""
     });
     const [patient, setPatient] = useState()
-    // const [getSymptoms, setGetSymptoms] = useState();
 
     function handleInputChange(event) {
         const { name, value } = event.target;

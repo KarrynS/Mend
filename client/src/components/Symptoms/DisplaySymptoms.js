@@ -3,7 +3,7 @@ import React from 'react';
 import Moment from  'react-moment';
 import API from "../../utils/API";
 
-const SavedSymptoms = (props) => {
+const DisplaySymptoms = (props) => {
     console.log("SavedSymptom props", props);
     console.log("date", props.symptoms);
      
@@ -68,29 +68,29 @@ const SavedSymptoms = (props) => {
         console.log("delete id", props.symptom._id)
         API.deleteSymptom(id)
         .then(res => getTrueSymptoms())
+        window.location.reload()
         .catch( err => console.log(err));
     }
     return (
         <>
           
-               
-                    <div className=" cardDiv col-md-6 col-md-">
-                        <h5> Symptoms: </h5>
-                        <p> {getDate()}</p>
-                    
-                        <div className="row">
+          <div className="symptomDiv col-md-6">
+                <div className=" cardDiv col-md-6 col-md-">
+                    <h5> Symptoms: </h5>
+                    <p> {getDate()}</p>
+                    <div className="row">
                         <ul className="col-10">
                             {getEye()}
                             {/* List Symptoms here */}
                             {getTrueSymptoms()}
                         </ul>
-                        <button onClick={() => removeSymptom(props.symptom._id)} className="deletebtn"><i className="fa fa-close"></i></button>                        </div>
-                        
+                        <button onClick={() => removeSymptom(props.symptom._id)} className="deletebtn"><i className="fa fa-close"></i></button>                        
                     </div>
-            
+                </div>
+            </div>
 
         </>
     )
 }
 
-export default SavedSymptoms;
+export default DisplaySymptoms;
