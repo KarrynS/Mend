@@ -5,7 +5,7 @@ import API from "../../utils/API";
 
 const DisplaySymptoms = (props) => {
     console.log("SavedSymptom props", props);
-    console.log("date", props.symptoms);
+    console.log("symptoms", props.symptoms);
      
     const symptomType = {
         eye: "Affected eye",
@@ -27,24 +27,64 @@ const DisplaySymptoms = (props) => {
         console.log("Object.keys", props.symptom )
         const trueSymptoms = keys.filter((key) => {
             return props.symptom[key] === true
-        });
-
+        }
+        );
         return trueSymptoms.map((symptom) => {
             return (
                 <>
                 <li>{symptomType[symptom]}</li>
                 </>
             )
-           
         });
     }
-
     const  getDate = () => {
-        const dateToFormat = "2021-04-23T12:32:06.005Z";
-        return (
-            <Moment format="dddd Do MMMM YYYY">{dateToFormat}</Moment>
-        )
+        const dateToFormat = props.symptom.date;
+        console.log(props.symptom.date)
+            return (
+                <Moment format="dddd Do MMMM YYYY">{dateToFormat}</Moment>
+            )
+      
+    //     const dates = Object.entries(props.symptom || {});
+    //     console.log("object entries", dates)
+        
+    //     const getDateValue = dates.filter((date) => {
+    //         return props.symptoms[date] === "date"
+    //     })
+
+    //     return(
+    //         <Moment format="dddd Do MMMM YYYY">{getDateValue}</Moment>
+    //     )
+          
+    //    for (const [key, value] of dates) {
+    //        console.log(value, key, "Date")
+    //        if (Object.keys(dates) === "Date"){
+    //            console.log("value", value) 
+    //        }
+    //    }
+        
+
+       
+        // symptomArray.forEach(function (date) {
+        //     const dateToFormat = date;
+        //     console.log("date to format", dateToFormat)
+        // })
+        // props.symptoms.map(symptom => {
+        //     console.log("getDate symptom", symptom)
+        //     const dateToFormat = symptom;
+        //     return (
+        //         <Moment format="dddd Do MMMM YYYY">{dateToFormat}</Moment>
+        //     )
+        // })
+        
+       
     }  
+
+    // const  getDate = () => {
+    //     const dateToFormat = props.date;
+    //     return (
+    //         <Moment format="dddd Do MMMM YYYY">{dateToFormat}</Moment>
+    //     )
+    // }  
 
     const getEye = () => {
         const keys = Object.keys(props.symptom || {});

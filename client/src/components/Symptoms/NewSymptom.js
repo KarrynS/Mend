@@ -105,7 +105,7 @@ function NewSymptom() {
                             <DisplaySymptoms 
                                 symptom={symptom}
                                 symptoms={symptoms}
-                            />  
+                            /> 
                             )       
                 })}
                 </div>
