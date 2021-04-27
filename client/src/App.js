@@ -7,11 +7,11 @@ import Symptoms from "./pages/Symptoms";
 import Diagnosis from "./pages/Diagnosis";
 import OptomSignUp from "./pages/OptomSignUp";
 import Optometrist from "./pages/Optometrist";
-
 import './App.css';
 import OptomLogin from "./pages/OptomLogin";
 
 function App() {
+
   return (
     <>
       <Router>

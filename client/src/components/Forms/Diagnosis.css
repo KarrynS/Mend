@@ -9,5 +9,26 @@
     margin-left: 20px;
 }
 
+.diagnosisDiv {
+    margin-top: 20px;
+}
 
+thead {
+    margin-top: 20px;
+}
 
+table{
+    width: 100%;
+    margin-bottom: 1rem;
+   
+    margin-top: 25px;
+    background-color: #D5B590;
+}
+
+th {
+    color: #1b4738;
+}
+
+.diagnosisName{
+    color: black!important;
+}
