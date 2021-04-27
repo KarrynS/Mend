@@ -29,6 +29,9 @@ export default {
     deleteSymptom: (id) => {
       return axios.delete('api/symptom/' +id);
     },
+    updateSymptombyId: (id) => {
+      return axios.update('api/symptom/'+id);
+    },
 
     // Optometrist related API calls
     optomLogin: (userData)=> {

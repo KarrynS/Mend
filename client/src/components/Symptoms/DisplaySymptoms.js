@@ -3,6 +3,7 @@ import React from 'react';
 import Moment from  'react-moment';
 import API from "../../utils/API";
 
+
 const DisplaySymptoms = (props) => {
     console.log("SavedSymptom props", props);
     console.log("symptoms", props.symptoms);
@@ -39,82 +40,30 @@ const DisplaySymptoms = (props) => {
         
     }
     const  getDate = () => {
-      
             const dateToFormat = props.symptom.date;
                 console.log(props.symptom.date)
             return (
                 <Moment format="dddd Do MMMM YYYY">{dateToFormat}</Moment>
             )
-      
-        
     }  
 
-            // const keys = Object.keys(props.symptom || {});
-            // const symptomDate = keys.filter((key) => {
-            //     return props.symptom[key] === "Date"
-            // })
-            //     return (
-            //         <Moment format="dddd Do MMMM YYYY">{symptomDate}</Moment>
-            //     )
-          
-    //     const dates = Object.entries(props.symptom || {});
-    //     console.log("object entries", dates)
-        
-    //     const getDateValue = dates.filter((date) => {
-    //         return props.symptoms[date] === "date"
-    //     })
-
-    //     return(
-    //         <Moment format="dddd Do MMMM YYYY">{getDateValue}</Moment>
-    //     )
-          
-    //    for (const [key, value] of dates) {
-    //        console.log(value, key, "Date")
-    //        if (Object.keys(dates) === "Date"){
-    //            console.log("value", value) 
-    //        }
-    //    }
-        
-
-       
-        // symptomArray.forEach(function (date) {
-        //     const dateToFormat = date;
-        //     console.log("date to format", dateToFormat)
-        // })
-        // props.symptoms.map(symptom => {
-        //     console.log("getDate symptom", symptom)
-        //     const dateToFormat = symptom;
-        //     return (
-        //         <Moment format="dddd Do MMMM YYYY">{dateToFormat}</Moment>
-        //     )
-        // })
-        
-       
-
-
-    // const  getDate = () => {
-    //     const dateToFormat = props.date;
-    //     return (
-    //         <Moment format="dddd Do MMMM YYYY">{dateToFormat}</Moment>
-    //     )
-    // }  
-
     const getEye = () => {
-        const keys = Object.keys(props.symptom || {});
-       if (keys === "Both") {
-           return (
-               <><li>Eyes: Both</li></>
-           ) 
-       } 
-       else if (keys === "Right") {
-           return (
-            <><li>Eye: Right</li></>
-            ) 
-       } else {
-        return (
-            <><li>Eye: Left</li></>
-            ) 
-       }
+        return (    
+            <><p>Affected Eye(s): {props.symptom.eye}</p></>
+        )
+    }
+
+    const getPain =() => {
+        if(props.symptom.pain === "") {
+            return (
+                <><p>Pain level: Pain level not logged</p></>
+            )
+        } else {
+            return (
+                <><p>Pain level: {props.symptom.pain}</p></>
+            )
+        }
+        
     }
 
     function removeSymptom(id) {
@@ -124,21 +73,33 @@ const DisplaySymptoms = (props) => {
         window.location.reload()
         .catch( err => console.log(err));
     }
+
+
+
+    function updateIssue() {
+      /////write logic here
+       
+    }
+ 
+
     return (
         <>
           
-          <div className="symptomDiv col-md-6">
-                <div className=" cardDiv col-md-6 col-md-">
-                    <h5> Symptoms: </h5>
-                    <p> {getDate()}</p>
+          
+                <div className=" cardDiv col-md-8 col-md-">
+                <div className="symptomDiv">
+                    <h5>Symptoms</h5>
+                    {getEye()}
+                    {getPain()}
                     <div className="row">
                         <ul className="col-10">
-                            {getEye()}
                             {/* List Symptoms here */}
                             {getTrueSymptoms()}
                         </ul>
-                        <button onClick={() => removeSymptom(props.symptom._id)} className="deletebtn"><i className="fa fa-close"></i></button>                        
                     </div>
+                    <p> Recorded on: {getDate()}</p>
+                    <button onClick={() => removeSymptom(props.symptom._id)} className="deletebtn">Delete<i className="fa fa-close"></i></button>                        
+                    {/* <button onClick={updateIssue()} class="buttonload"><i class="fa fa-refresh"></i>Update</button> */}
                 </div>
             </div>
 

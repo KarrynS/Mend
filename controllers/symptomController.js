@@ -20,17 +20,22 @@ module.exports = {
     },
     remove: function(req, res) {
         db.Symptom.findById({ _id: req.params.id })
-            .sort({ date: -1})
             .then(dbSymptom => dbSymptom.remove())
             .then(dbSymptom => res.json(dbSymptom))
             .catch(err => res.status(422).json(err));
       },
     load: function(req,res) {
         db.Symptom.find({ _id: req.user.symptoms})
-        .then(symptoms =>  {
+            .sort({ date: -1})
+            .then(symptoms =>  {
             console.log("symptoms =", symptoms)
             res.status(200).json(symptoms);
         })
+    },
+    update: function(req,res) {
+        db.Symptom.findOneAndUPdate({_id: req.params.id }, req.body)
+        .then(dbSymptom => res.json(dbSymptom))
+        .catch(err => res.status(422).json(err));
     }
    
 }
