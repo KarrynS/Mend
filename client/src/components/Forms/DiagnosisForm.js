@@ -48,7 +48,7 @@ function DiagnosisForm() {
         
 
             <div className="diagnosisDiv">
-                <table className="table table-borderless">
+                <table className="table-border">
                 <thead>
                     <tr>
                     <th scope="col diagnosisName">Name</th>
@@ -93,9 +93,8 @@ function DiagnosisForm() {
                 <option  name ="diagnosis" value="c_998">Dry Eye Disease</option>
                 <option  name ="diagnosis" value="c_959">Eye Injury</option>
                 <option  name ="diagnosis" value="c_892">Keratitis</option>
-                <option  name ="diagnosis" value="c_c_1122">Molluscum contagiosum</option>
                 <option  name ="diagnosis" value="c_799">Nasolacrimal duct obstruction</option>
-                <option  name ="diagnosis" value="c_c_549">Oculomotor nerve palsy</option>
+                <option  name ="diagnosis" value="c_549">Oculomotor nerve palsy</option>
                 <option  name ="diagnosis" value="c_997">Open-angle glaucoma</option>
                 <option  name ="diagnosis" value="c_957">Periorbital cellulitis</option>
                 <option  name ="diagnosis" value="c_596">Retinal detachment</option>

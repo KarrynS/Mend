@@ -1,5 +1,6 @@
 .my-1 {
     color: #1b4738;
+    font-size: 25px;
 }
 
 .form-inline {
@@ -7,26 +8,40 @@
     font-family: Courier, monospace;
     font-size: 16px;
     margin-left: 20px;
+    margin-bottom:30px;
 }
 
+#inlineFormCustomSelectPref {
+    margin-left: 20px;
+}
+
+
+/* Styling for table */
 .diagnosisDiv {
     margin-top: 20px;
+    text-align: left;
 }
 
 thead {
     margin-top: 20px;
+    border-radius: 20px;
 }
 
 table{
-    width: 100%;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
     margin-bottom: 1rem;
-   
+    
     margin-top: 25px;
     background-color: #D5B590;
+    border-radius: 20px;
+    
 }
 
 th {
     color: #1b4738;
+    padding-left: 10px;
 }
 
 .diagnosisName{
