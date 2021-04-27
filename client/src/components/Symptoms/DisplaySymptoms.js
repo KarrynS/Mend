@@ -36,14 +36,27 @@ const DisplaySymptoms = (props) => {
                 </>
             )
         });
+        
     }
     const  getDate = () => {
-        const dateToFormat = props.symptom.date;
-        console.log(props.symptom.date)
+      
+            const dateToFormat = props.symptom.date;
+                console.log(props.symptom.date)
             return (
                 <Moment format="dddd Do MMMM YYYY">{dateToFormat}</Moment>
             )
       
+        
+    }  
+
+            // const keys = Object.keys(props.symptom || {});
+            // const symptomDate = keys.filter((key) => {
+            //     return props.symptom[key] === "Date"
+            // })
+            //     return (
+            //         <Moment format="dddd Do MMMM YYYY">{symptomDate}</Moment>
+            //     )
+          
     //     const dates = Object.entries(props.symptom || {});
     //     console.log("object entries", dates)
         
@@ -77,7 +90,7 @@ const DisplaySymptoms = (props) => {
         // })
         
        
-    }  
+
 
     // const  getDate = () => {
     //     const dateToFormat = props.date;

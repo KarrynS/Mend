@@ -1,4 +1,5 @@
 import React from 'react' 
+import Moment from "react-moment";
 
 const ShowSymptoms = (props) => {
     console.log("props on ShowSymptoms", props)
@@ -36,7 +37,10 @@ const ShowSymptoms = (props) => {
             <div className="symptomContainer">
                 <div className="row">
                     <div className=" cardDiv col-4">
-                        <p> Symptoms: </p>
+                        <p> Date: 
+                            <Moment format="dddd Do MMMM YYYY">{props.symptom.date}</Moment>
+                        </p>
+                        <p>Eye: </p> 
                         <ul>
                             {getTrueSymptoms()}
                         </ul>

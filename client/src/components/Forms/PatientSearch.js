@@ -75,6 +75,7 @@ const PatientSearch = () => {
     return (
         <>
             <div className="searchDiv">
+                <div className="row">
                 <form className="patientSearchForm" onSubmit={handleFormSubmit}>
                 <h2 className="searchTitle">Search for a patient</h2>
                 <div className="row">
@@ -93,6 +94,7 @@ const PatientSearch = () => {
                 </div>
                 <button type="submit" className="btn btn-default searchBtn">Search</button>
                 </form>
+                </div>
             </div>   
 
             <div className="patientSymptoms">

@@ -16,9 +16,9 @@ const PatientSymptoms = ({patient}) => {
     
     return (
         <>
-            <h3>Patient: {patient.name}</h3>
-            <div className="symptomDiv col-4">
-                <h5> Symptoms recorded :</h5>
+        <div className="row">
+            <div className="patientSymptomDiv col-6">
+                <h5> Symptoms recorded for :  {patient.name}</h5>
                 <ul>
                     {patient.symptoms.map(symptom => {
                         return (
@@ -31,6 +31,7 @@ const PatientSymptoms = ({patient}) => {
             
          {/* <p> Birthday {props.patient.birthday}</p>
          <p> Email {props.patient.email}</p> */}
+         </div>
         </>
     )
 }

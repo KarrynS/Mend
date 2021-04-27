@@ -11,7 +11,7 @@ function Symptoms() {
         <>
             <Navbar />
             <NewSymptom />
-            <SavedSymptoms />
+           
         </>
     )
 }

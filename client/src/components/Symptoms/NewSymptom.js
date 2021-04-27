@@ -102,6 +102,7 @@ function NewSymptom() {
                  
                 {symptoms.map(symptom => {
                     return (
+                        
                             <DisplaySymptoms 
                                 symptom={symptom}
                                 symptoms={symptoms}
