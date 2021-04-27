@@ -20,9 +20,10 @@ module.exports = {
     },
     remove: function(req, res) {
         db.Symptom.findById({ _id: req.params.id })
-          .then(dbSymptom => dbSymptom.remove())
-          .then(dbSymptom => res.json(dbSymptom))
-          .catch(err => res.status(422).json(err));
+            .sort({ date: -1})
+            .then(dbSymptom => dbSymptom.remove())
+            .then(dbSymptom => res.json(dbSymptom))
+            .catch(err => res.status(422).json(err));
       },
     load: function(req,res) {
         db.Symptom.find({ _id: req.user.symptoms})
