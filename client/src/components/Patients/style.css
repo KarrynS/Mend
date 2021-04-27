@@ -1,4 +1,4 @@
-.symptomDiv {
+.patientSymptomDiv {
     background-color: #d5b590 ;
     font-family: Courier, monospace;
     margin-left: 20px;
@@ -8,7 +8,7 @@
     width: 50%;
 }
 
-.symptomDiv:hover{
+.patientSymptomDiv:hover{
     box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 }
 

@@ -1,5 +1,6 @@
 import React from 'react' 
 import Moment from "react-moment";
+import "./style.css"
 
 const ShowSymptoms = (props) => {
     console.log("props on ShowSymptoms", props)
@@ -32,15 +33,22 @@ const ShowSymptoms = (props) => {
                
             });
     }
+
+    const getEye = () => {
+        return (    
+            <><p>Affected Eye(s): {props.symptom.eye}</p></>
+        )
+    }
+
     return (
         <>
-            <div className="symptomContainer">
+            <div className="patientSymptomDiv col-md-6 col-md-">
                 <div className="row">
-                    <div className=" cardDiv col-4">
-                        <p> Date: 
+                    <div className=" cardDiv col-6">
+                        <p> Date : 
                             <Moment format="dddd Do MMMM YYYY">{props.symptom.date}</Moment>
                         </p>
-                        <p>Eye: </p> 
+                        {getEye()}
                         <ul>
                             {getTrueSymptoms()}
                         </ul>

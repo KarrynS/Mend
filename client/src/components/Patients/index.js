@@ -1,6 +1,7 @@
 import "./style.css";
 import React from 'react'
 import ShowSymptoms from "./ShowSymptoms";
+import TreatementPlan from "./TreatmentPlan"
 
 const PatientSymptoms = ({patient}) => {
     // const { name, birthday } = props.patient
@@ -17,18 +18,18 @@ const PatientSymptoms = ({patient}) => {
     return (
         <>
         <div className="row">
-            <div className="patientSymptomDiv col-6">
-                <h5> Symptoms recorded for :  {patient.name}</h5>
-                <ul>
+            <div className="symptomDiv">
+                <h5> Patient:  {patient.name}</h5>
+                
                     {patient.symptoms.map(symptom => {
                         return (
                             <ShowSymptoms symptom={symptom}/>
                          )
                     })}
-    
-                </ul>
-            </div>
+                
             
+            </div>
+            <TreatementPlan/>
          {/* <p> Birthday {props.patient.birthday}</p>
          <p> Email {props.patient.email}</p> */}
          </div>

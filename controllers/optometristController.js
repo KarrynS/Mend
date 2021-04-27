@@ -44,6 +44,7 @@ module.exports = {
     },
     load: function(req,res) {
       db.User.findOne({_id: req.user.symptoms})
+      .sort({ date: -1})
       .then(symptoms => {
         console.log("Patient symptoms /OPtom", symptoms)
         res.status(200).json(symptoms);

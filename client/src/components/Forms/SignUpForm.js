@@ -53,23 +53,6 @@ function SignUpForm() {
         }
     }
 
-    // const handleOnSubmit = (e) => {
-    //     e.preventDefault();
-    //     const userData = {
-    //         name: nameInput.current.value,
-    //         email: emailInput.current.value,
-    //         password: passwordInput.current.value,
-    //         birthday: birthdayInput.current.value,
-    //     }
-    //     API.saveUser(userData)
-    //     .then(res =>  {
-    //         console.log("userData on signup", userData);
-            
-    //         window.location.href = "/dashboard";
-    //     })
-    //     .catch(err => console.log(err));
-    // };
-
     return (
         <>
         <div className="imgDiv">

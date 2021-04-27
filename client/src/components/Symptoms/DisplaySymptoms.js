@@ -56,7 +56,7 @@ const DisplaySymptoms = (props) => {
     const getPain =() => {
         if(props.symptom.pain === "") {
             return (
-                <><p>Pain level: Pain level not logged</p></>
+                <><p>Pain level: Not recorded</p></>
             )
         } else {
             return (
