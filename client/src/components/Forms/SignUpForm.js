@@ -31,7 +31,7 @@ function SignUpForm() {
             API.create(
                 {
                 name: formObject.name,
-                username: formObject.name,
+                username: formObject.username,
                 email: formObject.email,
                 password: formObject.password,
                 password2: formObject.password2,
@@ -72,7 +72,7 @@ function SignUpForm() {
                                     placeholder="Name*" />
                             </div>
                             <div className="form-group username">
-                                <label htmlFor="exampleInputEmail1">Username</label>
+                                <label htmlFor="exampleInputEmail1">Full Name</label>
                                 <input 
                                     onChange={handleInputChange} 
                                     name="username"
