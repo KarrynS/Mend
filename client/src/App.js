@@ -7,8 +7,9 @@ import Symptoms from "./pages/Symptoms";
 import Diagnosis from "./pages/Diagnosis";
 import OptomSignUp from "./pages/OptomSignUp";
 import Optometrist from "./pages/Optometrist";
-import './App.css';
 import OptomLogin from "./pages/OptomLogin";
+import Chat from "./pages/Chat";
+import './App.css';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path = "/dashboard" component={Dashboard} />
           <Route path = "/symptoms" component={Symptoms} />
           <Route path = "/diagnosis" component={Diagnosis} />
+          <Route path = "/chat" component={Chat} />
           {/* <Route exact path = "/treatment" component={Treatment} /> */}
         </Switch> 
       </Router>
