@@ -49,6 +49,19 @@ module.exports = {
         console.log("Patient symptoms /OPtom", symptoms)
         res.status(200).json(symptoms);
       })
+    },
+    submitTreatment: function(req, res) {
+      db.User.updateOne({_id: req.body.id}, {treatment: 
+          {
+            diagnosis : req.body.diagnosis,
+            treatment : req.body.treatement,
+            date : req.body.date
+          }})
+      .then((user) => {
+        console.log("user Tx updated", user)
+        res.status(200).json(user);
+
+      })
     }
     
 }

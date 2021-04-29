@@ -29,6 +29,11 @@ const userSchema = new Schema({
     birthday: {
         type: String
     },
+    treatment: {
+        diagnosis: String,
+        treatment: String,
+        date: String
+    },
     age: {
         type: Number
     },

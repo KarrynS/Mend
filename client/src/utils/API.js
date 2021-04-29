@@ -49,5 +49,8 @@ export default {
     },
     loadPatient: () => {
       return axios.get('api/optom')
+    },
+    submitPlan:  function(treatmentData) {
+      return axios.post('/api/optom/treatment', treatmentData)
     }
 } 

@@ -1,0 +1,17 @@
+h1 {
+    color: #d5b590;
+}
+
+.treatmentDiv {
+    border: 3px solid #1b4738;
+    border-radius: 7px;
+    padding: 20px;
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Courier, monospace;
+}
+
+label {
+    color:#1b4738
+}

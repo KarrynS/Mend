@@ -60,6 +60,7 @@ router.get('/user', function(req, res){
   res.send(req.user);
 })
 
+router.post('/treatment', optometristController.submitTreatment)
 
 // Endpoint to logout
 router.get('/logout', function(req, res){

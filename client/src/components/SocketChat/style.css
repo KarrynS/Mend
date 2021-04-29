@@ -83,6 +83,17 @@ body {
 
 
 /* chatbox styling */
+.chatBoxContainer {
+    text-align: center;
+    justify-content: center;
+
+}
+
+#leave-btn {
+    margin-top: 0px;
+    float: right;
+}
+
 .chatContainer {
     width: 600px;
     height: 300px;
@@ -91,12 +102,15 @@ body {
     background-color: #4d4c4c;
     display: inline-flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .chatContainer .messages{
     flex: 80%;
     width: 100%;
     padding-left: 10px;
+    height: 100%;
+    overflow: scroll;
 }
 
 .chatContainer .messageInput{
@@ -133,7 +147,8 @@ color: whitesmoke;
     width: calc(100% - 30px);
     align-items: center;
   }
-  
+
+
   .messageContainer h1{
     color: white;
     font-family:  Courier, monospace;
@@ -168,4 +183,8 @@ color: whitesmoke;
     padding-left: 10px;
     padding-right: 10px;
   
+  }
+
+  .messages {
+    margin-bottom: 10px;
   }
