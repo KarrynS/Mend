@@ -7,11 +7,12 @@ import "./style.css"
 let socket;
 const CONNECTION_PORT = 'localhost:3000/'
 
+const defaultRoom = "Optometry"
 const InitialChat = () => {
 
     //States - Before Login
     const [chatLogin, setChatLogin] = useState(false);
-    const [room, setRoom] = useState("");
+    const [room, setRoom] = useState(defaultRoom);
     const [name, setName] = useState("");
 
     //States - After Login
@@ -23,11 +24,21 @@ const InitialChat = () => {
     }, [CONNECTION_PORT])
 
     useEffect(() => {
+        socket.on("join_room", message => {
+            console.log(message);
+        })
+        
+    })
+
+    useEffect(() => {
         socket.on("receive_message", (data) => {
             console.log("receive_message", data)
+            console.log("current message list", messageList)
+            console.log("spreader", [...messageList, data])
             setMessageList([...messageList, data])
         })
     })
+  
 
     const connectToRoom = () => {
         setChatLogin(true)
@@ -44,10 +55,10 @@ const InitialChat = () => {
             }
         };
 
-        await socket.emit("send_message", messageContent)
-        setMessageList([...messageList, messageContent.content])
-        setMessage("")
-
+        await socket.emit("chat_message", messageContent);
+        setMessageList([...messageList, messageContent.content]);
+        setMessage("");
+      
     }
 
     return (
@@ -58,7 +69,7 @@ const InitialChat = () => {
             { !chatLogin ? 
                 <div className="logIn">
                     <header class="join-header">
-				        <h1><i class="fas fa-smile"></i> iChat</h1>
+				        <h1><i class="fas fa-eye"></i> iChat</h1>
 			        </header>
                     <div className="inputs">
                         <input type="text" placeholder="Name" onChange={(e) => {setName(e.target.value)}}/>
@@ -74,7 +85,15 @@ const InitialChat = () => {
                 </div>
             
             :
+            <div className="chatBoxContainer">
+                <div className="header">
+                    <h1><i class="fas fa-eye"></i> iChat</h1>
+                    <a id="leave-btn" class="btn" >Leave Room</a>
+                </div>
             <div className="chatContainer">
+                <header class="chat-header">
+                    
+                </header>
                 <div className="messages">
                     {messageList.map((val,key) => {
                         return (
@@ -95,6 +114,8 @@ const InitialChat = () => {
                     />
                     <button className="sendBtn" onClick={sendMessage}>Send</button>
                 </div>
+            </div>
+          
             </div>
             }
         </div>

@@ -1,6 +1,7 @@
 //Requiring necessary npm packages
 const express = require("express");
 const session = require("express-session");
+var MongoStore = require('connect-mongo');
 const mongoose = require("mongoose");
 const passport = require("passport");
 const path = require("path");
@@ -22,7 +23,15 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // We need to use sessions to keep track of our user's login status
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(session(
+  { secret: "keyboard cat", 
+    resave: true, 
+    saveUninitialized: true, 
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGODB_URI || "mongodb://localhost/mend",
+    })
+  })
+);
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -52,27 +61,26 @@ const server = app.listen(PORT, () => {
 //Socket.io
 io = socket(server);
 
-// Runs when client conects
+// Runs when client connects
 io.on("connection", (socket) => {
-  console.log(socket.id)
-
-  socket.emit("message", "A user has joined the chat")
-
+  console.log("Initial connection: ", socket.id)
+  
+  // when a user connects
   socket.on("join_room", (data) => {
-
     socket.join(data)
     console.log("New socket connection: " + data)
   })
 
-  socket.on("send_message", (data) => {
-    console.log("send_message", data)
-    socket.to(data.room).emit("receive_message", data.contents)
+  //listening for chat message
+  socket.on("chat_message", (data) => {
+    console.log("chat_message", data)
+    socket.to(data.room).emit("receive_message", data.content)
 
   })
 
   // Runs when the client disconects
   socket.on("disconnect", () => {
     console.log("User disconnected")
-    io.emit("message", 'A use has left the chat')
+    socket.emit("join_room", 'A user has left the chat')
   })
 })
