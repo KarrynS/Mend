@@ -29,7 +29,7 @@ const userSchema = new Schema({
     birthday: {
         type: String
     },
-    treatment: {
+    management: {
         diagnosis: String,
         treatment: String,
         date: String

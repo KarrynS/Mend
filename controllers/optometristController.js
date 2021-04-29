@@ -51,10 +51,10 @@ module.exports = {
       })
     },
     submitTreatment: function(req, res) {
-      db.User.updateOne({_id: req.body.id}, {treatment: 
+      db.User.updateOne({_id: req.body.id}, {management: 
           {
             diagnosis : req.body.diagnosis,
-            treatment : req.body.treatement,
+            treatment : req.body.treatment,
             date : req.body.date
           }})
       .then((user) => {

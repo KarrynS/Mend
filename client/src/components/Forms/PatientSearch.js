@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import API from '../../utils/API';
 import PatientSymptoms from '../Patients';
 import "./PatientSearch.css"
@@ -33,8 +33,6 @@ const PatientSearch = () => {
         .then((res) => { 
             console.log("Patient response", res)
             setPatient(res.data)
-            // document.querySelector(".patientSymptoms")
-            // .appendChild(renderPatient());
             setPatientSearch({
                 name: "", 
                 email: "",

@@ -1,7 +1,7 @@
 import "./style.css";
 import React from 'react'
 import ShowSymptoms from "./ShowSymptoms";
-import TreatementPlan from "./TreatmentPlan"
+import ManagementPlan from "./ManagementPlan"
 
 const PatientSymptoms = ({patient}) => {
     // const { name, birthday } = props.patient
@@ -28,7 +28,7 @@ const PatientSymptoms = ({patient}) => {
                 
             
             </div>
-            <TreatementPlan patient={patient}/>
+            <ManagementPlan patient={patient}/>
          {/* <p> Birthday {props.patient.birthday}</p>
          <p> Email {props.patient.email}</p> */}
       
