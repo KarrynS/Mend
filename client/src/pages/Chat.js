@@ -1,10 +1,10 @@
 import React from 'react'
-import InitialChatBox from '../components/SocketChat/InitialChatBox'
+import InitialChat from '../components/SocketChat/InitialChat'
 
 const Chat = () => {
     return (
         <>
-            <InitialChatBox/>  
+            <InitialChat/>  
         </>
     )
 }
