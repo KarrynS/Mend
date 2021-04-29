@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Socket } from 'socket.io';
 import io from "socket.io-client";
 import Chatbox from './Chatbox';
@@ -7,8 +7,10 @@ import "./style.css"
 let socket;
 const CONNECTION_PORT = 'localhost:3000/'
 
+
 const defaultRoom = "Optometry"
 const InitialChat = () => {
+
 
     //States - Before Login
     const [chatLogin, setChatLogin] = useState(false);
@@ -18,6 +20,8 @@ const InitialChat = () => {
     //States - After Login
     const [message, setMessage] = useState("");
     const [messageList, setMessageList] = useState([{}]);
+
+    const scrollRef =  useRef();
 
     useEffect(() => {
         socket = io(CONNECTION_PORT)
@@ -39,6 +43,11 @@ const InitialChat = () => {
         })
     })
   
+    useEffect(() => {
+       if(scrollRef.current) {
+        scrollRef.current.scrollIntoView({behavior: "smooth"})
+       } 
+    }, [messageList])
 
     const connectToRoom = () => {
         setChatLogin(true)
@@ -94,8 +103,9 @@ const InitialChat = () => {
                 <header class="chat-header">
                     
                 </header>
-                <div className="messages">
+                <div className="messages" >
                     {messageList.map((val,key) => {
+                        
                         return (
                                 <div className="messageContainer"
                                     id={val.author === name ? "You" : "Other"}
@@ -105,9 +115,10 @@ const InitialChat = () => {
                                 </div>
                         )
                     })}
+                    <div ref={scrollRef}></div>
                 </div>
                 <div className="messageInput">
-                    <input type="text" placeholder="Enter message" 
+                    <input value={ message} type="text" placeholder="Enter message" 
                         onChange={(e) => {
                             setMessage(e.target.value);
                         }}
