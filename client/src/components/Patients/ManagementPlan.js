@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import API from '../../utils/API';
 import "./treatmentplan.css"
 
-const TreatmentPlan = (props) => {
+const ManagementPlan = (props) => {
     console.log("patient props", props.patient, props.patient._id)
 
     const [formObject, setformObject] = useState({
@@ -45,7 +45,7 @@ const TreatmentPlan = (props) => {
     return (
         <>
             <div className="treatmentDiv">
-            <h1>Treatment Plan</h1>   
+            <h1>Management Plan</h1>   
             <form>
                 <div class="form-group row">
                     <label htmlFor="Diagnosis" class="col-sm-2 col-form-label">Diagnosis:</label>
@@ -54,7 +54,7 @@ const TreatmentPlan = (props) => {
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label htmlFor="Management" class="col-sm-2 col-form-label">Management Plan:</label>
+                    <label htmlFor="Management" class="col-sm-2 col-form-label">Treatment:</label>
                     <div class="col-sm-10">
                     <textarea onChange={handleInputChange} name="management" type="text" row="3" class="form-control" id="inputmanagement" placeholder="Enter Management Plan"></textarea>
                     </div>
@@ -77,4 +77,4 @@ const TreatmentPlan = (props) => {
     )
 }
 
-export default TreatmentPlan;
+export default ManagementPlan;
