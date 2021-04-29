@@ -56,11 +56,12 @@ io = socket(server);
 io.on("connection", (socket) => {
   console.log(socket.id)
 
-  // socket.emit("message", "A user has joined the chat")
+  socket.emit("message", "A user has joined the chat")
 
   socket.on("join_room", (data) => {
+
     socket.join(data)
-    console.log("User joined room: " + data)
+    console.log("New socket connection: " + data)
   })
 
   socket.on("send_message", (data) => {
