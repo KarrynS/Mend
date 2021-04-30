@@ -101,28 +101,38 @@ const InitialChat = () => {
                 <header class="chat-header">
                     
                 </header>
-                <div className="messages" >
-                    {messageList.map((val,key) => {
-                        
-                        return (
-                                <div className="messageContainer"
-                                    id={val.author === name ? "You" : "Other"}
-                                    > 
-                                    <div className="messageIndividual"> {val.message}</div>
-                                    <h1>{val.author}</h1>
-                                </div>
-                        )
-                    })}
-                    <div ref={scrollRef}></div>
-                </div>
-                <div className="messageInput">
-                    <input value={ message} type="text" placeholder="Enter message" 
-                        onChange={(e) => {
-                            setMessage(e.target.value);
-                        }}
-                    />
-                    <button className="sendBtn" onClick={sendMessage}>Send</button>
-                </div>
+                    <div className="messages" >
+                        {messageList.map((val,key) => {
+                            
+                            return (
+                                    <div className="messageContainer"
+                                        id={val.author === name ? "You" : "Other"}
+                                        > 
+                                        { val.author === name ?
+                                            <>
+                                            <div className="messageIndividual"> {val.message}</div>
+                                            <h1>{val.author}</h1> 
+                                            </>
+                                            : 
+                                            <>
+                                            <h1>{val.author}</h1> 
+                                            <div className="messageIndividual"> {val.message}</div>
+                                            </>
+                                            }
+                                        
+                                    </div>
+                            )
+                        })}
+                        <div ref={scrollRef}></div>
+                    </div>
+                    <div className="messageInput">
+                        <input value={ message} type="text" placeholder="Enter message" 
+                            onChange={(e) => {
+                                setMessage(e.target.value);
+                            }}
+                        />
+                        <button className="sendBtn" onClick={sendMessage}>Send</button>
+                    </div>
             </div>
           
             </div>

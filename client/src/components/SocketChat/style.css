@@ -83,6 +83,10 @@ body {
 
 
 /* chatbox styling */
+.header h1 {
+    color: #1b4738
+}
+
 .chatBoxContainer {
     text-align: center;
     justify-content: center;
@@ -150,11 +154,13 @@ color: whitesmoke;
 
 
   .messageContainer h1{
-    color: white;
+    color: rgb(114, 114, 114);
     font-family:  Courier, monospace;
     font-weight: 300;
     font-size: 17px;
     align-items: center;
+    display: flex;
+    margin-top: 20px;
   }
   
   #You{
@@ -168,9 +174,12 @@ color: whitesmoke;
   #Other .messageIndividual {
     background-color: #D5b590;
     color: black;
+    margin-left: 10px;
+    margin-right: 0px;
+    font-family: Courier, monospace
   }
   .messageIndividual {
-    height: 60px;
+    height: 30px;
     border-radius: 10px;
     display: grid;
     place-items: center;
@@ -182,7 +191,12 @@ color: whitesmoke;
     margin-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
-  
+    justify-content: center;
+  }
+
+  .messageIndividual h1 {
+    align-items: center;
+
   }
 
   .messages {
