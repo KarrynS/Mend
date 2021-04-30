@@ -40,6 +40,19 @@ const ShowSymptoms = (props) => {
         )
     }
 
+    const getPain =() => {
+        if(props.symptom.pain === "") {
+            return (
+                <><p>Pain level: Not recorded</p></>
+            )
+        } else {
+            return (
+                <><p>Pain level: {props.symptom.pain}</p></>
+            )
+        }
+        
+    }
+
     return (
         <>
             <div className="patientSymptomDiv col-md-6 col-md-">
@@ -49,6 +62,7 @@ const ShowSymptoms = (props) => {
                             <Moment format="dddd Do MMMM YYYY">{props.symptom.date}</Moment>
                         </p>
                         {getEye()}
+                        {getPain()}
                         <ul>
                             {getTrueSymptoms()}
                         </ul>
