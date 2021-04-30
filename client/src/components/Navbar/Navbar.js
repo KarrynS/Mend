@@ -7,16 +7,16 @@ function Navbar() {
         <>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/">Mend</a>
+                    <a className="navbar-brand" href="/dashboard">Mend</a>
                     <div className="collapse navbar-collapse mr-auto" id="navbarNavAltMarkup">
                     <ul className="medium-horizontal align-right text-black" id="nav-menu">
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link to="/dashboard" className={window.location.pathname === "/" || window.location.pathname === "/members"
                                     ? "nav-link active"
                                     : "nav-link"
                                     }
                                 >Home</Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                             <Link to="/symptoms" className={window.location.pathname === "/symptoms" 
                                     ? "nav-link active" 
@@ -25,11 +25,11 @@ function Navbar() {
                                 >Symptoms</Link>
                             </li>
                             <li className="nav-item">
-                            <Link to="/treatments" className={window.location.pathname === "/treatment" 
+                            <Link to="/management" className={window.location.pathname === "/management" 
                                     ? "nav-link active" 
                                     : "nav-link"
                                     }
-                                >Treatment</Link>
+                                >Management</Link>
                             </li>
                             <li className="nav-item">
                             <Link to="/diagnosis" className={window.location.pathname === "/diagnosis" 
@@ -39,7 +39,7 @@ function Navbar() {
                                 >Diagnosis</Link>
                             </li>
                             <li className="nav-item">
-                            <Link to="/login" className={window.location.pathname === "/diagnosis"
+                            <Link to="/login" className={window.location.pathname === "/login"
                                     ? "nav-link active" 
                                     : "nav-link"
                                     }

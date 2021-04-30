@@ -65,10 +65,13 @@ padding: 0px;
 .card-deck {
     width: 100%;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .container {
     position: relative !important;
+    justify-content: center;
+    margin: auto;
 }
 
 .card {
