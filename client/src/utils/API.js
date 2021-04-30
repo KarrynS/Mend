@@ -15,6 +15,9 @@ export default {
     logout: () => {
       return axios.get('/api/user/logout')
     },
+    loadTreatment: function() {
+      return axios.get('api/user/management')
+    },
 
     //Symptom related API calls
     newSymptom: function(userData) {

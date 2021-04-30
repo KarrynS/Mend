@@ -45,6 +45,13 @@ module.exports = {
     // },
     login: function(req,res) {
       res.send(req.user);
+    }, 
+    loadManagement: function(req,res) {
+      db.User.findById({_id: req.user.id})
+      then(management => {
+        console.log("mx =", management)
+        res.status(200).json(management);
+      })
     }
 }
 

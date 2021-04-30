@@ -8,6 +8,7 @@ import Diagnosis from "./pages/Diagnosis";
 import OptomSignUp from "./pages/OptomSignUp";
 import Optometrist from "./pages/Optometrist";
 import OptomLogin from "./pages/OptomLogin";
+import Management from "./pages/Management";
 import Chat from "./pages/Chat";
 import './App.css';
 
@@ -26,7 +27,7 @@ function App() {
           <Route path = "/symptoms" component={Symptoms} />
           <Route path = "/diagnosis" component={Diagnosis} />
           <Route path = "/chat" component={Chat} />
-          {/* <Route exact path = "/treatment" component={Treatment} /> */}
+          <Route exact path = "/management" component={Management} />
         </Switch> 
       </Router>
     </>

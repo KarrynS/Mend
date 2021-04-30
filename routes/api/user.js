@@ -60,4 +60,9 @@ router.get('/logout', function(req, res){
   res.send(null)
 });
 
+//loading management page
+router.route('/management')
+  .get(userController.loadManagement);
+
+
 module.exports = router;

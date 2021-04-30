@@ -9,7 +9,7 @@ const ManagementPlan = (props) => {
         diagnosis: "",
         treatment: "", 
         date: "",
-        id: props.patient._id
+        id: ""
     })
 
     function handleInputChange(event) {
@@ -22,10 +22,11 @@ const ManagementPlan = (props) => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
+        console.log("management plan", formObject)
         API.submitPlan(
             {
                 diagnosis: formObject.diagnosis,
-                treatement: formObject.treatment,
+                treatment: formObject.treatment,
                 date: formObject.date,
                 id: props.patient._id
             }
@@ -46,7 +47,7 @@ const ManagementPlan = (props) => {
         <>
             <div className="treatmentDiv">
             <h1>Management Plan</h1>   
-            <form>
+            <form onSubmit={handleFormSubmit}>
                 <div class="form-group row">
                     <label htmlFor="Diagnosis" class="col-sm-2 col-form-label">Diagnosis:</label>
                     <div class="col-sm-10">
@@ -56,7 +57,7 @@ const ManagementPlan = (props) => {
                 <div class="form-group row">
                     <label htmlFor="Management" class="col-sm-2 col-form-label">Treatment:</label>
                     <div class="col-sm-10">
-                    <textarea onChange={handleInputChange} name="management" type="text" row="3" class="form-control" id="inputmanagement" placeholder="Enter Management Plan"></textarea>
+                    <textarea onChange={handleInputChange} name="treatment" type="text" row="3" class="form-control" id="inputmanagement" placeholder="Enter Management Plan"></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -67,7 +68,7 @@ const ManagementPlan = (props) => {
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                    <button onSubmit={handleFormSubmit} type="submit" class="btn btn-primary">Submit Plan</button>
+                    <button  type="submit" class="btn btn-primary">Submit Plan</button>
                     </div>
                 </div>
                 </form> 

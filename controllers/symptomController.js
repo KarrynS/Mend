@@ -33,7 +33,7 @@ module.exports = {
         })
     },
     update: function(req,res) {
-        db.Symptom.findOneAndUPdate({_id: req.params.id }, req.body)
+        db.Symptom.findOneAndUpdate({_id: req.params.id }, req.body)
         .then(dbSymptom => res.json(dbSymptom))
         .catch(err => res.status(422).json(err));
     }
