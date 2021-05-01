@@ -16,6 +16,13 @@ function TopbarOptom() {
                 <div className="top-bar-right">
                     <ul className="medium-horizontal align-right text-black" id="nav-menu">
                     <li className ="nav-item">
+                        <Link to="/chat" className={window.location.pathname === "/chat" 
+                                    ? "nav-link active" 
+                                    : "nav-link"
+                                    }
+                                >iChat</Link>
+                    </li>
+                    <li className ="nav-item">
                         <Link to="/optomlogin" className={window.location.pathname === "/optomlogin" 
                                     ? "nav-link active" 
                                     : "nav-link"

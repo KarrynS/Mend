@@ -1,5 +1,4 @@
 
-
 .navbar {
     font-family: Courier, monospace;
     background-color: #d5b590 !important;
@@ -32,11 +31,10 @@ ul li {
      font-weight: 100;
  }
 
- .imgDiv {
+ /* .imgDiv {
     background-image: url("../../img/dark-green-texture.jpg");
     width: auto;
-    height: 100vh;
-}
+} */
 
  .symptom {
         font-family: Courier, monospace;
@@ -46,11 +44,6 @@ ul li {
         padding: 25px;
  }
 
-
-.btn {
-background-color: #1b4738 !important;
-color:  #d5b590 !important;
-}
 
 .row {
 margin-top: 20px;
@@ -68,16 +61,185 @@ padding: 0px;
     justify-content: center;
 }
 
-.container {
+.dashboardcontainer {
     position: relative !important;
     justify-content: center;
     margin: auto;
+    display: grid;
+    width: 100%;
+    background-color: rgb(221, 220, 220);
 }
 
-.card {
+/* .card {
     background-color: #d5b590 !important;
-}
+} */
 
 .fas {
     justify-content: center;
+}
+
+.pic4{
+    height: 250px;
+    width: 250px;
+    float: right;
+    display: flex
+}
+
+/* overall styling for cards */
+.card-text {
+    font-size: 1.5rem;
+}
+
+.card-deck {
+    margin-left: 20px;
+}
+
+
+/* Styling for cd1 */
+.fa-exclamation-triangle {
+    margin-right: 5px;
+}
+
+.card-cd1 {
+    background-color: whitesmoke;
+    margin-left: 45px !important;
+    margin-right: auto;
+}
+
+.cd1Imgdiv {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-symptom{
+    color: black !important;
+    background-color: #d5b590!important;
+
+}
+.cd1textdiv h1 {
+    font-family: 'Abril Fatface';
+    color: #d5b590 !important;
+}
+
+.pic1{
+    height: 250px;
+    width: 250px;
+    float: right;
+    display: flex;
+    border-radius: 50% !important;
+    border: 10px double #d5b590 !important;
+}
+
+
+
+
+/* Styling for cd2 */
+.cd2textdiv h1 {
+    font-family: 'Abril Fatface';
+    color: #1b4738;
+}
+
+.fa-user-md {
+    margin-right: 5px;
+}
+.pic2{
+    height: 250px;
+    width: 250px;
+    float: left;
+    display: flex;
+    border-radius: 50% !important;
+    border: 10px double #1b4738 ;
+}
+
+.card-cd2 {
+    background-color: #d5b590 !important;
+    margin-left: 45px !important;
+    margin-right: auto;
+}
+
+.cd2textdiv{
+    float: right;   
+}
+
+.btn-optom {
+    background-color: #1b4738 !important;
+    color: white !important;
+    font-size: 1.7rem;
+}
+
+/* Styling for cd3 */
+.fa-book-medical {
+    margin-right: 5px;
+}
+
+.card-cd3 {
+    background-color: whitesmoke;
+    margin-left: 45px !important;
+    margin-right: auto;
+}
+
+.cd3Imgdiv {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-medical{
+    background-color: #d5b590 !important;
+    color: black !important;
+
+}
+.cd3textdiv h1 {
+    font-family: 'Abril Fatface';
+    color: #d5b590!important;
+}
+
+.pic3{
+    height: 250px;
+    width: 250px;
+    float: right;
+    display: flex;
+    border-radius: 50% !important;
+    border: 10px double #d5b590 ;
+}
+
+
+/* Styling for cd4 */
+.pic4{
+    height: 250px;
+    width: 250px;
+    float: left;
+    display: flex;
+    border-radius: 50% !important;
+    border: 10px double #1b4738 ;
+}
+
+.cd4textdiv h1 {
+    font-family: 'Abril Fatface';
+    color: 1b4738;
+}
+
+.fa-comments {
+    margin-right: 5px;
+}
+
+.card-cd4 {
+    background-color: #d5b590 !important;
+    margin-left: 45px !important;
+    margin-right: auto;
+}
+
+.cd4textdiv{
+    float: right;   
+}
+
+.btn-chat {
+    background-color: #1b4738 !important;
+    color: whitesmoke;
+    font-size: 1.7rem;
+}
+
+.cd4 {
+    margin-bottom: 50px
 }

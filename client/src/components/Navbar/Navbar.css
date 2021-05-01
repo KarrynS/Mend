@@ -10,11 +10,15 @@
     font-size: 32px !important;
 }
 
+.fa-star-of-life{
+    margin-right: 10px;
+}
+/* 
 #navbarNavAltMarkup{
     float: right;
     margin: 0 10px 0 0;
     justify-content: right;
-}
+} */
 
 .navbar-nav {
     justify-content: end;
@@ -24,7 +28,7 @@
 
 .nav-link {
     background-color: #d5b590;
-
+    align-items: center;
 }
 
 #nav-menu {

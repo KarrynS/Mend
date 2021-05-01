@@ -7,8 +7,8 @@ function Navbar() {
         <>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/dashboard">Mend</a>
-                    <div className="collapse navbar-collapse mr-auto" id="navbarNavAltMarkup">
+                    <a className="navbar-brand" href="/dashboard"><i class="fas fa-star-of-life"></i> Mend</a>
+                    <div className="top-bar-right">
                     <ul className="medium-horizontal align-right text-black" id="nav-menu">
                             {/* <li className="nav-item">
                                 <Link to="/dashboard" className={window.location.pathname === "/" || window.location.pathname === "/members"
