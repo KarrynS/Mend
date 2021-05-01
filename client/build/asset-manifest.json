@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4e264e8c.chunk.css",
+    "main.js": "/static/js/main.9f7496b8.chunk.js",
+    "main.js.map": "/static/js/main.9f7496b8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.992eac29.js",
+    "runtime-main.js.map": "/static/js/runtime-main.992eac29.js.map",
+    "static/css/2.02adba32.chunk.css": "/static/css/2.02adba32.chunk.css",
+    "static/js/2.d782399c.chunk.js": "/static/js/2.d782399c.chunk.js",
+    "static/js/2.d782399c.chunk.js.map": "/static/js/2.d782399c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.16252cf6597aa784a67b3af5ea9a034f.js": "/precache-manifest.16252cf6597aa784a67b3af5ea9a034f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.02adba32.chunk.css.map": "/static/css/2.02adba32.chunk.css.map",
+    "static/css/main.4e264e8c.chunk.css.map": "/static/css/main.4e264e8c.chunk.css.map",
+    "static/js/2.d782399c.chunk.js.LICENSE.txt": "/static/js/2.d782399c.chunk.js.LICENSE.txt",
+    "static/media/OptometristLogin.css": "/static/media/dark-green-texture.e90a0d8a.jpg",
+    "static/media/diagnosis_book.jpg": "/static/media/diagnosis_book.d46c8631.jpg",
+    "static/media/eyeissue.jpg": "/static/media/eyeissue.e121a02b.jpg",
+    "static/media/glassesonbook.jpg": "/static/media/glassesonbook.9169418f.jpg",
+    "static/media/leaf.jpg": "/static/media/leaf.eb27cd08.jpg",
+    "static/media/modeleye.jpg": "/static/media/modeleye.c92274f9.jpg",
+    "static/media/optomlogin.jpg": "/static/media/optomlogin.e9a47341.jpg",
+    "static/media/optomsignup.jpg": "/static/media/optomsignup.c64835c7.jpg",
+    "static/media/rainboweye.jpg": "/static/media/rainboweye.8e550e04.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.992eac29.js",
+    "static/css/2.02adba32.chunk.css",
+    "static/js/2.d782399c.chunk.js",
+    "static/css/main.4e264e8c.chunk.css",
+    "static/js/main.9f7496b8.chunk.js"
+  ]
+}

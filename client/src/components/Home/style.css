@@ -21,6 +21,10 @@ ul li {
      display: flex;
  }
 
+ #nav-menu > li.active {
+     color: white;
+ }
+
  .nav-item {
     list-style-type: none;
  }
@@ -31,10 +35,9 @@ ul li {
      font-weight: 100;
  }
 
- /* .imgDiv {
-    background-image: url("../../img/dark-green-texture.jpg");
-    width: auto;
-} */
+ .nav-link:hover{
+     color: white;
+ }
 
  .symptom {
         font-family: Courier, monospace;
@@ -115,8 +118,12 @@ padding: 0px;
 .btn-symptom{
     color: black !important;
     background-color: #d5b590!important;
-
+    border: 1px solid #d5b590 !important;
 }
+.btn-symptom:hover{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+}
+
 .cd1textdiv h1 {
     font-family: 'Abril Fatface';
     color: #d5b590 !important;
@@ -166,6 +173,11 @@ padding: 0px;
     background-color: #1b4738 !important;
     color: white !important;
     font-size: 1.7rem;
+    border: 1px solid #1b4738 !important;
+}
+
+.btn-optom:hover{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
 }
 
 /* Styling for cd3 */
@@ -188,8 +200,13 @@ padding: 0px;
 .btn-medical{
     background-color: #d5b590 !important;
     color: black !important;
-
+    border: 1px solid #d5b590 !important;
 }
+
+.btn-medical:hover{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+}
+
 .cd3textdiv h1 {
     font-family: 'Abril Fatface';
     color: #d5b590!important;
@@ -224,6 +241,8 @@ padding: 0px;
     margin-right: 5px;
 }
 
+
+
 .card-cd4 {
     background-color: #d5b590 !important;
     margin-left: 45px !important;
@@ -238,6 +257,11 @@ padding: 0px;
     background-color: #1b4738 !important;
     color: whitesmoke;
     font-size: 1.7rem;
+    border: 1px solid #1b4738 !important;
+}
+
+.btn-chat:hover{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
 }
 
 .cd4 {
