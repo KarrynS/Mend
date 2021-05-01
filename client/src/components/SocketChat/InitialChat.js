@@ -74,20 +74,26 @@ const InitialChat = () => {
         <div className="chat">
             
             { !chatLogin ? 
-                <div className="logIn">
-                    <header class="join-header">
-				        <h1><i class="fas fa-eye"></i> iChat</h1>
-			        </header>
-                    <div className="inputs">
-                        <input type="text" placeholder="Name" onChange={(e) => {setName(e.target.value)}}/>
-                        <select name="room" id="room" onChange={(e) => {setRoom(e.target.value)}}>
-							<option value="Optometrist">Optometrist</option>
-							<option value="General">General</option>
-						</select>
-                        
-                    </div>
-                    <div className="divbtn">
-                        <button onClick={connectToRoom} className="chatBtn">Start conversation</button>
+                <div className="chatBoxContainer">
+                     <div className="header">
+                    <a id="leave-btn-cross" class="btn" href="/dashboard"><i class="fas fa-times"></i></a>
+                </div>
+                    <div className="logIn">
+                        <header class="join-header">
+                            <h1><i class="fas fa-eye"></i> iChat</h1>
+                            
+                        </header>
+                        <div className="inputs">
+                            <input type="text" placeholder="Name" onChange={(e) => {setName(e.target.value)}}/>
+                            <select name="room" id="room" onChange={(e) => {setRoom(e.target.value)}}>
+                                <option value="Optometrist">Optometrist</option>
+                                <option value="General">General</option>
+                            </select>
+                            
+                        </div>
+                        <div className="divbtn">
+                            <button onClick={connectToRoom} className="chatBtn">Start conversation</button>
+                        </div>
                     </div>
                 </div>
             
@@ -95,7 +101,7 @@ const InitialChat = () => {
             <div className="chatBoxContainer">
                 <div className="header">
                     <h1><i class="fas fa-eye"></i> iChat</h1>
-                    <a id="leave-btn" class="btn" >Leave Room</a>
+                    <a id="leave-btn" class="btn" href="/dashboard"><i class="fas fa-times"></i></a>
                 </div>
             <div className="chatContainer">
                 <header class="chat-header">

@@ -48,7 +48,7 @@ module.exports = {
     }, 
     loadManagement: function(req,res) {
       db.User.findById({_id: req.user.id})
-      then(management => {
+      .then(management => {
         console.log("mx =", management)
         res.status(200).json(management);
       })

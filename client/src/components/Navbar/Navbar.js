@@ -39,6 +39,13 @@ function Navbar() {
                                 >Diagnosis</Link>
                             </li>
                             <li className="nav-item">
+                            <Link to="/chat" className={window.location.pathname === "/chat" 
+                                    ? "nav-link active" 
+                                    : "nav-link"
+                                    }
+                                >iChat</Link>
+                            </li>
+                            <li className="nav-item">
                             <Link to="/login" className={window.location.pathname === "/login"
                                     ? "nav-link active" 
                                     : "nav-link"

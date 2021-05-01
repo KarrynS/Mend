@@ -76,7 +76,7 @@ function DiagnosisForm() {
         <>
 
         <div className="backgroundImg">
-            <div className="container">
+            <div className="containerDiag">
             <form className="form-inline" onSubmit={loadDiagnosis}>
             <label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">Diagnosis</label>
             <select onChange={handleInputChange}className="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
