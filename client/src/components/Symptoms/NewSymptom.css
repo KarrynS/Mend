@@ -1,7 +1,13 @@
 .cardTitle {
     font-family: 'Abril Fatface';
     color: #1b4738 !important;
-    font-size: 22px !important;
+    font-size: 2rem;
     padding: 0;
 }
 
+.formContainer {
+    display: grid;
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}

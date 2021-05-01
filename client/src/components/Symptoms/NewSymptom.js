@@ -91,9 +91,9 @@ function NewSymptom() {
     
     return (
         <>
-            <div className="formDiv">
+            <div className="formContainer">
                  <div className="row justify-content-around">
-                    <div className="col-md-6 col-md-6">
+                    <div className="col-md-6 col-lg-12">
                         <NewSymptomForm 
                             handleFormSubmit={handleFormSubmit}
                             handleInputChange={handleInputChange}
