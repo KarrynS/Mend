@@ -3,7 +3,7 @@ import "./LoginForm.css";
 import LogInImage from "../../img/leaf.jpg";
 import API from "../../utils/API";
 
-function LoginForm() {
+function LoginForm(props) {
        //establishing form values
        const [formObject, setformObject] = useState({
         username: "",
@@ -32,6 +32,7 @@ function LoginForm() {
                     username: "",
                     password: ""
                 })
+                props.setIsLoggedIn(true)
                 console.log("loginData", formObject);
                 window.location.href = "/dashboard";
             })

@@ -1,8 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import API from "../../utils/API";
 
 function Navbar() {
+
+    const handleLogout= () => {
+        API.logout()
+        .then(response => {
+            window.location.href="/login"
+        })
+    }
+    
     return(
         <>
             <nav className="navbar navbar-expand-lg navbar-light">
@@ -46,7 +55,7 @@ function Navbar() {
                                 >iChat</Link>
                             </li>
                             <li className="nav-item">
-                            <Link to="/login" className={window.location.pathname === "/login"
+                            <Link onClick={handleLogout} className={window.location.pathname === "/login"
                                     ? "nav-link active" 
                                     : "nav-link"
                                     }

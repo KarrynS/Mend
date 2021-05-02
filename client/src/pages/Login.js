@@ -2,11 +2,11 @@ import React from "react";
 import Topbar from "../components/Topbar/Topbar";
 import LoginForm from  "../components/Forms/LoginForm";
 
-function Login() {
+function Login(props) {
     return (
         <>
             <Topbar />
-            <LoginForm />
+            <LoginForm setIsLoggedIn={props.setIsLoggedIn}/>
         </>
     )
 }

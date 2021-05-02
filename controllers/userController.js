@@ -18,7 +18,7 @@ module.exports = {
           console.log("dbUser/userController", newUser)
           db.User.createUser(newUser, function(err, user){
             if(err) throw err;
-            res.send(user).end()
+            res.redirect(307, '/api/user/login')
           });
         } else{
           res.status(500).send("{errors: \"Passwords don't match\"}").end()

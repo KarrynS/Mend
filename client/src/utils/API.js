@@ -10,7 +10,7 @@ export default {
         return axios.post('/api/user/login', userData)
     },
     currentUser: () => {
-      return axios.get('/api/user/current')
+      return axios.get('/api/user/user')
     },
     logout: () => {
       return axios.get('/api/user/logout')

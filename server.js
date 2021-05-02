@@ -17,6 +17,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors())
+
 //app.use(express.static("public"));
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -50,7 +51,7 @@ mongoose.connect(
 app.use(routes);
 //require("./controllers/api-routes")(app);
 app.get("*", (req,res) => {
-  res.sendFile(path.join(__dirname, "/client/build/index.html"))
+  res.sendFile(path.join(__dirname, "./client/build/index.html"))
 })
 
 
