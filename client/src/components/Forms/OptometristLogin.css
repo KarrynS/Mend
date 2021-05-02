@@ -16,10 +16,20 @@
 
 .login {
     font-family: Courier, monospace;
+    background-color: #d5b590;
     color: #d5b590;
     border: 1px  #d5b590 solid;
     border-radius: 2%;
     padding: 25px;
+}
+
+.optomloginBtn{
+    background-color: #1b4738 !important;
+    color:whitesmoke !important;
+}
+
+.optomloginBtn:hover{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
 }
 
 h2 {

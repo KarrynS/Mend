@@ -5,3 +5,11 @@
 #symptomBtn:hover{
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
 }
+
+.recordSymptom{
+    color: #1b4738 !important;
+}
+
+.symptom{
+    font-size: 1.2rem;
+}

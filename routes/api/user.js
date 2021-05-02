@@ -49,7 +49,7 @@ router.post('/login',
 );
 
 // Endpoint to get current user
-router.get('/user', function(req, res){
+router.get('/current', function(req, res){
   res.send(req.user);
 })
 

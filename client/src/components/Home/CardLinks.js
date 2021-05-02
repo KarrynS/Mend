@@ -5,7 +5,9 @@ import pic2 from "../../img/modeleye.jpg";
 import pic3 from "../../img/diagnosis_book.jpg";
 import pic4 from "../../img/rainboweye.jpg";
 
-const CardLinks = () => {
+const CardLinks = (props) => {
+    console.log("Cardlink userInfo", props);
+
     return (
         <>
         {/* <div className="imgDiv"> */}
@@ -32,7 +34,7 @@ const CardLinks = () => {
                             </div>
                             <div className="cd2textdiv col-md-6">
                                 <h1 className="card-title"><i className="fas fa-user-md"></i> Visited the optometrist?</h1>                             
-                                <p className="card-text">View your custom management plan to help you on the road to recovery</p>
+                                <p className="card-text">View your custom management plan to help you on the road to recovery.</p>
                                 <a href="management" className="btn btn-primary btn-optom">See Management Plan</a>                
                             </div>
                         </div>
@@ -61,7 +63,7 @@ const CardLinks = () => {
                             </div>
                             <div className="cd4textdiv col-md-6">
                                 <h1 className="card-title"><i className="fa fa-comments"></i> Need more assistance?</h1>                             
-                                <p className="card-text">Join a chat with your optometrist or chat with other members of the community</p>
+                                <p className="card-text">Join a chat with your optometrist or chat with other members of the community.</p>
                                 <a href="chat" className="btn btn-primary btn-chat">iChat</a>   
                                 </div>
                            

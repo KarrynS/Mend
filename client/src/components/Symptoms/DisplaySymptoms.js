@@ -33,7 +33,7 @@ const DisplaySymptoms = (props) => {
         return trueSymptoms.map((symptom) => {
             return (
                 <>
-                <li>{symptomType[symptom]}</li>
+                <> {symptomType[symptom]},&nbsp; </>
                 </>
             )
         });
@@ -49,18 +49,18 @@ const DisplaySymptoms = (props) => {
 
     const getEye = () => {
         return (    
-            <><p>Affected Eye(s): {props.symptom.eye}</p></>
+            <><>{props.symptom.eye}</></>
         )
     }
 
     const getPain =() => {
         if(props.symptom.pain === "") {
             return (
-                <><p>Pain level: Not recorded</p></>
+                <>Not recorded</>
             )
         } else {
             return (
-                <><p>Pain level: {props.symptom.pain}</p></>
+                <>{props.symptom.pain}</>
             )
         }
         
@@ -84,25 +84,18 @@ const DisplaySymptoms = (props) => {
 
     return (
         <>
-          
-          
-                <div className=" cardDiv col-md-8 col-md-">
-                <div className="symptomDiv">
-                    <h5>Symptoms</h5>
-                    {getEye()}
-                    {getPain()}
-                    <div className="row">
-                        <ul className="col-10">
-                            {/* List Symptoms here */}
-                            {getTrueSymptoms()}
-                        </ul>
-                    </div>
-                    <p> Recorded on: {getDate()}</p>
-                    <button onClick={() => removeSymptom(props.symptom._id)} className="deletebtn">Delete<i className="fa fa-close"></i></button>                        
-                    {/* <button onClick={updateIssue()} class="buttonload"><i class="fa fa-refresh"></i>Update</button> */}
+          <div className="container-sm sympCardContainer">
+            <div className="card w-75 innersympCard">
+                <div className="card-body">
+                    <h3 className="card-title cardTitle">New Symptom Card</h3>
+                    <p className="card-text affectedEye"><h5 className="sympCardTitle"><i class="fa fa-low-vision" aria-hidden="true">&nbsp;</i>Affected eye(s):</h5>{getEye()}</p>
+                    <p className="card-text painLevel"><h5 className="sympCardTitle"><i class="fa fa-medkit" aria-hidden="true">&nbsp;</i>Pain Level:</h5>{getPain()}</p>
+                    <p className="card-text recordedSymp"><h5 className="sympCardTitile"><i class="fa fa-bookmark" aria-hidden="true">&nbsp;</i>Saved Symptoms: &nbsp;</h5>{getTrueSymptoms()}</p>
+                    <p className="card-text recordedDate"><h5 className="sympCardTitile"><i class="fa fa-calendar-o" aria-hidden="true">&nbsp;</i>Recorded on: &nbsp;</h5>{getDate()}</p>
+                    <button onClick={() => removeSymptom(props.symptom._id)} className="btn removeSmpBtn"><i className="fa fa-close">&nbsp;</i>Remove symptom</button>                  
                 </div>
             </div>
-
+          </div>
         </>
     )
 }

@@ -1,0 +1,18 @@
+.signup {
+    font-family: Courier, monospace;
+    background-color: #d5b590;
+    border: 1px  #d5b590 solid;
+    border-radius: 2%;
+    padding: 25px;
+  
+}
+
+.optomsignUpBtn {
+    background-color: #1b4738 !important;
+    color: whitesmoke !important;
+}
+
+.optomsignUpBtn:hover{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+}
+

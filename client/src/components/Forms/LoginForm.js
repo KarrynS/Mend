@@ -68,7 +68,7 @@ function LoginForm(props) {
                                         id="password-input" 
                                         placeholder="Password"/>
                                 </div>
-                                <button type="submit" className="btn btn-default">Login</button>
+                                <button type="submit" className="btn btn-default loginBtn">Login</button>
                             </form>
                             <h3>Not a member? <a href="/">Sign up here</a></h3>
                         </div>

@@ -87,10 +87,10 @@ const PatientSearch = () => {
                     </div>
                     <div className="form-floating mb-3 col">
                         <input onChange={handleInputChange} name="birthday" type="text" className="form-control" id="floatingBirthday" placeholder="dd/mm/yyyy"/>
-                        <label htmlFor="floatingPassword"> Date of birth (dd/mm/yyyy)</label>
+                        <label htmlFor="floatingPassword"> Date of birth</label>
                     </div>
                 </div>
-                <button type="submit" className="btn btn-default searchBtn">Search</button>
+                <button type="submit" className="btn btn-default searchBtn" id="pxsearchBtn">Search</button>
                 </form>
                 </div>
             </div>   

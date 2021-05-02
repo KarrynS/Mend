@@ -17,9 +17,18 @@
     padding-bottom: 25px;
     background-color: #d5b590;
 }
+ 
+.patientSearchForm label{
+padding-left: 25px;
+}
 
 .btn {
     text-align: left;
+}
+
+#pxsearchBtn{
+    background-color:#1b4738 !important;
+    color: whitesmoke;
 }
 
 

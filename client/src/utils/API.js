@@ -10,7 +10,7 @@ export default {
         return axios.post('/api/user/login', userData)
     },
     currentUser: () => {
-      return axios.get('/api/user/user')
+      return axios.get('/api/user/current')
     },
     logout: () => {
       return axios.get('/api/user/logout')
@@ -55,5 +55,9 @@ export default {
     },
     submitPlan:  function(treatmentData) {
       return axios.post('/api/optom/treatment', treatmentData)
-    }
+    },
+    currentOptomUser: () => {
+      return axios.get('/api/optom/current')
+    },
+    
 } 

@@ -16,12 +16,15 @@ import API from "./utils/API";
 function App() {
 const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+const [userInfo, setUserInfo] = useState("");
+
   useEffect(() => {
     API.currentUser()
         .then(res => {
            console.log("res.data", res.data)
            if(res.data.email) {
               setIsLoggedIn(true); 
+              setUserInfo(res.data)
            }
         })
         // .catch((err) => {
@@ -52,7 +55,7 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
           <Route path = "/optomlogin" component={OptomLogin} />
           <Route path = "/optomsignup" component={OptomSignUp} />
           <Route path = "/optometrist" component={Optometrist} />
-          <Route path = "/dashboard" component={Dashboard} />
+          <Route path = "/dashboard" component={Dashboard} userInfo={userInfo}/>
           <Route path = "/symptoms" component={Symptoms} />
           <Route path = "/diagnosis" component={Diagnosis} />
           <Route path = "/chat" component={Chat} />

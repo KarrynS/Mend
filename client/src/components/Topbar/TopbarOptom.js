@@ -9,7 +9,7 @@ function TopbarOptom() {
                 <div className="container-fluid">
                 <div className="top-bar">
                     <div className="top-bar-left">
-                    <a className="navbar-brand" href="/optomlogin">Mend</a>
+                    <a className="navbar-brand" href="/optomlogin"><i class="fas fa-star-of-life"></i>Mend</a>
                 </div>
                 </div>
                 

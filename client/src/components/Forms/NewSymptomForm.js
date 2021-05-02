@@ -6,7 +6,7 @@ const NewSymptomForm = ({handleFormSubmit, handleInputChange}) => {
     return (
         <>
         <form className="symptom" onSubmit={handleFormSubmit}>
-            <h1 className="cardTitle">Record your symptoms</h1>
+            <h1 className="cardTitle recordSymptom">Record your symptoms</h1>
             <p>Check all symptoms that apply</p>
             <div className="row">
                 <div className="row">

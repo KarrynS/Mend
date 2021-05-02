@@ -255,7 +255,7 @@ padding: 0px;
 
 .btn-chat {
     background-color: #1b4738 !important;
-    color: whitesmoke;
+    color: whitesmoke !important;
     font-size: 1.7rem;
     border: 1px solid #1b4738 !important;
 }

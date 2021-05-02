@@ -1,15 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Topbar.css";
+import API from "../../utils/API";
 
 function Topbar() {
+
+    const handleLogout = () => {
+        API.optomLogout()
+        .then(response => {
+            window.location.href="/optomlogin"
+        })
+    }
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
                 <div className="top-bar">
                     <div className="top-bar-left">
-                    <a className="navbar-brand" href="/">Mend</a>
+                    <a className="navbar-brand" href="/"><i class="fas fa-star-of-life"></i>Mend</a>
                 </div>
                 </div>
                 
@@ -23,7 +31,7 @@ function Topbar() {
                                 >Members</Link>
                     </li>
                     <li className ="nav-item">
-                        <Link to="/optomlogin" className={window.location.pathname === "/optomlogin" 
+                        <Link onClick={handleLogout} className={window.location.pathname === "/optomlogin" 
                                     ? "nav-link active" 
                                     : "nav-link"
                                     }

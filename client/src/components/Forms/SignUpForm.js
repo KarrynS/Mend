@@ -56,10 +56,10 @@ function SignUpForm() {
     return (
         <>
         <div className="imgDiv">
-            <div className="container">
+            <div className="container signUpContainer">
                  <div className="row">
                     <div className="col-md-6 col-md-offset-3">
-                        <h2>Sign Up Form</h2>
+                        <h2 id="signupTitle">Sign Up Form</h2>
                         <form className="signup" onSubmit={handleFormSubmit}>
                             <div className="form-group name">
                                 <label htmlFor="exampleInputEmail1">Name</label>
@@ -72,7 +72,7 @@ function SignUpForm() {
                                     placeholder="Name*" />
                             </div>
                             <div className="form-group username">
-                                <label htmlFor="exampleInputEmail1">Full Name</label>
+                                <label htmlFor="exampleInputEmail1">Username</label>
                                 <input 
                                     onChange={handleInputChange} 
                                     name="username"
@@ -121,7 +121,7 @@ function SignUpForm() {
                                     placeholder="dd/mm/yyyy"/>
                             </div>
                             <br/>
-                            <button type="submit" className="btn btn-default">Sign Up</button>
+                            <button type="submit" className="btn btn-default signUpBtn">Sign Up</button>
                         </form>
                     </div>
                     <div className="memberslinkDiv col-md-3 col-md-offset-3">

@@ -58,7 +58,7 @@ function OptomLoginForm() {
                                         name="username" 
                                         className="form-control" 
                                         id="username-input" 
-                                        placeholder="Username"/>
+                                        placeholder="Enter username"/>
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="exampleInputPassword1">Password</label>
@@ -68,9 +68,9 @@ function OptomLoginForm() {
                                         name="password" 
                                         className="form-control" 
                                         id="password-input" 
-                                        placeholder="Password"/>
+                                        placeholder="Enter password"/>
                                 </div>
-                                <button type="submit" className="btn btn-default">Login</button>
+                                <button type="submit" className="btn btn-default optomloginBtn">Login</button>
                             </form>
                             <h3>Not a registered clinician? <a href="/optomsignup">Register here</a></h3>
                         </div>

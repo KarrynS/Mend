@@ -1,7 +1,7 @@
 .imgDiv {
     background-image: url("../../img/dark-green-texture.jpg");
     width: auto;
-    height: 100vh;
+    height:100vh;
 }
 
 .container {
@@ -10,12 +10,32 @@
     position: absolute;
 }
 
+.signUpContainer {
+    margin-bottom: 35px;
+    padding-bottom: 35px;
+}
+
 .signup {
     font-family: Courier, monospace;
-    color: #d5b590;
+    background-color: #d5b590;
     border: 1px  #d5b590 solid;
     border-radius: 2%;
     padding: 25px;
+  
+}
+
+#signupTitle {
+    padding-top: none;
+    margin-top: none; 
+    margin: auto;
+}
+.signUpBtn{
+    background-color: #1b4738 !important;
+    color: white !important;
+}
+
+.signUpBtn:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
 }
 
 h2 {

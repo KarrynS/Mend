@@ -1,61 +1,59 @@
-.dispSympContainter{
-  display: grid;
+.cardTitle{
+  color: #d5b590 !important
 }
 
-.symptomDiv {
-    width: 100%;
-    justify-content: center;
-    padding: 25px;
-    background-color: #d5b590 ;
-    font-family: Courier, monospace;
-    margin-left: 20px;
-    border-radius: 5px;
-    padding: 10px 16px;
-    margin: 20px;
- 
+.sympCardContainer {
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Style buttons */
-.deletebtn {
-    background-color: #d5b590; /* Blue background */
-    border: 1px solid #1b4738; /* Remove borders */
-    border-radius: 5px;
-    color:#1b4738!important; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-    width: 30% !important;
-  
-  }
-  
-  /* Darker background on mouse-over */
-  .deletebtn:hover {
-    background-color: #1b4738;
-    color: white;
-  }
-
-  .cardDiv{
-      max-width: initial;
-  }
-
-  h5{
-    font-family: 'Abril Fatface';
-    color: #1b4738;
-  }
-
-.buttonload {
-  float: right;
-  background-color: DodgerBlue; /* Blue background */
-  border: 1px solid #1b4738; /* Remove borders */
-  border-radius: 5px;
-  color: #1b4738; /* White text */
-  padding: 12px 16px; /* Some padding */
-  font-size: 16px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
+.innersympCard{
+  border: 3px solid #1b4738 !important;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-  @media (min-width: 768px ){
-      .col-md-6{
-        max-width: initial;
-      }
-  }
+.affectedEye {
+  display: flex;
+  font-size: 1.2rem;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.sympCardTitle {
+  align-items: center;
+  margin-right: 20px;
+  color: #1b4738;
+}
+
+.painLevel {
+  display: flex;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.recordedSymp{
+  display: flex;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.recordedDate{
+  display: flex;
+  font-size: 1.2rem;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.removeSmpBtn {
+  background-color: #d5b590 !important;
+  color: #1b4738 ! important;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.removeSmpBtn:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+
+}

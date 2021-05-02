@@ -109,7 +109,7 @@ function SignUpFormOptom() {
                                     placeholder="Re-enter password"/>
                             </div>
                             <br/>
-                            <button type="submit" className="btn btn-default">Sign Up</button>
+                            <button type="submit" className="btn btn-default optomsignUpBtn">Sign Up</button>
                         </form>
                     </div>
                     <div className="memberslinkDiv col-md-3 col-md-offset-3">
