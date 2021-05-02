@@ -91,6 +91,7 @@ function NewSymptom() {
     
     return (
         <>
+        <div className="newSymptomContainer">
             <div className="formContainer">
                  <div className="row justify-content-around">
                     <div className="col-md-6 col-lg-12">
@@ -111,9 +112,9 @@ function NewSymptom() {
                 })}
                 </div>
             </div>
-
-           
+        </div>
         </>
+         
     )
 }
 

@@ -26,11 +26,11 @@ const TreatmentPlan = () => {
         <>
            <div className="jumbotron jumbotron-fluid">
                <div className="treatmentcontainer">
-                    <h1 className="display-4">Management plan for : {plan.name}</h1>
-                    <p className="lead"><h5>Diagnosis : </h5>diag goes here</p>
+                    <h2 className="display-4 mxPlanTitle">Management plan for : {plan.name}</h2>
+                    <p className="lead mxdiagnosis"><h5 className="mxdiagnosisTitle"><i class="fa fa-plus" aria-hidden="true">&nbsp;</i>Diagnosis : </h5>//diag goes here///</p>
                     <hr className="my-4"/>
-                    <p><h5>Treatment advice: </h5>treatment goes here</p>
-                    <p><h5>Suggested review date: </h5>review date here</p>
+                    <p className="mxtreatment"><h5 className="mxdiagnosisTitle"><i class="fa fa-user-md" aria-hidden="true">&nbsp;</i>Treatment advice: </h5>//treatment goes here//</p>
+                    <p className="mxdate"><h5 className="mxdiagnosisTitle"><i class="fa fa-calendar-o" aria-hidden="true">&nbsp;</i>Recommended review date: </h5>//review date here//</p>
                </div>
             </div>
         </>

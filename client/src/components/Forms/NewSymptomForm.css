@@ -13,3 +13,38 @@
 .symptom{
     font-size: 1.2rem;
 }
+
+.mxPlanTitle{
+   padding-left: none !important;
+}
+
+.mxdiagnosis {
+    display: flex;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.mxdiagnosisTitle{
+    align-items: center;
+    margin-right: 20px;
+    color: #1b4738;
+}
+
+.mxtreatment{
+    display: flex;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.mxdate{
+    display: flex;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.treatmentcontainer {
+    background-color: antiquewhite;
+}
