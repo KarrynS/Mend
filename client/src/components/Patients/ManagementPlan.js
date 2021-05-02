@@ -68,7 +68,7 @@ const ManagementPlan = (props) => {
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                    <button  type="submit" class="btn btn-primary">Submit Plan</button>
+                    <button  type="submit" class="btn btn-primary mxplanBtn">Submit Plan</button>
                     </div>
                 </div>
                 </form> 

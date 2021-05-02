@@ -18,7 +18,7 @@ const PatientSymptoms = ({patient}) => {
     return (
         <>
             <div className="pxsymptomDiv">
-                <h5> Patient:  {patient.name}</h5>
+                <h3 className="pxsymptomDivTitle"> Results for :  {patient.name}</h3>
                 
                     {patient.symptoms.map(symptom => {
                         return (

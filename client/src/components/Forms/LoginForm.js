@@ -36,10 +36,10 @@ function LoginForm(props) {
                 console.log("loginData", formObject);
                 window.location.href = "/dashboard";
             })
-            .catch(err => console.log(err));
-                console.log("Authorisation Error: ", err)
+            .catch(err => {
+                console.log("Authorisation Error: ", err);
                 alert("Invalid login details")
-
+            });
         }
     }
 

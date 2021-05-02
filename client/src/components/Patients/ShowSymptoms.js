@@ -28,7 +28,7 @@ const ShowSymptoms = (props) => {
             });
             return trueSymptoms.map((symptom) => {
                 return (
-                    <li>{symptomType[symptom]}</li>
+                    <>{symptomType[symptom]},&nbsp; </>
                 )
                
             });
@@ -36,18 +36,18 @@ const ShowSymptoms = (props) => {
 
     const getEye = () => {
         return (    
-            <><p>Affected Eye(s): {props.symptom.eye}</p></>
+            <>{props.symptom.eye}</>
         )
     }
 
     const getPain =() => {
         if(props.symptom.pain === "") {
             return (
-                <><p>Pain level: Not recorded</p></>
+                <>Not recorded</>
             )
         } else {
             return (
-                <><p>Pain level: {props.symptom.pain}</p></>
+                <>{props.symptom.pain}</>
             )
         }
         
@@ -55,7 +55,21 @@ const ShowSymptoms = (props) => {
 
     return (
         <>
-            <div className="patientSymptomDiv col-md-6 col-md-">
+            <div className="container-sm sympCardContainer">
+            <div className="card w-75 innersympCard">
+                <div className="card-body">
+                    <h3 className="card-title cardTitle">New Symptom Card</h3>
+                    <p className="card-text affectedEye"><h5 className="sympCardTitle"><i class="fa fa-low-vision" aria-hidden="true">&nbsp;</i>Affected eye(s):</h5>{getEye()}</p>
+                    <p className="card-text painLevel"><h5 className="sympCardTitle"><i class="fa fa-medkit" aria-hidden="true">&nbsp;</i>Pain Level:</h5>{getPain()}</p>
+                    <p className="card-text recordedSymp"><h5 className="sympCardTitle"><i class="fa fa-bookmark" aria-hidden="true">&nbsp;</i>Saved Symptoms: &nbsp;</h5>{getTrueSymptoms()}</p>
+                    <p className="card-text recordedDate"><h5 className="sympCardTitle"><i class="fa fa-calendar" aria-hidden="true">&nbsp;</i>Recorded on: &nbsp; <Moment format="dddd Do MMMM YYYY">{props.symptom.date}</Moment></h5></p>
+                </div>
+            </div>
+          </div>
+
+
+
+            {/* <div className="patientSymptomDiv col-md-6 col-md-">
                 <div className="row">
                     <div className=" cardDiv col-8">
                         <p> Date : 
@@ -68,7 +82,7 @@ const ShowSymptoms = (props) => {
                         </ul>
                     </div>
                 </div>
-            </div>   
+            </div>    */}
         </>
     )
 }

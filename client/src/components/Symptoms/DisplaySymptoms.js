@@ -32,9 +32,9 @@ const DisplaySymptoms = (props) => {
         );
         return trueSymptoms.map((symptom) => {
             return (
-                <>
+              
                 <> {symptomType[symptom]},&nbsp; </>
-                </>
+             
             )
         });
         
@@ -49,7 +49,7 @@ const DisplaySymptoms = (props) => {
 
     const getEye = () => {
         return (    
-            <><>{props.symptom.eye}</></>
+            <>{props.symptom.eye}</>
         )
     }
 

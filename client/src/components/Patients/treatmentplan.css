@@ -1,5 +1,5 @@
 h1 {
-    color: #d5b590;
+    color: #1b4738;
 }
 
 .treatmentDiv {
@@ -10,8 +10,20 @@ h1 {
     margin-left: 20px;
     margin-right: 20px;
     font-family: Courier, monospace;
+    background-color: #d5b590;
+    margin-bottom:30px;
+    font-size: 1.2rem;
 }
 
 label {
     color:#1b4738
+}
+
+.mxplanBtn {
+    background-color: #1b4738 !important;
+    color: whitesmoke;
+}
+
+.mxplanBtn:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
 }
