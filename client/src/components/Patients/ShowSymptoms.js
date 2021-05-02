@@ -66,23 +66,6 @@ const ShowSymptoms = (props) => {
                 </div>
             </div>
           </div>
-
-
-
-            {/* <div className="patientSymptomDiv col-md-6 col-md-">
-                <div className="row">
-                    <div className=" cardDiv col-8">
-                        <p> Date : 
-                            <Moment format="dddd Do MMMM YYYY">{props.symptom.date}</Moment>
-                        </p>
-                        {getEye()}
-                        {getPain()}
-                        <ul>
-                            {getTrueSymptoms()}
-                        </ul>
-                    </div>
-                </div>
-            </div>    */}
         </>
     )
 }

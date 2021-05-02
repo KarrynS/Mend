@@ -23,7 +23,7 @@ function SignUpFormOptom() {
         })
     }
   
-    //upon loging, use API to autheticate user
+    //upon logging, use API to autheticate user
     const handleFormSubmit = (e) => {
         e.preventDefault();
         if (formObject.email && formObject.password && formObject.name) {

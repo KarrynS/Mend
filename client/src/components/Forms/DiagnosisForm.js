@@ -45,8 +45,6 @@ function DiagnosisForm() {
         console.log("extras", diagnosis)
         return (
             <>
-        
-
             <div className="diagnosisDiv">
                 <table className="table-border">
                 <thead>
@@ -55,7 +53,6 @@ function DiagnosisForm() {
                     <th scope="col">Prevalence</th>
                     <th scope="col">Severity</th>
                     <th scope="col">Comments</th>
-                    
                     </tr>
                 </thead>
                 <tbody>
@@ -77,33 +74,33 @@ function DiagnosisForm() {
 
         <div className="backgroundImg">
             <div className="containerDiag">
-            <form className="form-inline" onSubmit={loadDiagnosis}>
-            <label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">Diagnosis</label>
-            <select onChange={handleInputChange}className="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                <option defaultValue>Select a diagnosis...</option>
-                <option  name ="diagnosis" value="c_996">Acute angle-closure glaucoma</option>
-                <option  name="diagnosis" value="c_3">Allergic conjunctivitis</option>
-                <option  name="diagnosis" value="c_769">Blepharitis</option>
-                <option  name="diagnosis" value="c_176">Cataract</option>
-                <option  name ="diagnosis" value="c_171">Chalazion</option>
-                <option  name="diagnosis" value="c_172">Conjunctivitis</option>
-                <option  name ="diagnosis" value="c_174">Corneal abrasion</option>
-                <option  name ="diagnosis" value="c_175">Corneal ulceration</option>
-                <option  name ="diagnosis" value="c_771">Diabetic Retinopathy</option>
-                <option  name ="diagnosis" value="c_998">Dry Eye Disease</option>
-                <option  name ="diagnosis" value="c_959">Eye Injury</option>
-                <option  name ="diagnosis" value="c_892">Keratitis</option>
-                <option  name ="diagnosis" value="c_799">Nasolacrimal duct obstruction</option>
-                <option  name ="diagnosis" value="c_549">Oculomotor nerve palsy</option>
-                <option  name ="diagnosis" value="c_997">Open-angle glaucoma</option>
-                <option  name ="diagnosis" value="c_957">Periorbital cellulitis</option>
-                <option  name ="diagnosis" value="c_596">Retinal detachment</option>
-                <option  name ="diagnosis" value="c_593">Retinopathy</option>
-                <option  name ="diagnosis" value="c_144">Sjögren's syndrome</option>
-                <option  name ="diagnosis" value="c_170">Stye</option>
-                <option  name ="diagnosis" value="c_216">Uveitis</option>
-            </select>
-        </form>  
+                <form className="form-inline" onSubmit={loadDiagnosis}>
+                <label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">Diagnosis</label>
+                <select onChange={handleInputChange}className="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                    <option defaultValue>Select a diagnosis...</option>
+                    <option  name ="diagnosis" value="c_996">Acute angle-closure glaucoma</option>
+                    <option  name="diagnosis" value="c_3">Allergic conjunctivitis</option>
+                    <option  name="diagnosis" value="c_769">Blepharitis</option>
+                    <option  name="diagnosis" value="c_176">Cataract</option>
+                    <option  name ="diagnosis" value="c_171">Chalazion</option>
+                    <option  name="diagnosis" value="c_172">Conjunctivitis</option>
+                    <option  name ="diagnosis" value="c_174">Corneal abrasion</option>
+                    <option  name ="diagnosis" value="c_175">Corneal ulceration</option>
+                    <option  name ="diagnosis" value="c_771">Diabetic Retinopathy</option>
+                    <option  name ="diagnosis" value="c_998">Dry Eye Disease</option>
+                    <option  name ="diagnosis" value="c_959">Eye Injury</option>
+                    <option  name ="diagnosis" value="c_892">Keratitis</option>
+                    <option  name ="diagnosis" value="c_799">Nasolacrimal duct obstruction</option>
+                    <option  name ="diagnosis" value="c_549">Oculomotor nerve palsy</option>
+                    <option  name ="diagnosis" value="c_997">Open-angle glaucoma</option>
+                    <option  name ="diagnosis" value="c_957">Periorbital cellulitis</option>
+                    <option  name ="diagnosis" value="c_596">Retinal detachment</option>
+                    <option  name ="diagnosis" value="c_593">Retinopathy</option>
+                    <option  name ="diagnosis" value="c_144">Sjögren's syndrome</option>
+                    <option  name ="diagnosis" value="c_170">Stye</option>
+                    <option  name ="diagnosis" value="c_216">Uveitis</option>
+                </select>
+                </form>  
             </div>
         </div>
           

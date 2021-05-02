@@ -20,8 +20,6 @@ const TreatmentPlan = () => {
         console.log("tx plan loaded", plan)
     }, [])
 
-
-
     return (
         <>
            <div className="jumbotron jumbotron-fluid">

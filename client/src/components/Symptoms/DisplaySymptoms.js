@@ -3,10 +3,9 @@ import React from 'react';
 import Moment from  'react-moment';
 import API from "../../utils/API";
 
-
 const DisplaySymptoms = (props) => {
-    console.log("SavedSymptom props", props);
-    console.log("symptoms", props.symptoms);
+    // console.log("SavedSymptom props", props);
+    // console.log("symptoms", props.symptoms);
      
     const symptomType = {
         eye: "Affected eye",
@@ -32,16 +31,14 @@ const DisplaySymptoms = (props) => {
         );
         return trueSymptoms.map((symptom) => {
             return (
-              
                 <> {symptomType[symptom]},&nbsp; </>
-             
             )
         });
         
     }
     const  getDate = () => {
             const dateToFormat = props.symptom.date;
-                console.log(props.symptom.date)
+                // console.log(props.symptom.date)
             return (
                 <Moment format="dddd Do MMMM YYYY">{dateToFormat}</Moment>
             )
@@ -73,14 +70,6 @@ const DisplaySymptoms = (props) => {
         window.location.reload()
         .catch( err => console.log(err));
     }
-
-
-
-    function updateIssue() {
-      /////write logic here
-       
-    }
- 
 
     return (
         <>

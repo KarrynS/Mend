@@ -18,7 +18,7 @@ module.exports = {
           console.log("dbOptometrist/optometristController", newUser)
           db.Optometrist.createUser(newUser, function(err, user){
             if(err) throw err;
-            res.send(user).end()
+            res.redirect(307, '/api/optom/login')
           });
         } else{
           res.status(500).send("{errors: \"Passwords don't match\"}").end()

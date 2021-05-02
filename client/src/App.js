@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
@@ -15,13 +15,14 @@ import API from "./utils/API";
 
 function App() {
 const [isLoggedIn, setIsLoggedIn] = useState(false);
+const [optomLoggedIn, setOptomLoggedIn] = useState(false);
 
 const [userInfo, setUserInfo] = useState("");
 
   useEffect(() => {
     API.currentUser()
         .then(res => {
-           console.log("res.data", res.data)
+           console.log("user auth res.data", res.data)
            if(res.data.email) {
               setIsLoggedIn(true); 
               setUserInfo(res.data)
@@ -32,11 +33,17 @@ const [userInfo, setUserInfo] = useState("");
         // })
    }, [])
 
+  //  useEffect(() => {
+  //    API.currentOptomUser()
+  //    .then(res => {
+  //      console.log("optom auth res.data", res.data)
+  //    })
+  //  })
+
    const redirect = ()  => {
-     if (window.location.pathname.includes("/login") === false&isLoggedIn===false){
+     if (window.location.pathname.includes("/login") === false & isLoggedIn === false){
       // window.location.href="/login"
       setIsLoggedIn(false)
-
      }
  
    }

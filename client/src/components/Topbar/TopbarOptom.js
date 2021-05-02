@@ -1,8 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import API from "../../utils/API";
 import "./TopbarOptom.css";
 
 function TopbarOptom() {
+
+    const handleLogout = () => {
+        API.optomLogout()
+        .then(res => {
+            window.location.href="/optomlogin"
+        })
+    }
+
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light">
@@ -23,7 +32,7 @@ function TopbarOptom() {
                                 >iChat</Link>
                     </li>
                     <li className ="nav-item">
-                        <Link to="/optomlogin" className={window.location.pathname === "/optomlogin" 
+                        <Link onClick={handleLogout} className={window.location.pathname === "/optomlogin" 
                                     ? "nav-link active" 
                                     : "nav-link"
                                     }

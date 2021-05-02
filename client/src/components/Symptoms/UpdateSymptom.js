@@ -198,11 +198,3 @@ const UpdateSymptom = () => {
 }
 
 export default UpdateSymptom;
-
-
-// function updateSymptom(id) {
-//     API.updateSymptombyId(id)
-//     .then(res => getTrueSymptoms())
-//     window.location.reload()
-//     .catch( err => console.log(err));
-// }

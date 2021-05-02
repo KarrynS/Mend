@@ -10,7 +10,6 @@ const CardLinks = (props) => {
 
     return (
         <>
-        {/* <div className="imgDiv"> */}
             <div className="dashboardcontainer">
                 <div className="card-deck cd1">
                     <div className="card card-cd1">
@@ -73,7 +72,6 @@ const CardLinks = (props) => {
                     </div>
                 </div>
             </div>
-    {/* </div> */}
         </>
     )
 }

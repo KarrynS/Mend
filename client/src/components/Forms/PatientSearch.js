@@ -46,30 +46,6 @@ const PatientSearch = () => {
         .catch(err => console.log(err));
     }
 
-    // useEffect(() => {
-    //     alert("State updated")
-    // }, [patient])
-
-    // const renderPatient = () => {
-    //     return (
-            
-    //     )
-    // }
-
-    // useEffect(() => {
-    //     getPatientSymptoms();
-    // }, [getSymptoms])
-
-    // const getPatientSymptoms = () => {
-    //     API.loadPatient()
-    //     .then(res => {
-    //         setGetSymptoms(res.data)
-    //         console.log("searchPatient", res.data);
-    //     })
-    //     .catch(err => console.log(err));
-    // }
-
-
     return (
         <>
             <div className="searchDiv">

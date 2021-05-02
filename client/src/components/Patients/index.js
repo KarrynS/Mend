@@ -12,8 +12,8 @@ const PatientSymptoms = ({patient}) => {
     
     // },[patient] ) 
 
-    console.log("patient props", patient)
-    console.log("patientSymptoms props.symptoms", patient.symptoms)
+    // console.log("patient props", patient)
+    // console.log("patientSymptoms props.symptoms", patient.symptoms)
     
     return (
         <>
@@ -25,13 +25,8 @@ const PatientSymptoms = ({patient}) => {
                             <ShowSymptoms symptom={symptom}/>
                          )
                     })}
-                
-            
             </div>
             <ManagementPlan patient={patient}/>
-         {/* <p> Birthday {props.patient.birthday}</p>
-         <p> Email {props.patient.email}</p> */}
-      
         </>
     )
 }
