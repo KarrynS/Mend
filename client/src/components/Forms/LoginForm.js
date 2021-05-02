@@ -37,6 +37,9 @@ function LoginForm(props) {
                 window.location.href = "/dashboard";
             })
             .catch(err => console.log(err));
+                console.log("Authorisation Error: ", err)
+                alert("Invalid login details")
+
         }
     }
 

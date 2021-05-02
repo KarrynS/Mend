@@ -74,6 +74,8 @@ const InitialChat = () => {
         <div className="chat">
             
             { !chatLogin ? 
+
+                // Chatbox Login
                 <div className="chatBoxContainer">
                      <div className="header">
                     <a id="leave-btn-cross" class="btn" href="/dashboard"><i class="fas fa-times"></i></a>
@@ -98,6 +100,8 @@ const InitialChat = () => {
                 </div>
             
             :
+
+            // chatbox when user connects
             <div className="chatBoxContainer">
                 <div className="header">
                     <h1><i class="fas fa-eye"></i> iChat</h1>

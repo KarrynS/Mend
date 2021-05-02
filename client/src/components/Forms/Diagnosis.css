@@ -1,3 +1,5 @@
+
+
 .my-1 {
     color: #1b4738;
     font-size: 25px;
@@ -15,6 +17,7 @@
     margin-left: 20px;
     margin-bottom:30px;
     display: grid;
+    align-items: center;
 }
 
 #inlineFormCustomSelectPref {
