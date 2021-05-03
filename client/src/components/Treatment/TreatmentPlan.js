@@ -10,6 +10,7 @@ const TreatmentPlan = () => {
         .then(res => {
             setPlan(res.data);
             console.log("Plan:", res.data)
+            console.log(plan)
         })
         .catch(err => console.log(err));
         

@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
+import { useHistory } from "react-router-dom";
 import "./LoginForm.css";
 import LogInImage from "../../img/leaf.jpg";
 import API from "../../utils/API";
 
 function LoginForm(props) {
+    let history = useHistory();
+
        //establishing form values
        const [formObject, setformObject] = useState({
         username: "",
@@ -34,7 +37,8 @@ function LoginForm(props) {
                 })
                 props.setIsLoggedIn(true)
                 console.log("loginData", formObject);
-                window.location.href = "/dashboard";
+                history.push("/dashboard");
+                // window.location.href = "/dashboard";
             })
             .catch(err => {
                 console.log("Authorisation Error: ", err);
@@ -42,7 +46,7 @@ function LoginForm(props) {
             });
         }
     }
-
+  
     return (
         <>
             <div className="imgDiv">
