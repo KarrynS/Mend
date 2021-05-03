@@ -41,6 +41,12 @@ const TreatmentPlan = () => {
         .catch(err => console.log(err));
     }
         
+    function removeSavedPlan(id) {
+
+        API.deleteSavedPlan(id)
+        .then(res => loadSavedPlan())
+        .catch(err => console.log(err));
+    }
 
         return (
           
@@ -58,6 +64,9 @@ const TreatmentPlan = () => {
                                 <hr className="my-4"/>
                                 <p className="mxtreatment"><h5 className="mxdiagnosisTitle"><i class="fa fa-user-md" aria-hidden="true">&nbsp;</i>Treatment advice: </h5>{managementPlan.treatment}</p>
                                 <p className="mxdate"><h5 className="mxdiagnosisTitle"><i class="fa fa-calendar-o" aria-hidden="true">&nbsp;</i>Recommended review date: </h5>{managementPlan.review}</p>
+                                <div className="MxDeleteBtnDiv">
+                                    <button onSubmit={removeSavedPlan(managementPlan._id)} className="btn btn-primary MxDeleteBtn" value={managementPlan._id}>Delete Plan</button>
+                                </div>
                             </div>
                         </div>
                     </>

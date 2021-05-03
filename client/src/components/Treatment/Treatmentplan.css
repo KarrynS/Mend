@@ -39,3 +39,20 @@ p {
     font-family: Courier, monospace;
     display: grid;
 }
+
+.MxDeleteBtnDiv {
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.MxDeleteBtn {
+    border: 1px solid #d5b590;
+
+}
+
+.MxDeleteBtn:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+    background-color:#1b4738 !important;
+    color: whitesmoke;
+    cursor: pointer;
+}
