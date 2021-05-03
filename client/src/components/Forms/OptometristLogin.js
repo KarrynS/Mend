@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./OptometristLogin.css";
 import LogInImage from "../../img/optomlogin.jpg";
 import API from "../../utils/API";
 
-function OptomLoginForm() {
+function OptomLoginForm(props) {
+    let history = useHistory();
        //establishing form values
        const [formObject, setformObject] = useState({
         username: "",
@@ -33,7 +35,9 @@ function OptomLoginForm() {
             }))
             .then(() => {
                 console.log("loginData", formObject);
-                window.location.href = "/optometrist";
+                props.setOptomLoggedIn(true)
+                history.push("/optometrist")
+                // window.location.href = "/optometrist";
             })
             .catch((err) => {
                 console.log("Authorisation Error: ", err)

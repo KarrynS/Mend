@@ -14,13 +14,18 @@ import './App.css';
 import API from "./utils/API";
 
 function App() {
+
+//User States
 const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-// const [optomLoggedIn, setOptomLoggedIn] = useState(false);
-
 const [userInfo, setUserInfo] = useState("");
 
+//Optom States
+const [optomLoggedIn, setOptomLoggedIn] = useState(false);
+const [optomInfo, setOptomInfo] = useState("");
+
+//Waiting to render page before showing routes
 const [isLoading, setIsLoading] = useState(true);
+const [optomIsLoading, setOptomIsLoading] = useState(true);
 
   useEffect(() => {
     API.currentUser()
@@ -37,49 +42,68 @@ const [isLoading, setIsLoading] = useState(true);
         // })
    }, [])
 
-  //  useEffect(() => {
-  //    API.currentOptomUser()
-  //    .then(res => {
-  //      console.log("optom auth res.data", res.data)
-  //    })
-  //  })
+   useEffect(() => {
+     API.currentOptomUser()
+     .then(res => {
+       console.log("optom auth res.data", res.data)
+       if(res.data.email) {
+          setOptomLoggedIn(true);
+          setOptomInfo(res.data)
+       }
+       setOptomIsLoading(false);
+     })
+    //  .catch((err) => {
+    //    window.location.href="/optomlogin"
+    //  })
+   }, [])
 
-   const redirect = ()  => {
-     if (window.location.pathname.includes("/login") === false & isLoggedIn === false){
-      // window.location.href="/login"
-      // setIsLoggedIn(false)
-     }
+  //  const redirect = ()  => {
+  //    if (window.location.pathname.includes("/login") === false & isLoggedIn === false){
+  //     // window.location.href="/login"
+  //     // setIsLoggedIn(false)
+  //    }
  
-   }
+  //  }
    if (isLoading) {
      return (
       <div></div>
      )
      
    }
+
+   if (optomIsLoading){
+     return (
+       <div></div>
+     )
+   }
+
   return (
     <>
       <Router>
         <Switch>
           <Route exact path = {["/", "/signup"]} component={SignUp} />
-          <Route path = "/login" >
-            <Login setIsLoggedIn={setIsLoggedIn} />
-            
-          </Route>
-          {console.log("isloggedin", isLoggedIn)}
-            <>
-          <Route path = "/optomlogin" component={OptomLogin} />
           <Route path = "/optomsignup" component={OptomSignUp} />
-          <Route path = "/optometrist" component={Optometrist}>
-                          { isLoggedIn ? <Optometrist/> : <Redirect to="/optomlogin"/>}</Route>
+          <Route path = "/login" >
+            <Login setIsLoggedIn={setIsLoggedIn} /></Route>
+
+          {console.log("isloggedin", isLoggedIn)}
+
+          <Route path = "/optomlogin">
+            <OptomLogin setOptomLoggedIn={setOptomLoggedIn} /></Route>
+          <Route path = "/optometrist">
+                          { optomLoggedIn ? <Optometrist/> : <Redirect to="/optomlogin"/>}</Route>
           <Route path = "/dashboard"  userInfo={userInfo}>
                           { isLoggedIn ? <Dashboard/> : <Redirect to="/login"/>}</Route>
-          <Route path = "/symptoms" component={Symptoms}></Route>
-          <Route path = "/diagnosis" component={Diagnosis} />
-          <Route path = "/chat" component={Chat} />
-          <Route exact path = "/management" component={Management} />
+          <Route path = "/symptoms">
+                          { isLoggedIn ? <Symptoms/> : <Redirect to="/login"/>}</Route>
+          <Route path = "/diagnosis" >
+                          { isLoggedIn ? <Diagnosis/> : <Redirect to="/login"/>}</Route>
+          <Route path = "/chat" component={Chat} >
+                          { (isLoggedIn || optomLoggedIn) ? <Chat/> : <Redirect to="/login"/>}</Route>
+          <Route path = "/management" >
+                          { isLoggedIn ? <Management/> : <Redirect to="/login"/>}</Route>
 
-            </>
+          
         
     
      
