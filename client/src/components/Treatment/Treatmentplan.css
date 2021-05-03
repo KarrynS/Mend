@@ -1,3 +1,17 @@
+.MxTitle {
+    color:#1b4738 !important;
+    display: flex;
+    background-color: #e9ecef;
+}
+
+.MxHeading {
+    display: flex;
+    align-items: center;
+    font-family: Courier, monospace;
+    font-size: 1.8rem;
+    background-color: #e9ecef;
+}
+
 .treatmentcontainer {
     align-items: center;
     justify-content: center;
@@ -17,6 +31,7 @@
     background-color: none !important;
     margin : auto;
     display: grid;
+    margin-bottom: none;;
 }
 
 p {

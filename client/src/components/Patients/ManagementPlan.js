@@ -4,12 +4,13 @@ import "./treatmentplan.css"
 
 const ManagementPlan = (props) => {
     console.log("patient props", props.patient, props.patient._id)
+    const [patientId, setPatientId] = useState(props.patient._id);
 
     const [formObject, setformObject] = useState({
         diagnosis: "",
         treatment: "", 
-        date: "",
-        id: ""
+        review: "",
+        patientId: patientId
     })
 
     function handleInputChange(event) {
@@ -23,25 +24,29 @@ const ManagementPlan = (props) => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         console.log("management plan", formObject)
-        API.submitPlan(
+
+        API.newManagement(
             {
                 diagnosis: formObject.diagnosis,
                 treatment: formObject.treatment,
-                date: formObject.date,
-                id: props.patient._id
+                review: formObject.review,
+                patient: patientId
             }
         )
-       .then(() => setformObject({
-            diagnosis: "",
-            treatment: "", 
-            date: "",
-            id: ""
-       }))
        .then(() => {
-           console.log("treatment plan data", formObject);
-           alert("Treatment plan recorded")
-       })
+            setformObject({
+                diagnosis: "",
+                treatment: "", 
+                review: "",
+                patient: ""
+            })
+        })
+        
        .catch(err => console.log(err))
+       console.log("New Management added", formObject)
+       console.log("patientId" ,patientId)
+       alert("Treatment plan recorded")
+
     }
     return (
         <>
@@ -63,7 +68,7 @@ const ManagementPlan = (props) => {
                 <div class="form-group row">
                     <label htmlFor="example-date-input" class="col-2 col-form-label">Review Date:</label>
                     <div class="col-sm-10">
-                    <input onChange={handleInputChange} name="date" type="text" class="form-control" id="inputreview" placeholder="Suggested review schedule"/>
+                    <input onChange={handleInputChange} name="review" type="text" class="form-control" id="inputreview" placeholder="Suggested review schedule"/>
                     </div>
                 </div>
                 <div class="form-group row">

@@ -79,8 +79,8 @@ const DisplaySymptoms = (props) => {
                     <h3 className="card-title cardTitle">New Symptom Card</h3>
                     <p className="card-text affectedEye"><h5 className="sympCardTitle"><i class="fa fa-low-vision" aria-hidden="true">&nbsp;</i>Affected eye(s):</h5>{getEye()}</p>
                     <p className="card-text painLevel"><h5 className="sympCardTitle"><i class="fa fa-medkit" aria-hidden="true">&nbsp;</i>Pain Level:</h5>{getPain()}</p>
-                    <p className="card-text recordedSymp"><h5 className="sympCardTitile"><i class="fa fa-bookmark" aria-hidden="true">&nbsp;</i>Saved Symptoms: &nbsp;</h5>{getTrueSymptoms()}</p>
-                    <p className="card-text recordedDate"><h5 className="sympCardTitile"><i class="fa fa-calendar-o" aria-hidden="true">&nbsp;</i>Recorded on: &nbsp;</h5>{getDate()}</p>
+                    <p className="card-text recordedSymp"><h5 className="sympCardTitle"><i class="fa fa-bookmark" aria-hidden="true">&nbsp;</i>Saved Symptoms: &nbsp;</h5>{getTrueSymptoms()}</p>
+                    <p className="card-text recordedDate"><h5 className="sympCardTitle"><i class="fa fa-calendar-o" aria-hidden="true">&nbsp;</i>Recorded on: &nbsp;</h5>{getDate()}</p>
                     <button onClick={() => removeSymptom(props.symptom._id)} className="btn removeSmpBtn"><i className="fa fa-close">&nbsp;</i>Remove symptom</button>                  
                 </div>
             </div>

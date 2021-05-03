@@ -53,11 +53,19 @@ export default {
     loadPatient: () => {
       return axios.get('api/optom')
     },
-    submitPlan:  function(treatmentData) {
-      return axios.post('/api/optom/treatment', treatmentData)
-    },
+    // submitPlan:  function(treatmentData) {
+    //   return axios.post('/api/optom/treatment', treatmentData)
+    // },
     currentOptomUser: () => {
       return axios.get('/api/optom/current')
+    },
+
+    //Management related API calls
+    newManagement: function(userData) {
+      return axios.post('api/management/', userData)
+    },
+    loadManagementPlan: () => {
+      return axios.get('api/management')
     },
     
 } 

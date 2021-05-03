@@ -33,7 +33,7 @@ const CardLinks = (props) => {
                             </div>
                             <div className="cd2textdiv col-md-6">
                                 <h1 className="card-title"><i className="fas fa-user-md"></i> Visited the optometrist?</h1>                             
-                                <p className="card-text">View your custom management plan to help you on the road to recovery.</p>
+                                <p className="card-text">Your optometrist will record details of your visit. View your custom management plan here to help you on the road to recovery.</p>
                                 <a href="management" className="btn btn-primary btn-optom">See Management Plan</a>                
                             </div>
                         </div>
@@ -48,7 +48,7 @@ const CardLinks = (props) => {
                             </div>
                             <div className="cd3textdiv col-md-6">
                                 <h1 className="card-title"><i className="fas fa-book-medical"></i> Recieved your diagnosis?</h1>
-                                <p className="card-text">Want to learn more about your condition?</p>
+                                <p className="card-text">Want to learn more about your condition? Search for specific eye related information here. </p>
                                     <a href="diagnosis" className="btn btn-primary btn-medical">Learn more</a>                
                             </div>
                         </div>
@@ -62,7 +62,7 @@ const CardLinks = (props) => {
                             </div>
                             <div className="cd4textdiv col-md-6">
                                 <h1 className="card-title"><i className="fa fa-comments"></i> Need more assistance?</h1>                             
-                                <p className="card-text">Join a chat with your optometrist or chat with other members of the community.</p>
+                                <p className="card-text">Don't worry if you have more questions following your visit with the optometrist. Easily join a chat with your optometrist or enter discussions with other members of the Mend community.</p>
                                 <a href="chat" className="btn btn-primary btn-chat">iChat</a>   
                                 </div>
                            

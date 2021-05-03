@@ -184,7 +184,8 @@ color: whitesmoke;
     color: black;
     margin-left: 10px;
     margin-right: 0px;
-    font-family: Courier, monospace
+    font-family: Courier, monospace;
+    display: inline-table;
   }
   .messageIndividual {
     height: 30px;
@@ -200,6 +201,7 @@ color: whitesmoke;
     padding-left: 10px;
     padding-right: 10px;
     justify-content: center;
+    display: inline-table;
   }
 
   .messageIndividual h1 {

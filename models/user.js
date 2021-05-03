@@ -29,11 +29,17 @@ const userSchema = new Schema({
     birthday: {
         type: String
     },
-    management: {
-        diagnosis: String,
-        treatment: String,
-        date: String
-    },
+    // management: [{
+    //     diagnosis: String,
+    //     treatment: String,
+    //     date: String
+    // }],
+    management: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Management"
+        }
+    ],
     age: {
         type: Number
     },

@@ -26,6 +26,7 @@
 .optomloginBtn{
     background-color: #1b4738 !important;
     color:whitesmoke !important;
+    font-family: Courier, monospace;
 }
 
 .optomloginBtn:hover{
