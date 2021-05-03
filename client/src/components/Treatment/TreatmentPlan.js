@@ -19,6 +19,7 @@ const TreatmentPlan = () => {
     useEffect(() => {
         loadTreatmentPlan();
         console.log("tx plan loaded", plan)
+        console.log("plan.management", plan)
     }, [])
 
     return (

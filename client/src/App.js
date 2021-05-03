@@ -37,9 +37,9 @@ const [optomIsLoading, setOptomIsLoading] = useState(true);
            }
            setIsLoading(false);
         })
-        // .catch((err) => {
-        //    window.location.href='/login'
-        // })
+        .catch((err) => {
+           window.location.href='/login'
+        })
    }, [])
 
    useEffect(() => {
@@ -52,18 +52,12 @@ const [optomIsLoading, setOptomIsLoading] = useState(true);
        }
        setOptomIsLoading(false);
      })
-    //  .catch((err) => {
-    //    window.location.href="/optomlogin"
-    //  })
+     .catch((err) => {
+       window.location.href="/optomlogin"
+     })
    }, [])
 
-  //  const redirect = ()  => {
-  //    if (window.location.pathname.includes("/login") === false & isLoggedIn === false){
-  //     // window.location.href="/login"
-  //     // setIsLoggedIn(false)
-  //    }
- 
-  //  }
+
    if (isLoading) {
      return (
       <div></div>
@@ -86,8 +80,8 @@ const [optomIsLoading, setOptomIsLoading] = useState(true);
           <Route path = "/login" >
             <Login setIsLoggedIn={setIsLoggedIn} /></Route>
 
-          {console.log("isloggedin", isLoggedIn)}
-
+          {console.log("User is logged in", isLoggedIn)}
+          {console.log("Optom is logged in ", optomLoggedIn)}
           <Route path = "/optomlogin">
             <OptomLogin setOptomLoggedIn={setOptomLoggedIn} /></Route>
           <Route path = "/optometrist">
@@ -102,12 +96,6 @@ const [optomIsLoading, setOptomIsLoading] = useState(true);
                           { (isLoggedIn || optomLoggedIn) ? <Chat/> : <Redirect to="/login"/>}</Route>
           <Route path = "/management" >
                           { isLoggedIn ? <Management/> : <Redirect to="/login"/>}</Route>
-
-          
-        
-    
-     
-         
         </Switch> 
       </Router>
     </>
