@@ -19,9 +19,10 @@ const TreatmentPlan = () => {
     useEffect(() => {
         loadTreatmentPlan();
         console.log("tx plan loaded", plan)
-        console.log("plan.management", plan)
+      
     }, [])
 
+    console.log("plan.management", plan.management.date)
     return (
         <>
            <div className="jumbotron jumbotron-fluid">
