@@ -17,7 +17,7 @@ function Topbar() {
                 <div className="container-fluid">
                 <div className="top-bar">
                     <div className="top-bar-left">
-                    <a className="navbar-brand" href="/"><i class="fas fa-star-of-life"></i>Mend</a>
+                    <a className="navbar-brand" href="/"><i className="fas fa-star-of-life"></i>Mend</a>
                 </div>
                 </div>
                 

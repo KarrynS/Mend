@@ -1,6 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import io from "socket.io-client";
-import "./style.css"
+import "./style.css";
+import TopbarOptom from "../Topbar/TopbarOptom";
+import Navbar from "../Navbar/Navbar";
 
 let socket;
 const CONNECTION_PORT = 'localhost:3000/'
@@ -9,6 +11,8 @@ const CONNECTION_PORT = 'localhost:3000/'
 const defaultRoom = "Optometry"
 const InitialChat = (props) => {
     console.log("optom", props.optom)
+    console.log("optom", props.optom.role)
+    console.log("optomLoggedIn", props.optomLoggedIn);
 
     //States - Before Login
     const [chatLogin, setChatLogin] = useState(false);
@@ -69,9 +73,16 @@ const InitialChat = (props) => {
       
     }
 
+    //Handling disconnecting from chat
+    const disconnectChat = () => {
+        setChatLogin(false)
+    }
+
     return (
         
         <>
+        { props.optom.role === "Optometrist" ? <TopbarOptom/> : <Navbar/> }
+
         <div className="chat">
             
             { !chatLogin ? 
@@ -79,7 +90,7 @@ const InitialChat = (props) => {
                 // Chatbox Login
                 <div className="chatBoxContainer">
                      <div className="header">
-                    <a id="leave-btn-cross" class="btn" href="/dashboard"><i class="fas fa-times"></i></a>
+                    {/* <a id="leave-btn-cross" className="btn" href="/dashboard"><i class="fas fa-times"></i></a> */}
                 </div>
                     <div className="logIn">
                         <header class="join-header">
@@ -106,7 +117,7 @@ const InitialChat = (props) => {
             <div className="chatBoxContainer">
                 <div className="header">
                     <h1><i class="fas fa-eye"></i> iChat</h1>
-                    <a id="leave-btn" class="btn" href="/dashboard"><i class="fas fa-times"></i></a>
+                    <button onClick={() => disconnectChat()} id="leave-btn" class="btn" to="/chat"><i class="fas fa-times"></i></button>
                 </div>
             <div className="chatContainer">
                 <header class="chat-header">
@@ -134,7 +145,8 @@ const InitialChat = (props) => {
                                         
                                     </div>
                             )
-                        }) : "Welcome to iChat"}
+                        }) : <p className="welcomeDisplay">Hi {name}, you've joined the {room} chat</p>
+                        }
                         <div ref={scrollRef}></div>
                     </div>
                     <div className="messageInput">

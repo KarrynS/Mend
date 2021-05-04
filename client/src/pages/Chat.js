@@ -4,7 +4,7 @@ import InitialChat from '../components/SocketChat/InitialChat'
 const Chat = (props) => {
     return (
         <>
-            <InitialChat optom={props.optom}/>  
+            <InitialChat optom={props.optom} optomLoggedIn={props.optomLoggedIn}/>  
         </>
     )
 }

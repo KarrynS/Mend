@@ -93,7 +93,7 @@ const [optomIsLoading, setOptomIsLoading] = useState(true);
           <Route path = "/diagnosis" >
                           { isLoggedIn ? <Diagnosis/> : <Redirect to="/login"/>}</Route>
           <Route path = "/chat" >
-                          { (isLoggedIn || optomLoggedIn) ? <Chat optom={optom}/> : <Redirect to="/login"/>}</Route>
+                          { (isLoggedIn || optomLoggedIn) ? <Chat optom={optom} optomLoggedIn={optomLoggedIn}/> : <Redirect to="/login"/>}</Route>
           <Route path = "/management" >
                           { isLoggedIn ? <Management/> : <Redirect to="/login"/>}</Route>
         </Switch> 

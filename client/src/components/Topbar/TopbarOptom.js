@@ -18,12 +18,19 @@ function TopbarOptom() {
                 <div className="container-fluid">
                 <div className="top-bar">
                     <div className="top-bar-left">
-                    <a className="navbar-brand" href="/optomlogin"><i class="fas fa-star-of-life"></i>Mend</a>
+                    <a className="navbar-brand" to="/optomlogin" href="/optomlogin"><i class="fas fa-star-of-life"></i>Mend</a>
                 </div>
                 </div>
                 
                 <div className="top-bar-right">
                     <ul className="medium-horizontal align-right text-black" id="nav-menu">
+                    <li className ="nav-item">
+                        <Link to="/optometrist" className={window.location.pathname === "/optometrist" 
+                                    ? "nav-link active" 
+                                    : "nav-link"
+                                    }
+                                >Home</Link>
+                    </li>
                     <li className ="nav-item">
                         <Link to="/chat" className={window.location.pathname === "/chat" 
                                     ? "nav-link active" 

@@ -84,10 +84,20 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
-   
-
 }
 
+#leave-btn{
+    background-color: #1b4738 !important;
+    color: whitesmoke;
+}
+
+#leave-btn:hover{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+}
+
+.welcomeDisplay{
+    color: #D5b590
+}
 
 /* chatbox styling */
 .header h1 {
