@@ -25,7 +25,11 @@ const optometristSchema = new Schema({
             type: Schema.Types.ObjectId,
             ref: "User"
         }
-    ]
+    ],
+    role: {
+        type: String,
+        default: "Optometrist"
+    }
 });
 
 const Optometrist = mongoose.model("Optometrist", optometristSchema);

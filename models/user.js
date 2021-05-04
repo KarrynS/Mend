@@ -40,9 +40,9 @@ const userSchema = new Schema({
             ref: "Management"
         }
     ],
-    age: {
-        type: Number
-    },
+    // age: {
+    //     type: Number
+    // },
     userCreated: {
         type: Date,
         default: Date.now
@@ -52,7 +52,11 @@ const userSchema = new Schema({
             type: Schema.Types.ObjectId,
             ref: "Symptom"
         }
-    ]
+    ],
+    role: {
+        type: String,
+        default: "User"
+    }
 });
 
 const User = mongoose.model("User", userSchema);
@@ -88,16 +92,16 @@ bcrypt.compare(candidatePassword, hash, function(err, isMatch) {
 
 
 ///Trying to change dob entry to an age value   ******need to check age calc is saving to schema
-userSchema.pre("Save", function () {
-    const from = birthday.split("/");
-    const birthdateTimeStamp = new Date(from[2], from[1] - 1, from[0]);
-    const cur = new Date();
-    const diff = cur - birthdateTimeStamp; //difference in milliseconds)
-    const currentAge = Math.floor(diff/31557600000); //Divide by 1000*60*60*24*365.25
-    this.age = currentAge;
+// userSchema.pre("Save", function () {
+//     const from = birthday.split("/");
+//     const birthdateTimeStamp = new Date(from[2], from[1] - 1, from[0]);
+//     const cur = new Date();
+//     const diff = cur - birthdateTimeStamp; //difference in milliseconds)
+//     const currentAge = Math.floor(diff/31557600000); //Divide by 1000*60*60*24*365.25
+//     this.age = currentAge;
 
-    return this.age;
-})
+//     return this.age;
+// })
 
 
 

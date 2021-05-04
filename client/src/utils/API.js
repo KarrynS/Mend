@@ -68,7 +68,7 @@ export default {
       return axios.get('api/management')
     },
     deleteSavedPlan: (id) => {
-      return axios.delete('api/symptom/' +id);
+      return axios.delete('api/management/' +id);
     },
     
 } 
