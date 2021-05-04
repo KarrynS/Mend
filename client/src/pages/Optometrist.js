@@ -2,11 +2,11 @@ import React from "react";
 import PatientSearch from "../components/Forms/PatientSearch";
 import TopbarOptom from "../components/Topbar/TopbarOptom";
 
-const Optometrist = () => {
+const Optometrist = (props) => {
     return (
         <>
         <TopbarOptom />
-        <PatientSearch />
+        <PatientSearch  optom={props.optom}/>
         </>
     )
 }

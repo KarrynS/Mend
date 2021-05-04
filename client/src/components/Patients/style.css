@@ -12,9 +12,10 @@
     width: 50%;
 }
 
-.patientSymptomDiv:hover{
-    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+.innersympCard{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
 }
+
 
 .h5 {
     color: #1b4738

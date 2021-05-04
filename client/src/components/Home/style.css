@@ -73,9 +73,9 @@ padding: 0px;
     background-color: rgb(221, 220, 220);
 }
 
-/* .card {
-    background-color: #d5b590 !important;
-} */
+.card-cd1 {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+} 
 
 .fas {
     justify-content: center;

@@ -4,7 +4,8 @@ import PatientSymptoms from '../Patients';
 import "./PatientSearch.css"
 
 
-const PatientSearch = () => {
+const PatientSearch = (props) => {
+    console.log("optom", props.optom)
     
     const [patientSearch, setPatientSearch] = useState({
         name: "",
@@ -48,10 +49,17 @@ const PatientSearch = () => {
 
     return (
         <>
+        <div className="optomAppInfo">
+           <h3>Welcome {props.optom.name}</h3> 
+           <p>Search for your patients below and keep up to date of their eye issues.</p>
+           <hr ></hr>
+           <p>Easily record your diagnosis and treatment and we'll send them directly to your patients.</p>
+  
+        </div>
             <div className="searchDiv">
                 <div className="row">
                 <form className="patientSearchForm" onSubmit={handleFormSubmit}>
-                <h2 className="searchTitle">Search for a patient</h2>
+                <h2 className="searchTitle">Patient Search</h2>
                 <div className="row">
                     <div className="form-floating mb-3 col">
                         <input onChange={handleInputChange} name="name" type="text" className="form-control" id="floatingInput" placeholder="Name"/>
