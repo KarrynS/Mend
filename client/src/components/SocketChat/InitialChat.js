@@ -17,7 +17,7 @@ const InitialChat = () => {
 
     //States - After Login
     const [message, setMessage] = useState("");
-    const [messageList, setMessageList] = useState([{}]);
+    const [messageList, setMessageList] = useState([]);
 
     const scrollRef =  useRef();
 
@@ -62,7 +62,8 @@ const InitialChat = () => {
             }
         };
 
-        await socket.emit("chat_message", messageContent);
+        await 
+        socket.emit("chat_message", messageContent);
         setMessageList([...messageList, messageContent.content]);
         setMessage("");
       
@@ -112,7 +113,8 @@ const InitialChat = () => {
                     
                 </header>
                     <div className="messages" >
-                        {messageList.map((val,key) => {
+                        {console.log("messageList", messageList)}
+                        {messageList.length > 0 ?  messageList.map((val,key) => {
                             
                             return (
                                     <div className="messageContainer"
@@ -132,7 +134,7 @@ const InitialChat = () => {
                                         
                                     </div>
                             )
-                        })}
+                        }) : "Welcome to iChat"}
                         <div ref={scrollRef}></div>
                     </div>
                     <div className="messageInput">
