@@ -30,7 +30,7 @@ function SignUpFormOptom() {
             API.optomSignUp(
                 {
                 name: formObject.name,
-                username: formObject.name,
+                username: formObject.username,
                 email: formObject.email,
                 password: formObject.password,
                 password2: formObject.password2,

@@ -20,11 +20,15 @@ module.exports = {
     },
     remove: function(req, res) {
         db.Management.findById({ _id: req.params.id })
-        .then(dbManagement => dbManagement.remove())
-        .then(dbManagement => res.json(dbManagement))
-        .catch(err => res.status(422).jsom(err));
+        .then(dbManagement => {
+            console.log("dbManagement1", dbManagement)
+            dbManagement.remove()
+            res.send("Deleted Plan")
+        })
+        .catch(err => res.status(422).json(err));
     },
     load: function(req,res) {
+        console.log("load call", req.user);
         db.Management.find({ _id: req.user.management})
             .sort({ date: -1})
             .then(userData =>  {

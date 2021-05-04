@@ -29,16 +29,19 @@ function OptomLoginForm(props) {
                 username: formObject.username,
                 password: formObject.password
             })
+            .then((res) => {
+                console.log("loginData", formObject);
+                console.log("optomdata : ", res)
+                props.setOptomLoggedIn(true)
+                props.setOptom(res.data)
+                history.push("/optometrist")
+                // window.location.href = "/optometrist";
+            })
             .then(() => setformObject({
                 username: "",
                 password: ""
             }))
-            .then(() => {
-                console.log("loginData", formObject);
-                props.setOptomLoggedIn(true)
-                history.push("/optometrist")
-                // window.location.href = "/optometrist";
-            })
+            
             .catch((err) => {
                 console.log("Authorisation Error: ", err)
                 alert("Invalid login details")

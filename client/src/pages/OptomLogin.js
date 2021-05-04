@@ -6,7 +6,7 @@ const OptomLogin = (props) => {
     return (
         <>
          <Topbar />
-         < OptomLoginForm setOptomLoggedIn={props.setOptomLoggedIn}/>   
+         < OptomLoginForm setOptomLoggedIn={props.setOptomLoggedIn} setOptom={props.setOptom}/>   
         </>
     )
 }

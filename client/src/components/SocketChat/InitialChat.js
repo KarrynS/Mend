@@ -7,8 +7,8 @@ const CONNECTION_PORT = 'localhost:3000/'
 
 
 const defaultRoom = "Optometry"
-const InitialChat = () => {
-
+const InitialChat = (props) => {
+    console.log("optom", props.optom)
 
     //States - Before Login
     const [chatLogin, setChatLogin] = useState(false);

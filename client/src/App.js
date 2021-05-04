@@ -21,7 +21,7 @@ const [userInfo, setUserInfo] = useState("");
 
 //Optom States
 const [optomLoggedIn, setOptomLoggedIn] = useState(false);
-const [optomInfo, setOptomInfo] = useState("");
+const [optom, setOptom] = useState({});
 
 //Waiting to render page before showing routes
 const [isLoading, setIsLoading] = useState(true);
@@ -48,7 +48,7 @@ const [optomIsLoading, setOptomIsLoading] = useState(true);
        console.log("optom auth res.data", res.data)
        if(res.data.email) {
           setOptomLoggedIn(true);
-          setOptomInfo(res.data)
+          setOptom(res.data)
        }
        setOptomIsLoading(false);
      })
@@ -83,17 +83,17 @@ const [optomIsLoading, setOptomIsLoading] = useState(true);
           {console.log("User is logged in", isLoggedIn)}
           {console.log("Optom is logged in ", optomLoggedIn)}
           <Route path = "/optomlogin">
-            <OptomLogin setOptomLoggedIn={setOptomLoggedIn} /></Route>
-          <Route path = "/optometrist">
-                          { optomLoggedIn ? <Optometrist/> : <Redirect to="/optomlogin"/>}</Route>
+            <OptomLogin setOptomLoggedIn={setOptomLoggedIn} setOptom={setOptom}/></Route>
+          <Route path = "/optometrist" >
+                          { optomLoggedIn ? <Optometrist optom={optom}/> : <Redirect to="/optomlogin"/>}</Route>
           <Route path = "/dashboard"  userInfo={userInfo}>
                           { isLoggedIn ? <Dashboard/> : <Redirect to="/login"/>}</Route>
           <Route path = "/symptoms">
                           { isLoggedIn ? <Symptoms/> : <Redirect to="/login"/>}</Route>
           <Route path = "/diagnosis" >
                           { isLoggedIn ? <Diagnosis/> : <Redirect to="/login"/>}</Route>
-          <Route path = "/chat" component={Chat} >
-                          { (isLoggedIn || optomLoggedIn) ? <Chat/> : <Redirect to="/login"/>}</Route>
+          <Route path = "/chat" >
+                          { (isLoggedIn || optomLoggedIn) ? <Chat optom={optom}/> : <Redirect to="/login"/>}</Route>
           <Route path = "/management" >
                           { isLoggedIn ? <Management/> : <Redirect to="/login"/>}</Route>
         </Switch> 

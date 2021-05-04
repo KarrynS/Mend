@@ -1,10 +1,10 @@
 import React from 'react'
 import InitialChat from '../components/SocketChat/InitialChat'
 
-const Chat = () => {
+const Chat = (props) => {
     return (
         <>
-            <InitialChat/>  
+            <InitialChat optom={props.optom}/>  
         </>
     )
 }

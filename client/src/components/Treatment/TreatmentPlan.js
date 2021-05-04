@@ -5,14 +5,15 @@ import "./Treatmentplan.css";
 const TreatmentPlan = () => {
     const [managementPlans, setManagementPlans] = useState([]);
 
-    const [plan, setPlan] = useState("")
+    const [user, setUser] = useState("")
 
+    // Loading User 
     function loadTreatmentPlan() {
         API.loadTreatment()
         .then(res => {
-            setPlan(res.data);
+            setUser(res.data);
             console.log("Plan:", res.data)
-            console.log(plan)
+            console.log(user)
         })
         .catch(err => console.log(err));
         
@@ -20,14 +21,13 @@ const TreatmentPlan = () => {
 
     useEffect(() => {
         loadTreatmentPlan();
-        console.log("tx plan loaded", plan)
+        console.log("tx plan loaded", user)
       
     }, [])
 
-    console.log("plan.management", plan)
+    console.log("plan", user)
 
-
-    //getting managements 
+    //getting managements Plans for user
     useEffect(() => {
         loadSavedPlan();
     }, [])
@@ -41,8 +41,10 @@ const TreatmentPlan = () => {
         .catch(err => console.log(err));
     }
         
-    function removeSavedPlan(id) {
 
+    // Deleting management plan (by id)
+    function removeSavedPlan(id) {
+        console.log("Mx plan Id", id)
         API.deleteSavedPlan(id)
         .then(res => loadSavedPlan())
         .catch(err => console.log(err));
@@ -52,7 +54,7 @@ const TreatmentPlan = () => {
           
             <>
 
-                <p className="MxHeading"><h2 className="MxTitle">Management plan for :&nbsp; </h2>{plan.name}</p>
+                <p className="MxHeading"><h2 className="MxTitle">Management plan for :&nbsp; </h2>{user.name}</p>
 
               {managementPlans.map(managementPlan => {
                   return (
@@ -65,7 +67,7 @@ const TreatmentPlan = () => {
                                 <p className="mxtreatment"><h5 className="mxdiagnosisTitle"><i class="fa fa-user-md" aria-hidden="true">&nbsp;</i>Treatment advice: </h5>{managementPlan.treatment}</p>
                                 <p className="mxdate"><h5 className="mxdiagnosisTitle"><i class="fa fa-calendar-o" aria-hidden="true">&nbsp;</i>Recommended review date: </h5>{managementPlan.review}</p>
                                 <div className="MxDeleteBtnDiv">
-                                    <button onSubmit={removeSavedPlan(managementPlan._id)} className="btn btn-primary MxDeleteBtn" value={managementPlan._id}>Delete Plan</button>
+                                    <button onClick={() => removeSavedPlan(managementPlan._id)} className="btn btn-primary MxDeleteBtn" value={managementPlan._id}>Delete Plan</button>
                                 </div>
                             </div>
                         </div>
