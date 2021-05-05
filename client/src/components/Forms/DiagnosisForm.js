@@ -105,7 +105,7 @@ function DiagnosisForm() {
         </div>
           
             { diagnosis && DiagnosisTable() }
-
+    
         </>
     )
 }

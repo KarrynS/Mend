@@ -1,0 +1,60 @@
+.pdfImg {
+    border-radius: 50% !important;
+    border: 10px double #d5b590 !important;
+}
+
+.brochuresDiv{
+    align-items: center;
+    margin: auto
+}
+.container {
+    position: relative;
+}
+
+.brochureColumn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    /* display: inline-block; */
+    justify-content: center;
+}
+.brochureColumn h3{
+    z-index: 999;
+    text-align: center;
+    /* position: absolute; */
+ }
+.brochureColumn img{
+   height: 250px;
+   width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background:#1B4738;
+    background: rgba(27,71,56, 0.8); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family:  Courier, monospace;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+.brochureContainer {
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
