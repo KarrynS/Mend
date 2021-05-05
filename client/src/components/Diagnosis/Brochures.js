@@ -142,9 +142,13 @@ const Brochures = () => {
     return (
         <>
         <div className="brochuresDiv">
-            <div className="titleDiv">
-                <h3>Informational Brochures</h3>
-                <p>Easy to understand brochures summarising key facts about different eye conditions</p>
+            <div className="titleDiv row">
+                <div className="col-4">
+                    <h3>Informational Brochures</h3>
+                </div>
+                <div className="col-7">
+                    <p className="titleDivP">Easy to understand brochures summarising key facts about different eye conditions</p>
+                </div>
             </div>
             <div className="brochureContainer">
                 <div className="row brochureRow">
@@ -162,8 +166,9 @@ const Brochures = () => {
                 })}
                 </div>
             </div>
-            <div classname="closingDiv">
-                <p>*Informational brochures are provided by <a href="https://www.optometry.org.au/">Optometry Australia. </a>They are purely for educational purposes and should not replace or subsitite advice given by a qualified optometrist*</p>
+            <div className="closingDiv">
+                <p>*Informational brochures are provided by <a href="https://www.optometry.org.au/">Optometry Australia. </a></p>
+                <p>They are for educational purposes only and should not replace or subsitite advice given by a qualified optometrist*</p>
             </div>
         </div>   
 

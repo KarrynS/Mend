@@ -3,6 +3,24 @@
     border: 10px double #d5b590 !important;
 }
 
+.titleDiv{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+}
+
+.titleDiv h3{
+    margin-left: 20px
+}
+
+.titleDiv p{
+    align-items: center;
+    text-align: center;
+    vertical-align:middle;
+    font-size: 20px;
+}
 .brochuresDiv{
     align-items: center;
     margin: auto
@@ -32,8 +50,8 @@
 .overlay {
     position: absolute;
     bottom: 0;
-    background:#1B4738;
-    background: rgba(27,71,56, 0.8); /* Black see-through */
+    background:#d5b590;
+    background: rgba(213,181,144, 0.8); /* Black see-through */
     color: #f1f1f1;
     width: 100%;
     transition: .5s ease;
@@ -45,6 +63,7 @@
     justify-content: center;
     align-items: center;
     font-family:  Courier, monospace;
+    font-weight: bolder;
     font-size: 20px;
     border-radius: 10px;
   }
@@ -58,3 +77,9 @@
     margin-left: 20px;
 }
 
+.closingDiv {
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
