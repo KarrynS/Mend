@@ -17,3 +17,13 @@
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
 }
 
+@media screen and (max-width: 600px) {
+    .col-sm-1 {
+        width: 100%;
+        margin: auto;
+    }
+
+    .signup{
+        width: 100%;
+    }
+}

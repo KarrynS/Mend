@@ -56,9 +56,9 @@ function SignUpForm() {
     return (
         <>
         <div className="imgDiv">
-            <div className="container signUpContainer">
+            <div className="container-fluid signUpContainer">
                  <div className="row">
-                    <div className="col-md-6 col-md-offset-3">
+                    <div className="col-md-6 col-sm-2">
                         <h2 id="signupTitle">Sign Up Form</h2>
                         <form className="signup" onSubmit={handleFormSubmit}>
                             <div className="form-group name">
@@ -124,7 +124,7 @@ function SignUpForm() {
                             <button type="submit" className="btn btn-default signUpBtn">Sign Up</button>
                         </form>
                     </div>
-                    <div className="memberslinkDiv col-md-3 col-md-offset-3">
+                    <div className="memberslinkDiv col-md-3">
                         <div className="imageDiv">
                             <img className="SignUpImage" src={SignUpImage} alt="glasses" width="350" height="350"/>
                         </div>

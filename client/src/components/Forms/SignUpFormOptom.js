@@ -53,9 +53,9 @@ function SignUpFormOptom() {
     return (
         <>
         <div className="imgDiv">
-            <div className="container">
+            <div className="container-fluid">
                  <div className="row">
-                    <div className="col-md-6 col-md-offset-3">
+                    <div className="col-md-6 col-sm-2">
                         <h2>Optometrist Sign Up Form</h2>
                         <form className="signup" onSubmit={handleFormSubmit}>
                             <div className="form-group name">
@@ -112,7 +112,7 @@ function SignUpFormOptom() {
                             <button type="submit" className="btn btn-default optomsignUpBtn">Sign Up</button>
                         </form>
                     </div>
-                    <div className="memberslinkDiv col-md-3 col-md-offset-3">
+                    <div className="memberslinkDiv col-md-3">
                         <div className="imageDiv">
                             <img className="SignUpImage" src={SignUpImage} alt="glasses" width="350" height="350"/>
                         </div>

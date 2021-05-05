@@ -85,3 +85,14 @@ a {
 .date {
     margin-left: 20px;
 }
+
+@media screen and (max-width: 600px) {
+    .col-sm-1 {
+        width: 100%;
+        margin: auto;
+    }
+
+    .signup{
+        width: 100%;
+    }
+}
