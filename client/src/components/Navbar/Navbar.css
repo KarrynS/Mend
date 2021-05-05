@@ -34,3 +34,7 @@
 #nav-menu {
     display: flex;
 }
+
+.active {
+    color: white;
+}
