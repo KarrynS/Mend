@@ -1,0 +1,20 @@
+.footer {
+    /* margin-top: 50px; */
+    font-family: Courier, monospace !important;
+    background-color: #1b4738 !important;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-brand {
+    font-family: 'Abril Fatface';
+    color: #d5b590 !important;
+    font-size: 18px !important;
+    text-align: center;
+}
+
+.fa-star-of-life{
+    margin-right: 10px;
+}
