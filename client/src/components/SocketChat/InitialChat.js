@@ -88,11 +88,11 @@ const InitialChat = (props) => {
             { !chatLogin ? 
 
                 // Chatbox Login
-                <div className="chatBoxContainer">
-                     <div className="header">
-                    {/* <a id="leave-btn-cross" className="btn" href="/dashboard"><i class="fas fa-times"></i></a> */}
-                </div>
-                    <div className="logIn">
+                <div className="chatBoxContainer container-fluid">
+                    {/* <div className="header">
+                    <a id="leave-btn-cross" className="btn" href="/dashboard"><i class="fas fa-times"></i></a>
+                    </div> */}
+                    <div className="logIn col-6 col-md-offset-3 col-md-">
                         <header class="join-header">
                             <h1><i class="fas fa-eye"></i> iChat</h1>
                             
@@ -114,10 +114,21 @@ const InitialChat = (props) => {
             :
 
             // chatbox when user connects
-            <div className="chatBoxContainer">
+            <div className="chatBoxContainer container-fluid">
                 <div className="header">
-                    <h1><i class="fas fa-eye"></i> iChat</h1>
-                    <button onClick={() => disconnectChat()} id="leave-btn" class="btn" to="/chat"><i class="fas fa-times"></i></button>
+                    <div className="row">
+                        <div className="col-4 col-sm-12">
+
+                        </div>
+                        <div className="col-4 col-sm-12">
+                            <h1><i class="fas fa-eye"></i> iChat</h1>
+                        </div>
+                        <div className="col-4 col-sm-12 colBtn">
+                            <button onClick={() => disconnectChat()} id="leave-btn" class="btn" to="/chat"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div className="row col-6 chatCloseBtn">
+                    </div>
                 </div>
             <div className="chatContainer">
                 <header class="chat-header">

@@ -15,15 +15,8 @@ body {
     color: #1b4738
 }
 
-#leave-btn-cross {
-    margin-bottom: 10px;
-    float: right;
-    background-color: #1b4738;
-}
-
 .logIn {
-    width: 600px;
-    height: 300px;
+    height: auto;
     border: 3px solid #1b4738;
     border-radius: 7px;
     background-color: #D5b590;
@@ -63,11 +56,12 @@ body {
 }
 
 .logIn button {
-    width: 200px;
+    width: auto;
     height: 50px;
-    border: none;
+    border-radius: 10px;
     display: inline;
     margin-top: 45px;
+    margin-bottom: 20px;
 }
 
 .logIn button:hover{
@@ -113,7 +107,13 @@ body {
 #leave-btn {
     margin-top: 0px;
     float: right;
-    background-color: #1b4738;
+    background-color: #d5b590 !important;
+}
+
+
+.fa-times{
+    background-color: #D5b590;
+    color: #1b4738
 }
 
 .chatContainer {
@@ -168,57 +168,101 @@ color: whitesmoke;
     flex-direction: row;
     width: calc(100% - 30px);
     align-items: center;
-  }
+}
 
 
-  .messageContainer h1{
-    color: rgb(114, 114, 114);
-    font-family:  Courier, monospace;
-    font-weight: 300;
-    font-size: 17px;
-    align-items: center;
-    display: flex;
-    margin-top: 20px;
-  }
+.messageContainer h1{
+color: rgb(114, 114, 114);
+font-family:  Courier, monospace;
+font-weight: 300;
+font-size: 17px;
+align-items: center;
+display: flex;
+margin-top: 20px;
+}
+
+#You{
+justify-content: flex-start;
+}
+
+#Other {
+justify-content: flex-end;
+}
   
-  #You{
-    justify-content: flex-start;
-  }
-  
-  #Other {
-    justify-content: flex-end;
-  }
-  
-  #Other .messageIndividual {
-    background-color: #D5b590;
-    color: black;
-    margin-left: 10px;
-    margin-right: 0px;
-    font-family: Courier, monospace;
-    display: inline-table;
-  }
-  .messageIndividual {
-    height: 30px;
-    border-radius: 10px;
-    display: grid;
-    place-items: center;
-    background-color: #1b4738;
-    opacity: 0.9;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right: 10px;
-    margin-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    justify-content: center;
-    display: inline-table;
-  }
+#Other .messageIndividual {
+background-color: #D5b590;
+color: black;
+margin-left: 10px;
+margin-right: 0px;
+font-family: Courier, monospace;
+display: inline-table;
+}
+.messageIndividual {
+height: 30px;
+border-radius: 10px;
+display: grid;
+place-items: center;
+background-color: #1b4738;
+opacity: 0.9;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+margin-right: 10px;
+margin-top: 20px;
+padding-left: 10px;
+padding-right: 10px;
+justify-content: center;
+display: inline-table;
+}
 
-  .messageIndividual h1 {
-    align-items: center;
+.messageIndividual h1 {
+align-items: center;
 
-  }
+}
 
-  .messages {
-    margin-bottom: 10px;
-  }
+.messages {
+margin-bottom: 10px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .logIn {
+        display: grid;
+        flex-direction: column;
+        margin: auto;
+    }
+    .logIn input{
+        margin: 10px;
+        width: 100px;
+        height: 40px;
+    }
+    .logIn select{
+        margin: auto;
+        width: 100px;
+        height: 40px;
+    }
+    .header{
+        width: 100px;
+        display: column;
+    }
+    .inputs{
+        display: inline-grid;
+        margin: auto;
+        width: 100;
+    }
+   
+    
+}
+
+@media screen and (max-width: 680px) {
+    .chatContainer {
+        width: 350px;
+    }
+    .row {
+        display: inline-grid;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+}

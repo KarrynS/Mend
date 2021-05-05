@@ -55,7 +55,7 @@ function SignUpFormOptom() {
         <div className="imgDiv">
             <div className="container-fluid">
                  <div className="row">
-                    <div className="col-md-6 col-sm-2">
+                    <div className="col-md-6 col-sm-12">
                         <h2>Optometrist Sign Up Form</h2>
                         <form className="signup" onSubmit={handleFormSubmit}>
                             <div className="form-group name">
