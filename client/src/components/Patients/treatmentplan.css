@@ -1,5 +1,14 @@
+/* Styling for management plan box */
 h1 {
     color: #1b4738;
+}
+
+.treatmentcontainer {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+    justify-content: center;}
+
+.treatmentcontainer h2{
+    margin-left: none;
 }
 
 .treatmentDiv {
@@ -13,6 +22,7 @@ h1 {
     background-color: #d5b590;
     margin-bottom:30px;
     font-size: 1.2rem;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
 }
 
 label {
@@ -22,6 +32,7 @@ label {
 .mxplanBtn {
     background-color: #1b4738 !important;
     color: whitesmoke;
+    border-color: #1b4738 !important;
 }
 
 .mxplanBtn:hover {

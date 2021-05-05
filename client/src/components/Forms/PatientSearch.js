@@ -50,11 +50,17 @@ const PatientSearch = (props) => {
     return (
         <>
         <div className="optomAppInfo">
-           <h3>Welcome {props.optom.name}</h3> 
-           <p>Search for your patients below and keep up to date of their eye issues.</p>
-           <hr ></hr>
-           <p>Easily record your diagnosis and treatment and we'll send them directly to your patients.</p>
-  
+            <div className="row">
+                <div className="col-4">
+                    <h3>Welcome {props.optom.name}</h3>
+                </div>
+                <div className="col-4">
+                    <p>Search for your patients below and keep up to date of their eye issues.</p>
+                </div>
+                <div className="col-4">
+                    <p>Easily record your diagnosis and suggested treatment and we'll send them directly to your patients.</p>
+                </div>
+            </div>
         </div>
             <div className="searchDiv">
                 <div className="row">
@@ -62,15 +68,15 @@ const PatientSearch = (props) => {
                 <h2 className="searchTitle">Patient Search</h2>
                 <div className="row">
                     <div className="form-floating mb-3 col">
-                        <input onChange={handleInputChange} name="name" type="text" className="form-control" id="floatingInput" placeholder="Name"/>
+                        <input onChange={handleInputChange} value={patientSearch.name} name="name" type="text" className="form-control" id="floatingInput" placeholder="Name"/>
                         <label htmlFor="floatingInput"> Full Name</label>
                     </div>
                     <div className="form-floating mb-3 col">
-                        <input onChange={handleInputChange} name="email" type="email" className="form-control" id="floatingEmail" placeholder="Email"/>
+                        <input onChange={handleInputChange} value={patientSearch.email} name="email" type="email" className="form-control" id="floatingEmail" placeholder="Email"/>
                         <label htmlFor="floatingPassword"> Email</label>
                     </div>
                     <div className="form-floating mb-3 col">
-                        <input onChange={handleInputChange} name="birthday" type="text" className="form-control" id="floatingBirthday" placeholder="dd/mm/yyyy"/>
+                        <input onChange={handleInputChange} value={patientSearch.birthday} name="birthday" type="text" className="form-control" id="floatingBirthday" placeholder="dd/mm/yyyy"/>
                         <label htmlFor="floatingPassword"> Date of birth</label>
                     </div>
                 </div>

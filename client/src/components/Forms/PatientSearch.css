@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(221, 220, 220);
+}
+
 .searchDiv {
     width: 90%;
     justify-content: left;
@@ -8,9 +12,9 @@
 .optomAppInfo{
     align-items: baseline;
     justify-content: center;
-    display: flex;
     padding: 25px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+    
 }
 
 
@@ -25,6 +29,8 @@
     padding-right: 25px;
     padding-bottom: 25px;
     background-color: #d5b590;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+
 }
  
 .patientSearchForm label{
@@ -38,6 +44,10 @@ padding-left: 25px;
 #pxsearchBtn{
     background-color:#1b4738 !important;
     color: whitesmoke;
+}
+
+#pxsearchBtn:hover{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
 }
 
 

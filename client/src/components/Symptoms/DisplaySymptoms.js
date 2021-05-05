@@ -4,9 +4,7 @@ import Moment from  'react-moment';
 import API from "../../utils/API";
 
 const DisplaySymptoms = (props) => {
-    // console.log("SavedSymptom props", props);
-    // console.log("symptoms", props.symptoms);
-     
+         
     const symptomType = {
         eye: "Affected eye",
         soreEye: "Sore eye",

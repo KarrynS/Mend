@@ -1,3 +1,10 @@
+/* Styling Symptom cards */
+.pxsymptomDivTitle {
+    text-align: center;
+    color:#1b4738 !important;
+  
+  }
+
 .patientSymptoms{
     background-color: white;
 }
@@ -23,21 +30,19 @@
 
 /* Style buttons */
 .deletebtn {
-    /* background-color:#1b4738 !important; Blue background */
-    /* border: 1px #1b4738 solid; Remove borders */
-    color: #1b4738 !important; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
+    color: #1b4738 !important; 
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
     width: 10%;
     height: 2%;
-  }
+}
   
-  /* Darker background on mouse-over */
-  .deletebtn:hover {
-    background-color: RoyalBlue;
-  }
+.deletebtn:hover {
+background-color: RoyalBlue;
+}
 
-  ul li{
-      background-color: #d5b590 !important;
-  }
+ul li{
+    background-color: #d5b590 !important;
+}
+

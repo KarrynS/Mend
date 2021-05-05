@@ -58,7 +58,10 @@ const ShowSymptoms = (props) => {
             <div className="container-sm sympCardContainer">
             <div className="card w-75 innersympCard">
                 <div className="card-body">
+                    <div>
                     <h3 className="card-title cardTitle">New Symptom Card</h3>
+                    <hr/>
+                    </div>
                     <p className="card-text affectedEye"><h5 className="sympCardTitle"><i class="fa fa-low-vision" aria-hidden="true">&nbsp;</i>Affected eye(s):</h5>{getEye()}</p>
                     <p className="card-text painLevel"><h5 className="sympCardTitle"><i class="fa fa-medkit" aria-hidden="true">&nbsp;</i>Pain Level:</h5>{getPain()}</p>
                     <p className="card-text recordedSymp"><h5 className="sympCardTitle"><i class="fa fa-bookmark" aria-hidden="true">&nbsp;</i>Saved Symptoms: &nbsp;</h5>{getTrueSymptoms()}</p>

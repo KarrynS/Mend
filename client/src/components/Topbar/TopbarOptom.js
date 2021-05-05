@@ -18,7 +18,7 @@ function TopbarOptom() {
                 <div className="container-fluid">
                 <div className="top-bar">
                     <div className="top-bar-left">
-                    <a className="navbar-brand" to="/optomlogin" href="/optomlogin"><i class="fas fa-star-of-life"></i>Mend</a>
+                    <a className="navbar-brand"><i class="fas fa-star-of-life"></i>Mend</a>
                 </div>
                 </div>
                 

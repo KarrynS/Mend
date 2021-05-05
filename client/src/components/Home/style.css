@@ -1,4 +1,3 @@
-
 .navbar {
     font-family: Courier, monospace;
     background-color: #d5b590 !important;
@@ -45,6 +44,7 @@ ul li {
         background-color: #d5b590;
         border-radius: 2%;
         padding: 25px;
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
  }
 
 
@@ -74,6 +74,18 @@ padding: 0px;
 }
 
 .card-cd1 {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+} 
+
+.card-cd2 {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+} 
+
+.card-cd3 {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
+} 
+
+.card-cd4 {
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
 } 
 

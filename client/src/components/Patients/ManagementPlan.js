@@ -45,35 +45,63 @@ const ManagementPlan = (props) => {
        .catch(err => console.log(err))
        console.log("New Management added", formObject)
        console.log("patientId" ,patientId)
-       alert("Treatment plan recorded")
+        alert("Treatment plan recorded")
        
     }
+
+    // const submitPlanModal = () => {
+    //     return (
+    //         <>
+    //             <div className="modal" id="exampleModal" tabindex="-1" role="dialog">
+    //                 <div className="modal-dialog" role="document">
+    //                     <div className="modal-content">
+    //                     <div className="modal-header">
+    //                         <h5 className="modal-title">//Optom Name here//</h5>
+    //                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+    //                         <span aria-hidden="true">&times;</span>
+    //                         </button>
+    //                     </div>
+    //                     <div className="modal-body">
+    //                         <p>We have submitted your plan which {props.patient.name} will now be able to view</p>
+    //                     </div>
+    //                     <div className="modal-footer">
+    //                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+    //                     </div>
+    //                     </div>
+    //                 </div>
+    //                 </div>
+    //         </>
+    //     )
+    // }
+
+    // onClick={submitPlanModal()}
+
     return (
         <>
             <div className="treatmentDiv">
             <h1>Management Plan</h1>   
-            <form onSubmit={handleFormSubmit}>
-                <div class="form-group row">
-                    <label htmlFor="Diagnosis" class="col-sm-2 col-form-label">Diagnosis:</label>
-                    <div class="col-sm-10">
-                    <input onChange={handleInputChange} value={formObject.diagnosis} name="diagnosis" type="text" class="form-control" id="inputdiagnosis" placeholder="Enter Diagnosis"/>
+            <form onSubmit={handleFormSubmit} >
+                <div className="form-group row">
+                    <label htmlFor="Diagnosis" className="col-sm-2 col-form-label">Diagnosis:</label>
+                    <div className="col-sm-10">
+                    <input onChange={handleInputChange} value={formObject.diagnosis} name="diagnosis" type="text" className="form-control" id="inputdiagnosis" placeholder="Enter Diagnosis"/>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label htmlFor="Management" class="col-sm-2 col-form-label">Treatment:</label>
-                    <div class="col-sm-10">
-                    <textarea onChange={handleInputChange} value={formObject.treatment} name="treatment" type="text" row="3" class="form-control" id="inputmanagement" placeholder="Enter Management Plan"></textarea>
+                <div className="form-group row">
+                    <label htmlFor="Management" className="col-sm-2 col-form-label">Treatment:</label>
+                    <div className="col-sm-10">
+                    <textarea onChange={handleInputChange} value={formObject.treatment} name="treatment" type="text" row="3" className="form-control" id="inputmanagement" placeholder="Enter Management Plan"></textarea>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label htmlFor="example-date-input" class="col-2 col-form-label">Review Date:</label>
-                    <div class="col-sm-10">
-                    <input onChange={handleInputChange} value={formObject.review}name="review" type="text" class="form-control" id="inputreview" placeholder="Suggested review schedule"/>
+                <div className="form-group row">
+                    <label htmlFor="example-date-input" className="col-2 col-form-label">Review Date:</label>
+                    <div className="col-sm-10">
+                    <input onChange={handleInputChange} value={formObject.review}name="review" type="text" className="form-control" id="inputreview" placeholder="Suggested review schedule"/>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                    <button  type="submit" class="btn btn-primary mxplanBtn">Submit Plan</button>
+                <div className="form-group row">
+                    <div className="col-sm-10">
+                    <button  type="submit button" className="btn btn-primary mxplanBtn" data-toggle="modal" data-target="#exampleModal">Submit Plan</button>
                     </div>
                 </div>
                 </form> 

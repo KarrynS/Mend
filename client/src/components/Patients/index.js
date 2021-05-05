@@ -4,21 +4,11 @@ import ShowSymptoms from "./ShowSymptoms";
 import ManagementPlan from "./ManagementPlan"
 
 const PatientSymptoms = ({patient}) => {
-    // const { name, birthday } = props.patient
-    // const [patient, setPatient] = useState();
-
-    // useEffect(() => {
-    //     props.patient ? setPatient(props.patient) : console.log("patient undefined")
-    
-    // },[patient] ) 
-
-    // console.log("patient props", patient)
-    // console.log("patientSymptoms props.symptoms", patient.symptoms)
     
     return (
         <>
             <div className="pxsymptomDiv">
-                <h3 className="pxsymptomDivTitle"> Patient :  {patient.name}</h3>
+            <h3 className="pxsymptomDivTitle"> Symptoms for patient :  {patient.name}</h3>
                 
                     {patient.symptoms.map(symptom => {
                         return (
