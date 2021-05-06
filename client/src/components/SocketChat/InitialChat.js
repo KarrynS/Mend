@@ -116,14 +116,11 @@ const InitialChat = (props) => {
             // chatbox when user connects
             <div className="chatBoxContainer container-fluid">
                 <div className="header">
-                    <div className="row">
-                        <div className="col-4 col-sm-12">
-
-                        </div>
-                        <div className="col-4 col-sm-12">
+                    <div className="row chatBoxHeader">
+                        <div className="col-6 col-sm-12 colTitle">
                             <h1><i class="fas fa-eye"></i> iChat</h1>
                         </div>
-                        <div className="col-4 col-sm-12 colBtn">
+                        <div className="col-6 col-sm-12 colBtn">
                             <button onClick={() => disconnectChat()} id="leave-btn" class="btn" to="/chat"><i class="fas fa-times"></i></button>
                         </div>
                     </div>

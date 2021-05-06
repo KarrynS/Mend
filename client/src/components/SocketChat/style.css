@@ -116,6 +116,15 @@ body {
     color: #1b4738
 }
 
+.chatBoxHeader .col-sm-12 {
+    max-width: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    height:auto;    
+}
+
 .chatContainer {
     width: 600px;
     height: 300px;

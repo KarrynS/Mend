@@ -59,7 +59,7 @@ function SignUpForm() {
             <div className="container-fluid signUpContainer">
                  <div className="row">
                     <div className="col-md-6 col-sm-12">
-                        <h2 id="signupTitle">Sign Up Form</h2>
+                        <h2 id="signupTitle">Members Sign Up Form</h2>
                         <form className="signup" onSubmit={handleFormSubmit}>
                             <div className="form-group name">
                                 <label htmlFor="exampleInputEmail1">Name</label>
