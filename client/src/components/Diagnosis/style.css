@@ -35,6 +35,7 @@
     position: relative;
     /* display: inline-block; */
     justify-content: center;
+    height: auto;
 }
 .brochureColumn h3{
     z-index: 999;

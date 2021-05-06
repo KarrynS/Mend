@@ -167,7 +167,7 @@ const Brochures = () => {
                 </div>
             </div>
             <div className="closingDiv">
-                <p>*Informational brochures are provided by <a href="https://www.optometry.org.au/">Optometry Australia. </a></p>
+                <p>*Informational brochures are provided by <a href="https://www.optometry.org.au/" target="_blank">Optometry Australia. </a></p>
                 <p>They are for educational purposes only and should not replace or subsitite advice given by a qualified optometrist*</p>
             </div>
         </div>   
