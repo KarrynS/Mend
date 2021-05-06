@@ -83,3 +83,19 @@
     margin-top: 50px;
     text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+    .titleDiv {
+        flex-direction: column;
+    }
+    .titleDiv h3{
+        margin:auto;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .titleDiv .col-4 {
+        max-width: none;
+    }
+   
+}

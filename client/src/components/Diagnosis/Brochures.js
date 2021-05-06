@@ -143,10 +143,10 @@ const Brochures = () => {
         <>
         <div className="brochuresDiv">
             <div className="titleDiv row">
-                <div className="col-4">
+                <div className="col-4 col-sm-6">
                     <h3>Informational Brochures</h3>
                 </div>
-                <div className="col-7">
+                <div className="col-7 col-sm-6">
                     <p className="titleDivP">Easy to understand brochures summarising key facts about different eye conditions</p>
                 </div>
             </div>
