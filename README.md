@@ -1,7 +1,7 @@
 ## Mend 
 
 ## Description 
-Mend is a MERN stack application where patients and optometrists can record and communicate their eye issues and management plans easily. This platform allows for users to learn more about eye conditions and encourages a community where users and optometrists can engage in live chats. 
+Mend is a MERN stack application where patients and optometrists can record and communicate their eye issues and management plans easily. This platform allows for users to learn more about eye conditions and encourages a community where users and optometrists can engage together via live chats. 
 
 ---
 | Table of Contents |
@@ -19,7 +19,7 @@ Mend is a MERN stack application where patients and optometrists can record and 
 ---
 
 ## User Story
-As a patient with a new eye issue I want to easily track my symptoms and review treatment advice given to me by the optometrist so that my recovery and eye health remains on track.
+As a patient with a new eye issue, I want to easily track my symptoms and review treatment advice given to me by the optometrist so that my recovery and eye health remains on track.
 
 As an optometrist I want to accurately understand a patient’s eye issue(s) and formulate advice so I can help treat and manage my patients effectively.
 
