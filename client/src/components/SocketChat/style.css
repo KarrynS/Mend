@@ -232,7 +232,14 @@ align-items: center;
 margin-bottom: 10px;
 }
 
+.chatBoxUserInfo p{
+    color: #1b4738;
+}
 
+.roomDisplay h5{
+    color:#1b4738;
+    align-items: center;
+}
 
 @media screen and (max-width: 576px) {
     .logIn {

@@ -124,18 +124,21 @@ const InitialChat = (props) => {
                             <button onClick={() => disconnectChat()} id="leave-btn" class="btn" to="/chat"><i class="fas fa-times"></i></button>
                         </div>
                     </div>
-                    <div className="row col-6 chatCloseBtn">
-                    </div>
                 </div>
-            <div className="chatContainer">
-                <header class="chat-header">
-                    
-                </header>
+                <div className="chatBoxUserInfo">
+                            <p className="roomDisplay">Room: {room}</p>
+                        </div>
+                <div className="chatContainer">
+                    <header class="chat-header">
+                      
+                    </header>
                     <div className="messages" >
                         {console.log("messageList", messageList)}
                         {messageList.length > 0 ?  messageList.map((val,key) => {
                             
                             return (
+                                   <> 
+                                    
                                     <div className="messageContainer"
                                         id={val.author === name ? "You" : "Other"}
                                         > 
@@ -152,8 +155,12 @@ const InitialChat = (props) => {
                                             }
                                         
                                     </div>
+                                    
+                                    </>
                             )
-                        }) : <p className="welcomeDisplay">Hi {name}, you've joined the {room} chat</p>
+                        }) : 
+                                <p className="welcomeDisplay">Welcome to iChat, {name}</p>
+                           
                         }
                         <div ref={scrollRef}></div>
                     </div>
