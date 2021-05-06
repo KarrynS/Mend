@@ -1,29 +1,85 @@
-# Create React Express App
+## Mend 
 
-## About This Boilerplate
+## Description 
+Mend is a MERN stack application where patients and optometrists can record and communicate their eye issues and management plans easily. This platform allows for users to learn more about eye conditions and encourages a community where users and optometrists can engage in live chats. 
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+---
+| Table of Contents |
+|---|
+| [User Story](#UserStory) |
+| [Functionality](#Functionality) |
+| [ScreenShot](#ScreenShot) |
+| [Links](#Links) |
+| [Front End Tech](#FrontEndTech) |
+| [Back End Tech](#BackEndTech) |
+| [Other Technologies](#OtherTechnologies) |
+| [License](#License) |
+| [Contributing](#Contributing) |
+| [Questions](#Questions) |
+---
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## User Story
+As a patient with a new eye issue I want to easily track my symptoms and review treatment advice given to me by the optometrist so that my recovery and eye health remains on track.
 
-## Starting the app locally
+As an optometrist I want to accurately understand a patient’s eye issue(s) and formulate advice so I can help treat and manage my patients effectively.
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
 
-```
-npm install
-```
+## Functionality 
+* Has 2 user entry points - Patient and Optometrist
+* Model View Controller Design Pattern.
+* User data is saved into MongoDB and updated with mongoose.
+* CRUD best practices followed.
+* Single Page App utilising Bootstrap column system design.
+* Deployed to Heroku.
 
-This should install node modules within the server and the client folder.
+## Screenshot
+Application should look like below:
 
-After both installations complete, run the following command in your terminal:
+<img src="client/src/img/ManagementPlan.png" alt="Mend application">
+<br>
+<img src="client/src/img/Diagnosis.png"alt="Mend application">
+<br>
+<img src="client/src/img/iChat.png" alt="Mend application">
+<br>
+<img src="client/src/img/PatientSearch.png">
 
-```
-npm start
-```
+## Links
+### Github Repository
+Github : https://github.com/KarrynS/Mend.git
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+### URL
+Deployed : https://mend2021.herokuapp.com/
 
-## Deployment (Heroku)
+## Front End Tech
+* React
+* JavaScript
+* Bootstrap
+* HTML
+* CSS
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+## Back End Tech
+* Node.js 
+* JavaScript 
+* Heroku
+* Express
+* MongoDB
+* Passport
+
+## Other technologies
+* react-moment
+* InfermedicaAPI
+* bycrypt
+* socket.io. 
+
+## License 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Contributing
+To contribute please refer to https://github.com/microsoft/vscode/wiki/How-to-Contribute
+
+## Questions
+Please direct questions to the following email: karrynsaw@gmail.com
+
+
+Github: https://github.com/KarrynS
