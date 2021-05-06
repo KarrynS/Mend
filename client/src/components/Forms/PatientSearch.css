@@ -1,12 +1,12 @@
 body {
-    background-color: rgb(221, 220, 220);
+    background-color: rgb(243, 241, 241);
 }
 
 .searchDiv {
     width: 90%;
     justify-content: left;
     text-align: left;
-
+    background-color:#ffff;
 }
 
 .optomAppInfo{
@@ -14,7 +14,7 @@ body {
     justify-content: center;
     padding: 25px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.294);
-    
+    background-color: #ffff;
 }
 
 
@@ -44,6 +44,7 @@ padding-left: 25px;
 #pxsearchBtn{
     background-color:#1b4738 !important;
     color: whitesmoke;
+    font-family: Courier, monospace;
 }
 
 #pxsearchBtn:hover{
