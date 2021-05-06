@@ -35,6 +35,8 @@ As an optometrist I want to accurately understand a patient’s eye issue(s) and
 ## Screenshot
 Application should look like below:
 
+<img src="client/src/img/Screen Shot 2021-05-06 at 7.45.45 pm.png">
+<br>
 <img src="client/src/img/ManagementPlan.png" alt="Mend application">
 <br>
 <img src="client/src/img/Diagnosis.png"alt="Mend application">
@@ -62,7 +64,8 @@ Deployed : https://mend2021.herokuapp.com/
 * JavaScript 
 * Heroku
 * Express
-* MongoDB
+* MongoDB Atlas
+* Mongoose
 * Passport
 
 ## Other technologies
@@ -70,6 +73,8 @@ Deployed : https://mend2021.herokuapp.com/
 * InfermedicaAPI
 * bycrypt
 * socket.io. 
+* Postman
+* Github
 
 ## License 
 
