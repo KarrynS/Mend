@@ -35,7 +35,7 @@ As an optometrist I want to accurately understand a patient’s eye issue(s) and
 ## Screenshot
 Application should look like below:
 
-<img src="client/src/img/Screen Shot 2021-05-06 at 7.45.45 pm.png">
+<img src="client/src/img/signup.png">
 <br>
 <img src="client/src/img/ManagementPlan.png" alt="Mend application">
 <br>
