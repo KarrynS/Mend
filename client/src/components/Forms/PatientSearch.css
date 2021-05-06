@@ -6,7 +6,8 @@ body {
     width: 90%;
     justify-content: left;
     text-align: left;
-    background-color:#ffff;
+    /* background-color:#ffff; */
+    margin-top: 10px;
 }
 
 .optomAppInfo{
