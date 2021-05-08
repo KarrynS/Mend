@@ -5,7 +5,7 @@ import TopbarOptom from "../Topbar/TopbarOptom";
 import Navbar from "../Navbar/Navbar";
 
 let socket;
-const CONNECTION_PORT = 'localhost:3000/'
+const CONNECTION_PORT = process.env.CONNECTION_PORT || 'localhost:3000/'
 
 
 const defaultRoom = "Optometry"
