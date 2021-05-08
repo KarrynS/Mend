@@ -11,6 +11,12 @@
     font-size: 1.8rem;
     background-color: #e9ecef;
 }
+.waitingMessage{
+    font-family: Courier, monospace;
+    padding-left: 20px;
+    color:#1b4738
+
+}
 
 .treatmentcontainer {
     align-items: center;

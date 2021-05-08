@@ -56,7 +56,8 @@ const TreatmentPlan = () => {
 
                 <p className="MxHeading"><h2 className="MxTitle">Management plan for :&nbsp; </h2>{user.name}</p>
 
-              {managementPlans.map(managementPlan => {
+                {console.log("checking to see data format ", managementPlans)}
+              {managementPlans.length > 0 ? managementPlans.map(managementPlan => {
                   return (
                     <>
                         <div className="jumbotron jumbotron-fluid">
@@ -73,7 +74,12 @@ const TreatmentPlan = () => {
                         </div>
                     </>
                   )
-              })}
+              }) : 
+                <div className="waitingDiv">
+                    <h5 className="waitingMessage">No active Treatments Plans submitted by the optometrist</h5>
+                </div>
+              
+              }
                
             </>
         )
