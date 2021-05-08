@@ -1,6 +1,8 @@
 .pdfImg {
     border-radius: 50% !important;
     border: 10px double #d5b590 !important;
+    width: 50vh;
+    height: 50vh;
 }
 
 .titleDiv{
