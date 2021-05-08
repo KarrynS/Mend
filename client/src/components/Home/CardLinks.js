@@ -47,7 +47,7 @@ const CardLinks = (props) => {
                                 <img className="pic3" src={pic3} alt="eye"/>
                             </div>
                             <div className="cd3textdiv col-md-6">
-                                <h1 className="card-title"><i className="fas fa-book-medical"></i> Recieved your diagnosis?</h1>
+                                <h1 className="card-title"><i className="fas fa-book-medical"></i> Received your diagnosis?</h1>
                                 <p className="card-text">Want to learn more about your condition? Search for specific eye related information here. </p>
                                     <a href="diagnosis" className="btn btn-primary btn-medical">Learn more</a>                
                             </div>
