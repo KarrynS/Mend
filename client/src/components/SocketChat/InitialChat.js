@@ -4,7 +4,7 @@ import "./style.css";
 import TopbarOptom from "../Topbar/TopbarOptom";
 import Navbar from "../Navbar/Navbar";
 
-let socket;
+let socket = io("https://mend2021.herokuapp.com");
 const CONNECTION_PORT = process.env.CONNECTION_PORT || 'localhost:3000/'
 
 
