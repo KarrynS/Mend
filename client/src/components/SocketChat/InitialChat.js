@@ -8,6 +8,11 @@ let socket = io("https://mend2021.herokuapp.com");
 const CONNECTION_PORT = process.env.CONNECTION_PORT || 'localhost:3000/'
 
 
+// connecting locally
+// let socket;
+// const CONNECTION_PORT = 'localhost:3000/'
+
+
 const defaultRoom = "Optometry"
 const InitialChat = (props) => {
     console.log("optom", props.optom)
