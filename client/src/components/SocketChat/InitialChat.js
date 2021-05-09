@@ -5,14 +5,14 @@ import TopbarOptom from "../Topbar/TopbarOptom";
 import Navbar from "../Navbar/Navbar";
 
 // let socket = io("ws://mend2021.herokuapp.com/socket.io/?EIO=4&transport=websocket");
-// const CONNECTION_PORT = process.env.CONNECTION_PORT || 'localhost:3000/'
+const CONNECTION_PORT = process.env.CONNECTION_PORT || 'localhost:3000/'
 
 
 
 
 // connecting locally
 let socket;
-const CONNECTION_PORT = 'ws://mend2021.herokuapp.com/socket.io/?EIO=4&transport=websocket'
+// const CONNECTION_PORT = 'ws://mend2021.herokuapp.com/socket.io/?EIO=4&transport=websocket'
 
 
 const defaultRoom = "Optometry"
