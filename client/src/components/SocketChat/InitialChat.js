@@ -4,14 +4,14 @@ import "./style.css";
 import TopbarOptom from "../Topbar/TopbarOptom";
 import Navbar from "../Navbar/Navbar";
 
-// let socket = io("ws://mend2021.herokuapp.com/socket.io/?EIO=4&transport=websocket");
+
 const CONNECTION_PORT = process.env.CONNECTION_PORT || 'localhost:3000/'
 
 
 
-
+let socket = io(CONNECTION_PORT);
 // connecting locally
-let socket;
+// let socket;
 // const CONNECTION_PORT = 'ws://mend2021.herokuapp.com/socket.io/?EIO=4&transport=websocket'
 
 
