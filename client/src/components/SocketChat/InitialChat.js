@@ -4,8 +4,8 @@ import "./style.css";
 import TopbarOptom from "../Topbar/TopbarOptom";
 import Navbar from "../Navbar/Navbar";
 
-// let socket;
-let socket = io('ws://mend2021.herokuapp.com/socket.io/?EIO=4&transport=websocket');
+let socket;
+// let socket = io('ws://mend2021.herokuapp.com/socket.io/?EIO=4&transport=websocket');
 // to deploy
 const CONNECTION_PORT = 'ws://mend2021.herokuapp.com/socket.io/?EIO=4&transport=websocket'
 
