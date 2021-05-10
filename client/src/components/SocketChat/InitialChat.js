@@ -8,11 +8,11 @@ import Navbar from "../Navbar/Navbar";
 // let socket = io('ws://mend2021.herokuapp.com/socket.io/?EIO=4&transport=websocket');
 // to deploy
 let socket;
-// const CONNECTION_PORT = 'wss://mend2021.herokuapp.com/socket.io/?EIO=4&transport=websocket'
+const CONNECTION_PORT = 'wss://mend2021.herokuapp.com/socket.io/?EIO=4&transport=websocket'
 
 // connecting locally
 // let socket;
-const CONNECTION_PORT = 'localhost:3000/'
+// const CONNECTION_PORT = 'localhost:3000/'
 
 
 const defaultRoom = "Optometry"
