@@ -33,7 +33,7 @@ const InitialChat = (props) => {
     const scrollRef =  useRef();
 
     useEffect(() => {
-        socket = io(CONNECTION_PORT)
+        socket = io(CONNECTION_PORT, {secure: true})
     }, [CONNECTION_PORT])
 
     useEffect(() => {
