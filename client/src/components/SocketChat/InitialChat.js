@@ -15,12 +15,6 @@ const CONNECTION_PORT = 'ws://mend2021.herokuapp.com/socket.io/?EIO=4&transport=
 // const CONNECTION_PORT = 'localhost:3000/'
 
 
-
-
-
-
-
-
 const defaultRoom = "Optometry"
 const InitialChat = (props) => {
     console.log("optom", props.optom)
